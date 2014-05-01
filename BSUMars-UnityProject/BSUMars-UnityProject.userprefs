@@ -1,9 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CharacterMovement.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Breakable Glass\Shaders\SimpleGlass.shader">
     <Files>
-      <File FileName="Assets\Scripts\CharacterMovement.cs" Line="72" Column="1" />
-      <File FileName="Assets\MouseRotationCamera.cs" Line="76" Column="12" />
+      <File FileName="Assets\Breakable Glass\Shaders\SimpleGlass.shader" Line="13" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
