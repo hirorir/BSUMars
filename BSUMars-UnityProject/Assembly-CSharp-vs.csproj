@@ -46,11 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Sample Assets\2D\Scripts\Camera2DFollow.cs" />
-     <Compile Include="Assets\Sample Assets\2D\Scripts\CameraFollow.cs" />
-     <Compile Include="Assets\Sample Assets\2D\Scripts\Platformer2DUserControl.cs" />
-     <Compile Include="Assets\Sample Assets\2D\Scripts\PlatformerCharacter2D.cs" />
-     <Compile Include="Assets\Sample Assets\2D\Scripts\Restarter.cs" />
      <Compile Include="Assets\Sample Assets\Cameras\Scripts\AbstractTargetFollower.cs" />
      <Compile Include="Assets\Sample Assets\Cameras\Scripts\AutoCam.cs" />
      <Compile Include="Assets\Sample Assets\Cameras\Scripts\FreeLookCam.cs" />
@@ -95,10 +90,6 @@
      <Compile Include="Assets\Sample Assets\Effects\Particle Systems\scripts\ParticleSystemMultiplier.cs" />
      <Compile Include="Assets\Sample Assets\Effects\Particle Systems\scripts\SmokeParticles.cs" />
      <Compile Include="Assets\Sample Assets\Effects\Particle Systems\scripts\WaterHoseParticles.cs" />
-     <Compile Include="Assets\Sample Assets\Sample Scenes\Scripts\Clouds.cs" />
-     <Compile Include="Assets\Sample Assets\Sample Scenes\Scripts\ParticleSceneControls.cs" />
-     <Compile Include="Assets\Sample Assets\Sample Scenes\Scripts\PlaceTargetWithMouse.cs" />
-     <Compile Include="Assets\Sample Assets\Sample Scenes\Scripts\SlowMoButton.cs" />
      <Compile Include="Assets\Sample Assets\Utility\ActivateTrigger.cs" />
      <Compile Include="Assets\Sample Assets\Utility\AutoMobileShaderSwitch.cs" />
      <Compile Include="Assets\Sample Assets\Utility\AutoMoveAndRotate.cs" />
@@ -139,7 +130,6 @@
      <Compile Include="Assets\Sample Assets\Vehicles\Car\Scripts\Wheel.cs" />
      <Compile Include="Assets\Sample Assets\Vehicles\Rolling Ball\Scripts\Ball.cs" />
      <Compile Include="Assets\Sample Assets\Vehicles\Rolling Ball\Scripts\BallUserControl.cs" />
-     <Compile Include="Assets\Scripts\CharacterControl.cs" />
      <None Include="Assets\Sample Assets\Effects\Toon Shading\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Sample Assets\Prototyping\Shaders\WorldCoord Diffuse.shader" />
      <None Include="Assets\Sample Assets\Effects\Light Shafts\Shaders\SamplePositions.shader" />

@@ -17,7 +17,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: $randomseed
       value:
-        scalar[0]: 6782
+        scalar[0]: 6501
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -437,7 +437,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Details_Input_Intensity
       value:
-        scalar[0]: 0
+        scalar[0]: .218999997
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -480,8 +480,8 @@ SubstanceImporter:
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 25, y: 25}
-      generateAllOutputs: 1
+      scale: {x: 20, y: 20}
+      generateAllOutputs: 0
       animationUpdateRate: 42
     materialProperties:
       serializedVersion: 2
@@ -491,20 +491,24 @@ SubstanceImporter:
             name: _MainTex
           second:
             texture: {instanceID: 0}
-            scale: {x: 25, y: 25}
+            scale: {x: 20, y: 20}
             offset: {x: 0, y: 0}
         data:
           first:
             name: _BumpMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 25, y: 25}
+            scale: {x: 20, y: 20}
             offset: {x: 0, y: 0}
       floats:
         data:
           first:
             name: _Shininess
           second: .078125
+        data:
+          first:
+            name: _EmissionLM
+          second: 0
       colors:
         data:
           first:
