@@ -594,7 +594,7 @@ SubstanceImporter:
   - serializedVersion: 10
     name: glass_dome
     prototypeName: Bitmap2Material2
-    shaderName: Simple Glass
+    shaderName: Transparent/Specular
     inputs:
     - name: $outputsize
       value:
@@ -605,7 +605,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: $randomseed
       value:
-        scalar[0]: 3480
+        scalar[0]: 1459
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -731,7 +731,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Normal_Strength
       value:
-        scalar[0]: 10
+        scalar[0]: 1.10000002
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -1085,12 +1085,12 @@ SubstanceImporter:
         data:
           first:
             name: _Shininess
-          second: .00999999978
+          second: .111905791
       colors:
         data:
           first:
             name: _Color
-          second: {r: 1, g: 1, b: 1, a: .250980407}
+          second: {r: .617647052, g: .549492836, b: 0, a: .313725501}
         data:
           first:
             name: _SpecColor

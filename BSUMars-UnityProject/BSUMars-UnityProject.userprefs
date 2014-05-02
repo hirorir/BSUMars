@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Breakable Glass\Shaders\SimpleGlass.shader">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Immunogen\Immunogen-UnityProject\Assets\Resources\Classes\PhysicsObject\Nucleus\Nucleus.cs">
     <Files>
-      <File FileName="Assets\Breakable Glass\Shaders\SimpleGlass.shader" Line="13" Column="19" />
+      <File FileName="..\..\Immunogen\Immunogen-UnityProject\Assets\health_representation.cs" Line="18" Column="2" />
+      <File FileName="..\..\Immunogen\Immunogen-UnityProject\Assets\Resources\Classes\PhysicsObject\Nucleus\Nucleus.cs" Line="32" Column="70" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
