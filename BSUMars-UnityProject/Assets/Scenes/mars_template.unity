@@ -581,6 +581,10 @@ Prefab:
       value: 
       objectReference: {fileID: -882090192, guid: 1c7daa9b3dc69754088cd5de23e21819,
         type: 3}
+    - target: {fileID: 9500000, guid: 083dc17fd576b49498ba4dfd8333fdb9, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 40c59768fc51ce04cbc47b63e07511e9, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 083dc17fd576b49498ba4dfd8333fdb9, type: 3}
   m_RootGameObject: {fileID: 1794155934}
@@ -670,7 +674,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .149019614, g: .149019614, b: .149019614, a: .0196078438}
+  m_BackGroundColor: {r: 0, g: .384888321, b: .485294104, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -784,7 +788,7 @@ Light:
   m_SpotAngle: 90
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_Strength: 1
     m_Bias: .0500000007
@@ -811,7 +815,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1143877356}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: -1.04410458, y: 77.8956223, z: -.351567388}
+  m_LocalPosition: {x: -1.04410458, y: 67.0651779, z: -.351568699}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -852,15 +856,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 128d44b50f0a25c46b47620307ab7a3f, type: 2}
       propertyPath: m_BackGroundColor.r
-      value: .149019614
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 128d44b50f0a25c46b47620307ab7a3f, type: 2}
       propertyPath: m_BackGroundColor.g
-      value: .149019614
+      value: .384888321
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 128d44b50f0a25c46b47620307ab7a3f, type: 2}
       propertyPath: m_BackGroundColor.b
-      value: .149019614
+      value: .485294104
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 128d44b50f0a25c46b47620307ab7a3f, type: 2}
       propertyPath: m_ClearFlags
@@ -970,7 +974,7 @@ Animator:
   m_GameObject: {fileID: 1794155934}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 083dc17fd576b49498ba4dfd8333fdb9, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40c59768fc51ce04cbc47b63e07511e9, type: 2}
   m_CullingMode: 0
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 0
