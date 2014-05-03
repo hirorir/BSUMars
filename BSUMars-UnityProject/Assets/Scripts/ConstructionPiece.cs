@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ConstructionPiece : MonoBehaviour {
 	[SerializeField] protected float conSpeed = 8f; // The controlled movement speed of the object.
@@ -7,7 +8,8 @@ public class ConstructionPiece : MonoBehaviour {
 	private bool wasPlaced = false;
 	private GameObject player;
 	private Camera mainCam;
-	private Camera conCam;
+    private Camera activeCam;
+	private List<Camera> conCams;
 
 	// Use this for initialization
 	void Start () {
@@ -18,24 +20,29 @@ public class ConstructionPiece : MonoBehaviour {
 		yield return new WaitForSeconds(0.2f);
 		player = GameObject.Find("First Person Character");
 		mainCam = GameObject.Find("First Person Camera").GetComponent<Camera>();
-		conCam = GameObject.Find("ConstructionCamera").GetComponent<Camera>();
+        activeCam = mainCam;
+        conCams = new List<Camera>();
+        foreach(Transform child in transform) {
+            if (child.name == "ConstructionCamera")
+                conCams.Add(child.gameObject.GetComponent<Camera>());
+        }
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (placing) {
 			if (Input.GetKey(KeyCode.W)) {
-				transform.Translate(0f, 0f, Time.deltaTime * conSpeed);
+				transform.Translate(0f, 0f, Time.deltaTime * conSpeed, Space.World);
 			} else if (Input.GetKey(KeyCode.A)) {
-				transform.Translate(-Time.deltaTime * conSpeed, 0f, 0f);
+				transform.Translate(-Time.deltaTime * conSpeed, 0f, 0f, Space.World);
 			} else if (Input.GetKey(KeyCode.S)) {
-				transform.Translate(0f, 0f, -Time.deltaTime * conSpeed);
+                transform.Translate(0f, 0f, -Time.deltaTime * conSpeed, Space.World);
 			} else if (Input.GetKey(KeyCode.D)) {
-				transform.Translate(Time.deltaTime * conSpeed, 0f, 0f);
+                transform.Translate(Time.deltaTime * conSpeed, 0f, 0f, Space.World);
 			} else if (Input.GetKey(KeyCode.R)) {
-				transform.Translate(0f, Time.deltaTime * conSpeed, 0f);
-			} else if (Input.GetKey(KeyCode.F)) {
-				transform.Translate(0f, -Time.deltaTime * conSpeed, 0f);
+                transform.Translate(0f, Time.deltaTime * conSpeed, 0f, Space.World);
+			} else if (Input.GetKey(KeyCode.F) && transform.position.y - collider.bounds.size.y > 0) {
+                transform.Translate(0f, -Time.deltaTime * conSpeed, 0f, Space.World);
 			} else if (Input.GetKey(KeyCode.Q)) {
 				transform.Rotate(0f, -1f, 0f);
 			} else if (Input.GetKey(KeyCode.E)) {
@@ -56,7 +63,7 @@ public class ConstructionPiece : MonoBehaviour {
 
 	protected void OnTriggerStay(Collider target) {
 		if (target.tag == "ConGrid" && !placing && !wasPlaced) {
-			if (target.bounds.Contains(transform.position)) {
+			if (target.bounds.Contains(transform.position) && transform.parent == player.transform) {
 				SnapTo(target.gameObject, target.bounds.size.z);
 			}
 		}
@@ -73,26 +80,46 @@ public class ConstructionPiece : MonoBehaviour {
 	public void SnapTo(GameObject grid, float offset) {
 		if (transform.parent == player.transform)
 			transform.parent = null;
-		player.transform.position = grid.transform.position - offset * grid.transform.forward;
-		player.transform.eulerAngles = new Vector3(0f, 0f, 0f);
+		//player.transform.position = grid.transform.position - offset * grid.transform.forward;
+		//player.transform.eulerAngles = new Vector3(0f, 0f, 0f);
 		player.rigidbody.velocity = new Vector3(0f, 0f, 0f);
 		transform.position = grid.transform.position;
 		transform.eulerAngles = new Vector3(0f, 0f, 0f);
 		//rigidbody.velocity = new Vector3(0f, 0f, 0f);
 		//rigidbody.freezeRotation = true;
+        //rigidbody.useGravity = false;
 		Destroy(rigidbody);
 		placing = true;
 		player.GetComponent<FirstPersonCharacter>().disableMovement();
 		mainCam.enabled = false;
-		conCam.enabled = true;
-		//rigidbody.useGravity = false;
+        //activeCam = closestCam();
+        Debug.Log(grid.transform.Find("ConstructionCameraZ").name);
+        activeCam = grid.transform.Find("ConstructionCameraZ").GetComponent<Camera>();
+		activeCam.enabled = true;
+		
 	}
 
 	public void endPlacement() {
 		mainCam.enabled = true;
-		conCam.enabled = false;
+		activeCam.enabled = false;
 		placing = false;
 		player.GetComponent<FirstPersonCharacter>().enableMovement();
-		rigidbody.useGravity = true;
+        gameObject.AddComponent<Rigidbody>();
+		//rigidbody.useGravity = true;
 	}
+
+    private Camera closestCam() {
+        float minDist = 10000;
+        Camera nearCam = new Camera();
+        foreach (GameObject camera in transform){
+            float dist = Vector3.Distance(camera.transform.position, player.transform.position);
+            Camera cam = camera.GetComponent<Camera>();
+            if (cam &&  dist < minDist) {
+                Debug.Log("ew");
+                nearCam = camera.GetComponent<Camera>();
+                minDist = dist;
+            }
+        }
+        return nearCam;
+    }
 }
