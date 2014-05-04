@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conSpeed: 2
+  rotSpeed: 90
 --- !u!23 &30650785
 Renderer:
   m_ObjectHideFlags: 0
@@ -418,7 +419,7 @@ GameObject:
   - 92: {fileID: 446379906}
   - 81: {fileID: 446379905}
   m_Layer: 0
-  m_Name: ConstructionCamera
+  m_Name: ConstructionCameraLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -898,6 +899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conSpeed: 2
+  rotSpeed: 90
 --- !u!23 &1407303804
 Renderer:
   m_ObjectHideFlags: 0
@@ -965,7 +967,7 @@ GameObject:
   - 92: {fileID: 1471555251}
   - 81: {fileID: 1471555250}
   m_Layer: 0
-  m_Name: ConstructionCamera
+  m_Name: ConstructionCameraRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1260,7 +1262,7 @@ GameObject:
   - 92: {fileID: 1932475182}
   - 81: {fileID: 1932475181}
   m_Layer: 0
-  m_Name: ConstructionCamera
+  m_Name: ConstructionCameraBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1340,7 +1342,7 @@ GameObject:
   - 92: {fileID: 1956778188}
   - 81: {fileID: 1956778187}
   m_Layer: 0
-  m_Name: ConstructionCamera
+  m_Name: ConstructionCameraFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

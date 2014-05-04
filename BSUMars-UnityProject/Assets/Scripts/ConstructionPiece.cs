@@ -12,7 +12,7 @@ public class ConstructionPiece : MonoBehaviour {
 	private GameObject player;
 	private Camera mainCam;
     private Camera activeCam;
-	private List<Camera> conCams;
+	//private List<Camera> conCams;
 
 	// Use this for initialization
 	void Start () {
@@ -20,46 +20,55 @@ public class ConstructionPiece : MonoBehaviour {
 	}
 
 	private IEnumerator getobjs() {
-		yield return new WaitForSeconds(0.2f);
+		yield return new WaitForEndOfFrame();
 		player = GameObject.Find("First Person Character");
 		mainCam = GameObject.Find("First Person Camera").GetComponent<Camera>();
         activeCam = mainCam;
-        conCams = new List<Camera>();
-        foreach(Transform child in transform) {
-            if (child.name == "ConstructionCamera")
+        //conCams = new List<Camera>();
+        /*foreach(Transform child in transform) {
+            if (child.GetComponent<Camera>())
                 conCams.Add(child.gameObject.GetComponent<Camera>());
-        }
+        }*/
 	}
 
 	void Update() {
-
+		if (placing) {
+			if (Input.GetKeyDown(KeyCode.O)) {
+				activeCam.enabled = false;
+				activeCam = getRotCam(activeCam, "left");
+				activeCam.enabled = true;
+			} else if (Input.GetKeyDown(KeyCode.P)) {
+				activeCam.enabled = false;
+				activeCam = getRotCam(activeCam, "right");
+				activeCam.enabled = true;
+			}
+		}
 	}
 	
 	void FixedUpdate () {
+		if (player != null) {
+			if (transform.parent == player.transform && Input.GetKeyDown(KeyCode.Return)) {
+				transform.parent = null;
+			}
+		}
 		if (placing) {
 			Vector3 movementVec = new Vector3(0f, 0f, 0f);
 			if (Input.GetKey(KeyCode.W)) {
 				movementVec += new Vector3(adjZ * Time.deltaTime, 0f, adjX * Time.deltaTime);
-				//transform.Translate(adjZ * Time.deltaTime, 0f, adjX * Time.deltaTime);
 			} 
 			if (Input.GetKey(KeyCode.A)) {
-				//transform.Translate(-adjX * Time.deltaTime, 0f, adjZ * Time.deltaTime, Space.World);
 				movementVec += new Vector3(-adjX * Time.deltaTime, 0f, adjZ * Time.deltaTime);
 			} 
 			if (Input.GetKey(KeyCode.S)) {
-				//transform.Translate(adjZ * Time.deltaTime, 0f, -adjX * Time.deltaTime, Space.World);
 				movementVec += new Vector3(adjZ * Time.deltaTime, 0f, -adjX * Time.deltaTime);
 			} 
 			if (Input.GetKey(KeyCode.D)) {
-				//transform.Translate(adjX * Time.deltaTime, 0f, adjZ * Time.deltaTime, Space.World);
 				movementVec += new Vector3(adjX * Time.deltaTime, 0f, adjZ * Time.deltaTime);
 			} 
 			if (Input.GetKey(KeyCode.R)) {
-                //transform.Translate(0f, Time.deltaTime * conSpeed, 0f, Space.World);
 				movementVec += new Vector3(0f, Time.deltaTime * conSpeed, 0f);
 			} 
 			if (Input.GetKey(KeyCode.F) && transform.position.y > collider.bounds.size.y / 2) {
-                //transform.Translate(0f, -Time.deltaTime * conSpeed, 0f, Space.World);
 				movementVec += new Vector3(0f, -Time.deltaTime * conSpeed, 0f);
 			} 
 			if (Input.GetKey(KeyCode.Q)) {
@@ -68,6 +77,8 @@ public class ConstructionPiece : MonoBehaviour {
 				transform.Rotate(0f, rotSpeed * Time.deltaTime, 0f);
 			}
 			transform.Translate(movementVec, Space.World);
+
+			
 		}
 	}
 
@@ -82,7 +93,7 @@ public class ConstructionPiece : MonoBehaviour {
 	}
 
 	protected void OnTriggerStay(Collider target) {
-		if (target.tag == "ConGrid" && !placing && !wasPlaced) {
+		if (target.tag == "ConGrid" && !placing) {
 			if (target.bounds.Contains(transform.position) && transform.parent == player.transform) {
 				SnapTo(target.gameObject, target.bounds.size.z);
 			}
@@ -135,7 +146,6 @@ public class ConstructionPiece : MonoBehaviour {
             float dist = Vector3.Distance(camera.position, player.transform.position);
             Camera cam = camera.GetComponent<Camera>();
             if (cam && dist < minDist) {
-                Debug.Log("ew");
                 nearCam = camera.GetComponent<Camera>();
                 minDist = dist;
             }
@@ -143,4 +153,36 @@ public class ConstructionPiece : MonoBehaviour {
 		Debug.Log(nearCam.name);
         return nearCam;
     }
+
+	private Camera getRotCam(Camera orig, string dir) {
+		if (dir == "left") {
+			switch (orig.name) {
+				case "ConstructionCameraFront":
+					return orig.transform.parent.Find("ConstructionCameraLeft").GetComponent<Camera>();
+				case "ConstructionCameraLeft":
+					return orig.transform.parent.Find("ConstructionCameraBack").GetComponent<Camera>();
+				case "ConstructionCameraBack":
+					return orig.transform.parent.Find("ConstructionCameraRight").GetComponent<Camera>();
+				case "ConstructionCameraRight":
+					return orig.transform.parent.Find("ConstructionCameraFront").GetComponent<Camera>();
+				default:
+					return orig;
+			}
+		} else if (dir == "right") {
+			switch (orig.name) {
+				case "ConstructionCameraFront":
+					return orig.transform.parent.Find("ConstructionCameraRight").GetComponent<Camera>();
+				case "ConstructionCameraLeft":
+					return orig.transform.parent.Find("ConstructionCameraFront").GetComponent<Camera>();
+				case "ConstructionCameraBack":
+					return orig.transform.parent.Find("ConstructionCameraLeft").GetComponent<Camera>();
+				case "ConstructionCameraRight":
+					return orig.transform.parent.Find("ConstructionCameraBack").GetComponent<Camera>();
+				default:
+					return orig;
+			}
+		} else {
+			return orig;
+		}
+	}
 }
