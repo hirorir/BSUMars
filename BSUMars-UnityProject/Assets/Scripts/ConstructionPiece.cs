@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class ConstructionPiece : MonoBehaviour {
 	[SerializeField] protected float conSpeed = 16f; // The controlled placement movement speed of the object.
 	[SerializeField] protected float rotSpeed = 90f; // The controlled placement rotation speed of the object.
+	public float origMass;
 	private float adjX;
 	private float adjZ;
 	private bool placing = false; // Whether or not the piece is being placed by the player.
@@ -17,6 +19,7 @@ public class ConstructionPiece : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(getobjs());
+		origMass = rigidbody.mass;
 	}
 
 	private IEnumerator getobjs() {
@@ -24,11 +27,6 @@ public class ConstructionPiece : MonoBehaviour {
 		player = GameObject.Find("First Person Character");
 		mainCam = GameObject.Find("First Person Camera").GetComponent<Camera>();
         activeCam = mainCam;
-        //conCams = new List<Camera>();
-        /*foreach(Transform child in transform) {
-            if (child.GetComponent<Camera>())
-                conCams.Add(child.gameObject.GetComponent<Camera>());
-        }*/
 	}
 
 	void Update() {
@@ -37,10 +35,14 @@ public class ConstructionPiece : MonoBehaviour {
 				activeCam.enabled = false;
 				activeCam = getRotCam(activeCam, "left");
 				activeCam.enabled = true;
+				adjX = Mathf.Cos(activeCam.transform.eulerAngles.y * Mathf.PI / 180f) * conSpeed;
+				adjZ = Mathf.Sin(activeCam.transform.eulerAngles.y * Mathf.PI / 180f) * conSpeed;
 			} else if (Input.GetKeyDown(KeyCode.P)) {
 				activeCam.enabled = false;
 				activeCam = getRotCam(activeCam, "right");
 				activeCam.enabled = true;
+				adjX = Mathf.Cos(activeCam.transform.eulerAngles.y * Mathf.PI / 180f) * conSpeed;
+				adjZ = Mathf.Sin(activeCam.transform.eulerAngles.y * Mathf.PI / 180f) * conSpeed;
 			}
 		}
 	}
@@ -57,13 +59,13 @@ public class ConstructionPiece : MonoBehaviour {
 				movementVec += new Vector3(adjZ * Time.deltaTime, 0f, adjX * Time.deltaTime);
 			} 
 			if (Input.GetKey(KeyCode.A)) {
-				movementVec += new Vector3(-adjX * Time.deltaTime, 0f, adjZ * Time.deltaTime);
+				movementVec -= new Vector3(adjX * Time.deltaTime, 0f, -adjZ * Time.deltaTime);
 			} 
 			if (Input.GetKey(KeyCode.S)) {
-				movementVec += new Vector3(adjZ * Time.deltaTime, 0f, -adjX * Time.deltaTime);
+				movementVec -= new Vector3(adjZ * Time.deltaTime, 0f, adjX * Time.deltaTime);
 			} 
 			if (Input.GetKey(KeyCode.D)) {
-				movementVec += new Vector3(adjX * Time.deltaTime, 0f, adjZ * Time.deltaTime);
+				movementVec += new Vector3(adjX * Time.deltaTime, 0f, -adjZ * Time.deltaTime);
 			} 
 			if (Input.GetKey(KeyCode.R)) {
 				movementVec += new Vector3(0f, Time.deltaTime * conSpeed, 0f);
@@ -76,6 +78,12 @@ public class ConstructionPiece : MonoBehaviour {
 			} else if (Input.GetKey(KeyCode.E)) {
 				transform.Rotate(0f, rotSpeed * Time.deltaTime, 0f);
 			}
+			/*if (movementVec != Vector3.zero) {
+				BoxCollider newPos = new BoxCollider();
+				newPos.size = collider.bounds.size;
+				newPos.transform.position = transform.position + movementVec;
+				List<Collider> colls = newPos.bounds.Intersects();
+			}*/
 			transform.Translate(movementVec, Space.World);
 
 			
@@ -111,20 +119,20 @@ public class ConstructionPiece : MonoBehaviour {
 	public void SnapTo(GameObject grid, float offset) {
 		if (transform.parent == player.transform)
 			transform.parent = null;
-		//player.transform.position = grid.transform.position - offset * grid.transform.forward;
-		//player.transform.eulerAngles = new Vector3(0f, 0f, 0f);
 		player.rigidbody.velocity = new Vector3(0f, 0f, 0f);
-		//transform.position = grid.transform.position;
 		transform.eulerAngles = new Vector3(0f, 0f, 0f);
-		//rigidbody.velocity = new Vector3(0f, 0f, 0f);
-		//rigidbody.freezeRotation = true;
-        //rigidbody.useGravity = false;
-		Destroy(rigidbody);
+		//rigidbody.isKinematic = true;
+		rigidbody.velocity = Vector3.zero;
+		rigidbody.
+		rigidbody.useGravity = false;
+		foreach (GameObject piece in GameObject.FindGameObjectsWithTag("ConPiece")) {
+			piece.rigidbody.mass = 10000;
+		}
+		rigidbody.mass = 0.01f;
 		placing = true;
 		player.GetComponent<FirstPersonCharacter>().disableMovement();
 		mainCam.enabled = false;
         activeCam = closestCam(grid);
-        //activeCam = grid.transform.Find("ConstructionCameraZ").GetComponent<Camera>();
 		activeCam.enabled = true;
 		adjX = Mathf.Cos(activeCam.transform.eulerAngles.y * Mathf.PI / 180f) * conSpeed;
 		adjZ = Mathf.Sin(activeCam.transform.eulerAngles.y * Mathf.PI / 180f) * conSpeed;
@@ -135,8 +143,17 @@ public class ConstructionPiece : MonoBehaviour {
 		activeCam.enabled = false;
 		placing = false;
 		player.GetComponent<FirstPersonCharacter>().enableMovement();
-        gameObject.AddComponent<Rigidbody>();
-		//rigidbody.useGravity = true;
+		//rigidbody.isKinematic = false;
+		foreach (GameObject piece in GameObject.FindGameObjectsWithTag("ConPiece")) {
+			piece.rigidbody.mass = piece.GetComponent<ConstructionPiece>().origMass;
+		}
+		rigidbody.useGravity = true;
+	}
+
+	protected void OnCollisionEnter(Collision target) {
+		if (placing && target.gameObject.tag == "ConPiece") {
+			rigidbody.velocity = Vector3.zero;
+		}
 	}
 
     private Camera closestCam(GameObject obj) {
@@ -150,7 +167,6 @@ public class ConstructionPiece : MonoBehaviour {
                 minDist = dist;
             }
         }
-		Debug.Log(nearCam.name);
         return nearCam;
     }
 

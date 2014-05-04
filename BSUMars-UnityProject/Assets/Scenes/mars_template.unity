@@ -89,7 +89,7 @@ GameObject:
   - 54: {fileID: 30650783}
   m_Layer: 0
   m_Name: BldgBase
-  m_TagString: Untagged
+  m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -521,6 +521,14 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
+      propertyPath: m_TagString
+      value: ConPiece
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
   m_RootGameObject: {fileID: 30650782}
@@ -560,6 +568,14 @@ Prefab:
     - target: {fileID: 400000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
+      propertyPath: m_TagString
+      value: ConPiece
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
@@ -865,7 +881,7 @@ GameObject:
   - 54: {fileID: 1407303802}
   m_Layer: 0
   m_Name: BldgBase
-  m_TagString: Untagged
+  m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
