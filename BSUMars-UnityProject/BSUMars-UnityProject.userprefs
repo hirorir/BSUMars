@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Immunogen\Immunogen-UnityProject\Assets\Resources\Classes\PhysicsObject\Nucleus\Nucleus.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ConstructionPiece.cs">
     <Files>
-      <File FileName="..\..\Immunogen\Immunogen-UnityProject\Assets\health_representation.cs" Line="18" Column="2" />
-      <File FileName="..\..\Immunogen\Immunogen-UnityProject\Assets\Resources\Classes\PhysicsObject\Nucleus\Nucleus.cs" Line="32" Column="70" />
+      <File FileName="Assets\Scripts\ConstructionPiece.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

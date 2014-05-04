@@ -173,7 +173,7 @@ Transform:
   m_PrefabInternal: {fileID: 757757942}
   m_GameObject: {fileID: 30650782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.41326141, y: 1.5, z: 11.1927614}
+  m_LocalPosition: {x: 17.1826553, y: 1.5, z: 11.1927614}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -480,8 +480,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 446379904}
-  m_LocalRotation: {x: .258819044, y: 0, z: 0, w: .965925813}
-  m_LocalPosition: {x: -1.92961454, y: 7.93608093, z: -6.83574247}
+  m_LocalRotation: {x: .183012709, y: .683012724, z: -.183012709, w: .683012724}
+  m_LocalPosition: {x: -8, y: 7.93608093, z: -.0273627043}
   m_LocalScale: {x: .5, y: .875, z: .625}
   m_Children: []
   m_Father: {fileID: 387722918}
@@ -494,7 +494,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 8.41326141
+      value: 17.1826553
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
       propertyPath: m_LocalPosition.y
@@ -965,7 +965,7 @@ GameObject:
   - 92: {fileID: 1471555251}
   - 81: {fileID: 1471555250}
   m_Layer: 0
-  m_Name: ConstructionCameraZ
+  m_Name: ConstructionCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -977,8 +977,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1471555248}
-  m_LocalRotation: {x: .258819044, y: 0, z: 0, w: .965925813}
-  m_LocalPosition: {x: -.929614544, y: 7.93608093, z: -6.83574247}
+  m_LocalRotation: {x: -.183012709, y: .683012724, z: -.183012709, w: -.683012724}
+  m_LocalPosition: {x: 8, y: 7.93599987, z: -.33533287}
   m_LocalScale: {x: .5, y: .875, z: .625}
   m_Children: []
   m_Father: {fileID: 387722918}
@@ -1322,7 +1322,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1932475180}
-  m_LocalRotation: {x: .258819044, y: 0, z: 0, w: .965925813}
+  m_LocalRotation: {x: -1.13133396e-08, y: .965925813, z: -.258819044, w: -4.22219593e-08}
   m_LocalPosition: {x: -.429614514, y: 7.93608093, z: 7.835742}
   m_LocalScale: {x: .5, y: .95703125, z: .68359375}
   m_Children: []

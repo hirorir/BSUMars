@@ -3,7 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class ConstructionPiece : MonoBehaviour {
-	[SerializeField] protected float conSpeed = 8f; // The controlled movement speed of the object.
+	[SerializeField] protected float conSpeed = 16f; // The controlled placement movement speed of the object.
+	[SerializeField] protected float rotSpeed = 90f; // The controlled placement rotation speed of the object.
+	private float adjX;
+	private float adjZ;
 	private bool placing = false; // Whether or not the piece is being placed by the player.
 	private bool wasPlaced = false;
 	private GameObject player;
@@ -27,27 +30,44 @@ public class ConstructionPiece : MonoBehaviour {
                 conCams.Add(child.gameObject.GetComponent<Camera>());
         }
 	}
+
+	void Update() {
+
+	}
 	
-	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (placing) {
+			Vector3 movementVec = new Vector3(0f, 0f, 0f);
 			if (Input.GetKey(KeyCode.W)) {
-				transform.Translate(0f, 0f, Time.deltaTime * conSpeed, Space.World);
-			} else if (Input.GetKey(KeyCode.A)) {
-				transform.Translate(-Time.deltaTime * conSpeed, 0f, 0f, Space.World);
-			} else if (Input.GetKey(KeyCode.S)) {
-                transform.Translate(0f, 0f, -Time.deltaTime * conSpeed, Space.World);
-			} else if (Input.GetKey(KeyCode.D)) {
-                transform.Translate(Time.deltaTime * conSpeed, 0f, 0f, Space.World);
-			} else if (Input.GetKey(KeyCode.R)) {
-                transform.Translate(0f, Time.deltaTime * conSpeed, 0f, Space.World);
-			} else if (Input.GetKey(KeyCode.F) && transform.position.y - collider.bounds.size.y > 0) {
-                transform.Translate(0f, -Time.deltaTime * conSpeed, 0f, Space.World);
-			} else if (Input.GetKey(KeyCode.Q)) {
-				transform.Rotate(0f, -1f, 0f);
+				movementVec += new Vector3(adjZ * Time.deltaTime, 0f, adjX * Time.deltaTime);
+				//transform.Translate(adjZ * Time.deltaTime, 0f, adjX * Time.deltaTime);
+			} 
+			if (Input.GetKey(KeyCode.A)) {
+				//transform.Translate(-adjX * Time.deltaTime, 0f, adjZ * Time.deltaTime, Space.World);
+				movementVec += new Vector3(-adjX * Time.deltaTime, 0f, adjZ * Time.deltaTime);
+			} 
+			if (Input.GetKey(KeyCode.S)) {
+				//transform.Translate(adjZ * Time.deltaTime, 0f, -adjX * Time.deltaTime, Space.World);
+				movementVec += new Vector3(adjZ * Time.deltaTime, 0f, -adjX * Time.deltaTime);
+			} 
+			if (Input.GetKey(KeyCode.D)) {
+				//transform.Translate(adjX * Time.deltaTime, 0f, adjZ * Time.deltaTime, Space.World);
+				movementVec += new Vector3(adjX * Time.deltaTime, 0f, adjZ * Time.deltaTime);
+			} 
+			if (Input.GetKey(KeyCode.R)) {
+                //transform.Translate(0f, Time.deltaTime * conSpeed, 0f, Space.World);
+				movementVec += new Vector3(0f, Time.deltaTime * conSpeed, 0f);
+			} 
+			if (Input.GetKey(KeyCode.F) && transform.position.y > collider.bounds.size.y / 2) {
+                //transform.Translate(0f, -Time.deltaTime * conSpeed, 0f, Space.World);
+				movementVec += new Vector3(0f, -Time.deltaTime * conSpeed, 0f);
+			} 
+			if (Input.GetKey(KeyCode.Q)) {
+				transform.Rotate(0f, -rotSpeed * Time.deltaTime, 0f);
 			} else if (Input.GetKey(KeyCode.E)) {
-				transform.Rotate(0f, 1f, 0f);
+				transform.Rotate(0f, rotSpeed * Time.deltaTime, 0f);
 			}
+			transform.Translate(movementVec, Space.World);
 		}
 	}
 
@@ -70,7 +90,7 @@ public class ConstructionPiece : MonoBehaviour {
 	}
 
 	protected void OnTriggerExit(Collider target) {
-		if (target.tag == "ConGrid") {
+		if (target.tag == "ConGrid" && !wasPlaced) {
 			endPlacement();
 			wasPlaced = false;
 		}
@@ -83,7 +103,7 @@ public class ConstructionPiece : MonoBehaviour {
 		//player.transform.position = grid.transform.position - offset * grid.transform.forward;
 		//player.transform.eulerAngles = new Vector3(0f, 0f, 0f);
 		player.rigidbody.velocity = new Vector3(0f, 0f, 0f);
-		transform.position = grid.transform.position;
+		//transform.position = grid.transform.position;
 		transform.eulerAngles = new Vector3(0f, 0f, 0f);
 		//rigidbody.velocity = new Vector3(0f, 0f, 0f);
 		//rigidbody.freezeRotation = true;
@@ -92,11 +112,11 @@ public class ConstructionPiece : MonoBehaviour {
 		placing = true;
 		player.GetComponent<FirstPersonCharacter>().disableMovement();
 		mainCam.enabled = false;
-        //activeCam = closestCam();
-        Debug.Log(grid.transform.Find("ConstructionCameraZ").name);
-        activeCam = grid.transform.Find("ConstructionCameraZ").GetComponent<Camera>();
+        activeCam = closestCam(grid);
+        //activeCam = grid.transform.Find("ConstructionCameraZ").GetComponent<Camera>();
 		activeCam.enabled = true;
-		
+		adjX = Mathf.Cos(activeCam.transform.eulerAngles.y * Mathf.PI / 180f) * conSpeed;
+		adjZ = Mathf.Sin(activeCam.transform.eulerAngles.y * Mathf.PI / 180f) * conSpeed;
 	}
 
 	public void endPlacement() {
@@ -108,18 +128,19 @@ public class ConstructionPiece : MonoBehaviour {
 		//rigidbody.useGravity = true;
 	}
 
-    private Camera closestCam() {
+    private Camera closestCam(GameObject obj) {
         float minDist = 10000;
         Camera nearCam = new Camera();
-        foreach (GameObject camera in transform){
-            float dist = Vector3.Distance(camera.transform.position, player.transform.position);
+        foreach (Transform camera in obj.transform){
+            float dist = Vector3.Distance(camera.position, player.transform.position);
             Camera cam = camera.GetComponent<Camera>();
-            if (cam &&  dist < minDist) {
+            if (cam && dist < minDist) {
                 Debug.Log("ew");
                 nearCam = camera.GetComponent<Camera>();
                 minDist = dist;
             }
         }
+		Debug.Log(nearCam.name);
         return nearCam;
     }
 }
