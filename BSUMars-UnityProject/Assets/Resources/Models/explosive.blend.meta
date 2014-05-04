@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 083dc17fd576b49498ba4dfd8333fdb9
+guid: e8978b0b2c5d4d847836cbcaf2c305f3
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -7,8 +7,8 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Sphere
-    4300002: dome
+    4300000: Cube
+    4300002: explosive
     7400000: Default Take
     9500000: //RootNode
   materials:
