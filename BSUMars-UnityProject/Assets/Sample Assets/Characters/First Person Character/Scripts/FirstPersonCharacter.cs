@@ -29,6 +29,7 @@ public class FirstPersonCharacter : MonoBehaviour
 	public bool grounded { get; private set; }
 	private Vector2 input;
 	private IComparer rayHitComparer;
+	private GameObject hitObject = null;
 	
 	void Awake ()
 	{
@@ -46,12 +47,19 @@ public class FirstPersonCharacter : MonoBehaviour
 	
 	void Update()
 	{
-		RaycastHit hit;
 		if (Input.GetKeyDown(KeyCode.Q)) {
-			if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 5)) {
-				if (hit.collider.gameObject.GetComponent<ConstructionPiece>()) {
-					hit.transform.parent = transform;
-					hit.rigidbody.isKinematic = true;
+			RaycastHit hit;
+			if(hitObject != null){		//if it isn't null, it must be what the player is carrying
+				hitObject.transform.parent = null;
+				hitObject.rigidbody.isKinematic = false;
+			}
+			else if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3f)) {
+				if (hit.collider.gameObject.GetComponent<ConstructionPiece>()) {	//otherwise get what the character is trying to get
+					hitObject = hit.collider.gameObject;
+					hitObject.transform.parent = transform;							//if it's a construction piece, do this
+					hitObject.rigidbody.isKinematic = true;
+				}else if(hitObject != null){										//otherwise just set it to null
+					hitObject = null;
 				}
 			}
 		}
