@@ -72,9 +72,6 @@ public class FirstPersonCharacter : MonoBehaviour
 
 	void Update()
 	{
-		//if(hitObject != null)
-			//hitObject.rigidbody.angularVelocity = new Vector3 (0, 0, 0);
-
 		RaycastHit hit;
 
 		if(Physics.Raycast(transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, rigDist)){
@@ -82,6 +79,9 @@ public class FirstPersonCharacter : MonoBehaviour
 				reticule.transform.position = hit.point;
 		}
 		else reticule.transform.position = cam.transform.TransformDirection (Vector3.forward) * rigDist + transform.position;	//reticule is always rigDist in front of the camera
+
+		if(hit.distance < 1f && hitObject != null)		//if it's too close, drop it
+			dropObject ();
 
 		if (Input.GetKeyDown(KeyCode.Q)) {
 			if(hitObject != null){		//if it isn't null, it must be what the player is carrying. toggle off

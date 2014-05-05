@@ -316,7 +316,7 @@ MonoBehaviour:
     groundStickyEffect: 5
   lockCursor: 1
   movEnabled: 1
-  rigDist: 4
+  rigDist: 5
 --- !u!1 &387722913
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,6 +814,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 4300002, guid: 083dc17fd576b49498ba4dfd8333fdb9, type: 3}
+    - target: {fileID: 6400000, guid: 6cdfdda15c9bd7b428741d725e2c953c, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300002, guid: 083dc17fd576b49498ba4dfd8333fdb9, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6cdfdda15c9bd7b428741d725e2c953c, type: 2}
   m_RootGameObject: {fileID: 1794155934}
@@ -1303,7 +1307,7 @@ MeshCollider:
   serializedVersion: 2
   m_SmoothSphereCollisions: 1
   m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: 083dc17fd576b49498ba4dfd8333fdb9, type: 3}
+  m_Mesh: {fileID: 4300002, guid: 083dc17fd576b49498ba4dfd8333fdb9, type: 3}
 --- !u!1 &1932475180
 GameObject:
   m_ObjectHideFlags: 0
