@@ -9,6 +9,7 @@ public class ConstructionPiece : MonoBehaviour {
 	public float origMass;
 	private float adjX;
 	private float adjZ;
+	public GameObject curGrid;
 	private bool placing = false; // Whether or not the piece is being placed by the player.
 	private bool wasPlaced = false;
 	private GameObject player;
@@ -95,25 +96,35 @@ public class ConstructionPiece : MonoBehaviour {
 		}
 	}
 
+	protected void OnTriggerEnter(Collider target) {
+		if (target.tag == "ConGrid" && !placing) {
+			curGrid = target.gameObject;
+		}
+	}
+
 	protected void OnTriggerStay(Collider target) {
 		if (target.tag == "ConGrid" && !placing) {
 			if (target.bounds.Contains(transform.position) && transform.parent == player.transform) {
-				StartPlacement(target.gameObject, target.bounds.size.z);
+				//StartPlacement(target.gameObject, target.bounds.size.z);
 			}
 		}
 	}
 
 	protected void OnTriggerExit(Collider target) {
-		if (target.tag == "ConGrid" && !wasPlaced) {
-			endPlacement();
-			wasPlaced = false;
+		if (target.tag == "ConGrid") {
+			curGrid = null;
+			if (!wasPlaced) {
+				endPlacement();
+				wasPlaced = false;
+			}
 		}
 	}
 
 	// This function is jank and hacked together right now. Fixing it after shit works.
-	public void StartPlacement(GameObject grid, float offset) {
+	public void StartPlacement(GameObject grid) {
 		if (transform.parent == player.transform)
 			transform.parent = null;
+		transform.eulerAngles = Vector3.zero;
 		player.transform.parent.parent.rigidbody.velocity = Vector3.zero;
 		//rigidbody.velocity = Vector3.zero;
 		foreach (GameObject piece in GameObject.FindGameObjectsWithTag("ConPiece")) {
@@ -132,8 +143,8 @@ public class ConstructionPiece : MonoBehaviour {
 	}
 
 	public void endPlacement() {
-		mainCam.enabled = true;
 		activeCam.enabled = false;
+		mainCam.enabled = true;
 		placing = false;
 		player.transform.parent.parent.GetComponent<FirstPersonCharacter>().enableMovement();
 		foreach (GameObject piece in GameObject.FindGameObjectsWithTag("ConPiece")) {
