@@ -46,6 +46,16 @@ public class FirstPersonCharacter : MonoBehaviour
 	
 	void Update()
 	{
+		RaycastHit hit;
+		if (Input.GetKeyDown(KeyCode.Q)) {
+			if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 5)) {
+				if (hit.collider.gameObject.GetComponent<ConstructionPiece>()) {
+					hit.transform.parent = transform;
+					hit.rigidbody.isKinematic = true;
+				}
+			}
+		}
+
 		if (Input.GetMouseButtonUp(0))
 		{
 			Screen.lockCursor = lockCursor;
@@ -55,15 +65,6 @@ public class FirstPersonCharacter : MonoBehaviour
 
 	public void FixedUpdate() {
 		if (movEnabled) {
-			RaycastHit hit;
-			if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 5)) {
-				if (Input.GetKeyDown(KeyCode.Q)) {
-					if (hit.collider.gameObject.GetComponent<ConstructionPiece>()) {
-						hit.transform.parent = transform;
-						hit.rigidbody.isKinematic = true;
-					}
-				}
-			}
 			float speed = runSpeed;
 
 			// Read input
