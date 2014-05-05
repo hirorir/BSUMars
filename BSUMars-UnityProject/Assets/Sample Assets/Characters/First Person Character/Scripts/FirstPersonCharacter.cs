@@ -14,6 +14,7 @@ public class FirstPersonCharacter : MonoBehaviour
 	[SerializeField] private bool lockCursor = true;
 	[SerializeField]
 	private bool movEnabled = true;
+	[SerializeField] private float rigDist = 5f;
 
 	[System.Serializable]
 	public class AdvancedSettings                                                       // The advanced settings
@@ -30,6 +31,27 @@ public class FirstPersonCharacter : MonoBehaviour
 	private Vector2 input;
 	private IComparer rayHitComparer;
 	private GameObject hitObject = null;
+	private GameObject cam;
+	private GameObject reticule;
+
+	void Start(){
+		cam = GameObject.FindGameObjectWithTag ("MainCamera");
+
+		reticule = new GameObject ();
+		reticule.name = "rig";
+		Rigidbody dummyRig = reticule.AddComponent<Rigidbody> ();
+		dummyRig.useGravity = false;
+		dummyRig.isKinematic = true;
+	}
+
+	public void dropObject(){
+		Destroy(reticule.GetComponent<SpringJoint> ());
+		hitObject.transform.parent = null;
+		hitObject.rigidbody.freezeRotation = false;
+		//hitObject.rigidbody.isKinematic = false;
+		hitObject.rigidbody.useGravity = true;
+		hitObject = null;
+	}
 	
 	void Awake ()
 	{
@@ -44,20 +66,30 @@ public class FirstPersonCharacter : MonoBehaviour
 	{
 		Screen.lockCursor = false;
 	}
-	
+
 	void Update()
 	{
+		reticule.transform.position = cam.transform.TransformDirection (Vector3.forward) * rigDist + transform.position;
 		if (Input.GetKeyDown(KeyCode.Q)) {
 			RaycastHit hit;
-			if(hitObject != null){		//if it isn't null, it must be what the player is carrying
-				hitObject.transform.parent = null;
-				hitObject.rigidbody.isKinematic = false;
+			if(hitObject != null){		//if it isn't null, it must be what the player is carrying. toggle off
+				dropObject ();
 			}
-			else if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3f)) {
+			else if (Physics.Raycast(transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, rigDist)) {
 				if (hit.collider.gameObject.GetComponent<ConstructionPiece>()) {	//otherwise get what the character is trying to get
 					hitObject = hit.collider.gameObject;
-					hitObject.transform.parent = transform;							//if it's a construction piece, do this
-					hitObject.rigidbody.isKinematic = true;
+					hitObject.transform.parent = cam.transform;						//if it's a construction piece, do this
+					hitObject.rigidbody.useGravity = false;
+					hitObject.rigidbody.freezeRotation = true;
+
+					//reticule.transform.position = hitObject.transform.position;
+					SpringJoint joint = reticule.AddComponent<SpringJoint>();
+					joint.connectedBody = hitObject.rigidbody;
+					joint.spring = 10000f;
+					joint.maxDistance = 0f;
+					joint.damper = 0f;
+
+					//hitObject.rigidbody.isKinematic = true;
 				}else if(hitObject != null){										//otherwise just set it to null
 					hitObject = null;
 				}
