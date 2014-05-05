@@ -48,11 +48,13 @@ public class FirstPersonCharacter : MonoBehaviour
 	}
 
 	public void dropObject(){
-		Destroy(reticule.GetComponent<FixedJoint> ());
-		hitObject.transform.parent = null;
+		Destroy(reticule.GetComponent<FixedJoint> ());		ConstructionPiece conPiece = hitObject.GetComponent<ConstructionPiece>();
+		Destroy(reticule.GetComponent<SpringJoint> ());		hitObject.transform.parent = null;
 		hitObject.rigidbody.constraints = RigidbodyConstraints.None;
 		//hitObject.rigidbody.isKinematic = false;
 		hitObject.rigidbody.useGravity = true;
+		if (conPiece.curGrid != null)
+			conPiece.StartPlacement(conPiece.curGrid);
 		hitObject = null;
 	}
 	
