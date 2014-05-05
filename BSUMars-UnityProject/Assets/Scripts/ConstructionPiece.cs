@@ -24,8 +24,8 @@ public class ConstructionPiece : MonoBehaviour {
 
 	private IEnumerator getobjs() {
 		yield return new WaitForEndOfFrame();
-		player = GameObject.Find("First Person Character");
-		mainCam = GameObject.Find("First Person Camera").GetComponent<Camera>();
+		player = GameObject.Find("First Person Camera");
+		mainCam = player.GetComponent<Camera>();
         activeCam = mainCam;
 	}
 
@@ -114,7 +114,7 @@ public class ConstructionPiece : MonoBehaviour {
 	public void StartPlacement(GameObject grid, float offset) {
 		if (transform.parent == player.transform)
 			transform.parent = null;
-		player.rigidbody.velocity = Vector3.zero;
+		player.transform.parent.parent.rigidbody.velocity = Vector3.zero;
 		//rigidbody.velocity = Vector3.zero;
 		foreach (GameObject piece in GameObject.FindGameObjectsWithTag("ConPiece")) {
 			piece.rigidbody.isKinematic = true;
@@ -123,7 +123,7 @@ public class ConstructionPiece : MonoBehaviour {
 		rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
 		rigidbody.isKinematic = false;
 		placing = true;
-		player.GetComponent<FirstPersonCharacter>().disableMovement();
+		player.transform.parent.parent.GetComponent<FirstPersonCharacter>().disableMovement();
 		mainCam.enabled = false;
         activeCam = closestCam(grid);
 		activeCam.enabled = true;
@@ -135,7 +135,7 @@ public class ConstructionPiece : MonoBehaviour {
 		mainCam.enabled = true;
 		activeCam.enabled = false;
 		placing = false;
-		player.GetComponent<FirstPersonCharacter>().enableMovement();
+		player.transform.parent.parent.GetComponent<FirstPersonCharacter>().enableMovement();
 		foreach (GameObject piece in GameObject.FindGameObjectsWithTag("ConPiece")) {
 			piece.rigidbody.isKinematic = false;
 		}
