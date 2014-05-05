@@ -14,7 +14,7 @@ public class FirstPersonCharacter : MonoBehaviour
 	[SerializeField] private bool lockCursor = true;
 	[SerializeField]
 	private bool movEnabled = true;
-	[SerializeField] private float rigDist = 5f;
+	[SerializeField] private float rigDist = 4f;
 
 	[System.Serializable]
 	public class AdvancedSettings                                                       // The advanced settings
@@ -69,7 +69,7 @@ public class FirstPersonCharacter : MonoBehaviour
 
 	void Update()
 	{
-		reticule.transform.position = cam.transform.TransformDirection (Vector3.forward) * rigDist + transform.position;
+		reticule.transform.position = cam.transform.TransformDirection (Vector3.forward) * rigDist + transform.position;	//reticule is always rigDist in front of the camera
 		if (Input.GetKeyDown(KeyCode.Q)) {
 			RaycastHit hit;
 			if(hitObject != null){		//if it isn't null, it must be what the player is carrying. toggle off
@@ -83,7 +83,7 @@ public class FirstPersonCharacter : MonoBehaviour
 					hitObject.rigidbody.freezeRotation = true;
 
 					//reticule.transform.position = hitObject.transform.position;
-					SpringJoint joint = reticule.AddComponent<SpringJoint>();
+					SpringJoint joint = reticule.AddComponent<SpringJoint>();		//have the cube gravitate towards the reticule
 					joint.connectedBody = hitObject.rigidbody;
 					joint.spring = 10000f;
 					joint.maxDistance = 0f;
