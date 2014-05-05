@@ -46,6 +46,7 @@ public class FirstPersonCharacter : MonoBehaviour
 	}
 
 	public void dropObject(){
+		Debug.Log("Drop object");
 		Destroy(reticule.GetComponent<SpringJoint> ());
 		hitObject.transform.parent = null;
 		hitObject.rigidbody.freezeRotation = false;
