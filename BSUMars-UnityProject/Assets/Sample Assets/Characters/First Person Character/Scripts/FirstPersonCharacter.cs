@@ -46,12 +46,14 @@ public class FirstPersonCharacter : MonoBehaviour
 	}
 
 	public void dropObject(){
-		Debug.Log("Drop object");
+		ConstructionPiece conPiece = hitObject.GetComponent<ConstructionPiece>();
 		Destroy(reticule.GetComponent<SpringJoint> ());
 		hitObject.transform.parent = null;
 		hitObject.rigidbody.freezeRotation = false;
 		//hitObject.rigidbody.isKinematic = false;
 		hitObject.rigidbody.useGravity = true;
+		if (conPiece.curGrid != null)
+			conPiece.StartPlacement(conPiece.curGrid);
 		hitObject = null;
 	}
 	
