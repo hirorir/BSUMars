@@ -60,6 +60,7 @@ public class FirstPersonCharacter : MonoBehaviour
 				if (Input.GetKeyDown(KeyCode.Q)) {
 					if (hit.collider.gameObject.GetComponent<ConstructionPiece>()) {
 						hit.transform.parent = transform;
+						hit.rigidbody.isKinematic = true;
 					}
 				}
 			}

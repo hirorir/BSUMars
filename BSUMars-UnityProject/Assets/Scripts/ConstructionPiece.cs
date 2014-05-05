@@ -31,6 +31,7 @@ public class ConstructionPiece : MonoBehaviour {
 
 	void Update() {
 		if (placing) {
+			rigidbody.velocity = Vector3.zero;
 			if (Input.GetKeyDown(KeyCode.O)) {
 				activeCam.enabled = false;
 				activeCam = getRotCam(activeCam, "left");
@@ -78,12 +79,6 @@ public class ConstructionPiece : MonoBehaviour {
 			} else if (Input.GetKey(KeyCode.E)) {
 				transform.Rotate(0f, rotSpeed * Time.deltaTime, 0f);
 			}
-			/*if (movementVec != Vector3.zero) {
-				BoxCollider newPos = new BoxCollider();
-				newPos.size = collider.bounds.size;
-				newPos.transform.position = transform.position + movementVec;
-				List<Collider> colls = newPos.bounds.Intersects();
-			}*/
 			transform.Translate(movementVec, Space.World);
 
 			
@@ -103,7 +98,7 @@ public class ConstructionPiece : MonoBehaviour {
 	protected void OnTriggerStay(Collider target) {
 		if (target.tag == "ConGrid" && !placing) {
 			if (target.bounds.Contains(transform.position) && transform.parent == player.transform) {
-				SnapTo(target.gameObject, target.bounds.size.z);
+				StartPlacement(target.gameObject, target.bounds.size.z);
 			}
 		}
 	}
@@ -116,19 +111,17 @@ public class ConstructionPiece : MonoBehaviour {
 	}
 
 	// This function is jank and hacked together right now. Fixing it after shit works.
-	public void SnapTo(GameObject grid, float offset) {
+	public void StartPlacement(GameObject grid, float offset) {
 		if (transform.parent == player.transform)
 			transform.parent = null;
-		player.rigidbody.velocity = new Vector3(0f, 0f, 0f);
-		transform.eulerAngles = new Vector3(0f, 0f, 0f);
-		//rigidbody.isKinematic = true;
-		rigidbody.velocity = Vector3.zero;
-		rigidbody.
-		rigidbody.useGravity = false;
+		player.rigidbody.velocity = Vector3.zero;
+		//rigidbody.velocity = Vector3.zero;
 		foreach (GameObject piece in GameObject.FindGameObjectsWithTag("ConPiece")) {
-			piece.rigidbody.mass = 10000;
+			piece.rigidbody.isKinematic = true;
 		}
-		rigidbody.mass = 0.01f;
+		rigidbody.useGravity = false;
+		rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
+		rigidbody.isKinematic = false;
 		placing = true;
 		player.GetComponent<FirstPersonCharacter>().disableMovement();
 		mainCam.enabled = false;
@@ -143,11 +136,11 @@ public class ConstructionPiece : MonoBehaviour {
 		activeCam.enabled = false;
 		placing = false;
 		player.GetComponent<FirstPersonCharacter>().enableMovement();
-		//rigidbody.isKinematic = false;
 		foreach (GameObject piece in GameObject.FindGameObjectsWithTag("ConPiece")) {
-			piece.rigidbody.mass = piece.GetComponent<ConstructionPiece>().origMass;
+			piece.rigidbody.isKinematic = false;
 		}
 		rigidbody.useGravity = true;
+		rigidbody.constraints = RigidbodyConstraints.None;
 	}
 
 	protected void OnCollisionEnter(Collision target) {
