@@ -43,12 +43,14 @@ public class FirstPersonCharacter : MonoBehaviour
 		Rigidbody dummyRig = reticule.AddComponent<Rigidbody> ();
 		dummyRig.useGravity = false;
 		dummyRig.isKinematic = true;
+		//dummyRig.freezeRotation = true;
+		dummyRig.constraints = RigidbodyConstraints.FreezeAll;
 	}
 
 	public void dropObject(){
-		Destroy(reticule.GetComponent<SpringJoint> ());
+		Destroy(reticule.GetComponent<FixedJoint> ());
 		hitObject.transform.parent = null;
-		hitObject.rigidbody.freezeRotation = false;
+		hitObject.rigidbody.constraints = RigidbodyConstraints.None;
 		//hitObject.rigidbody.isKinematic = false;
 		hitObject.rigidbody.useGravity = true;
 		hitObject = null;
@@ -70,9 +72,18 @@ public class FirstPersonCharacter : MonoBehaviour
 
 	void Update()
 	{
-		reticule.transform.position = cam.transform.TransformDirection (Vector3.forward) * rigDist + transform.position;	//reticule is always rigDist in front of the camera
+		//if(hitObject != null)
+			//hitObject.rigidbody.angularVelocity = new Vector3 (0, 0, 0);
+
+		RaycastHit hit;
+
+		if(Physics.Raycast(transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, rigDist)){
+			if(hit.collider.gameObject != hitObject)
+				reticule.transform.position = hit.point;
+		}
+		else reticule.transform.position = cam.transform.TransformDirection (Vector3.forward) * rigDist + transform.position;	//reticule is always rigDist in front of the camera
+
 		if (Input.GetKeyDown(KeyCode.Q)) {
-			RaycastHit hit;
 			if(hitObject != null){		//if it isn't null, it must be what the player is carrying. toggle off
 				dropObject ();
 			}
@@ -81,13 +92,13 @@ public class FirstPersonCharacter : MonoBehaviour
 					hitObject = hit.collider.gameObject;
 					hitObject.transform.parent = cam.transform;						//if it's a construction piece, do this
 					hitObject.rigidbody.useGravity = false;
-					hitObject.rigidbody.freezeRotation = true;
+					hitObject.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
 
-					SpringJoint joint = reticule.AddComponent<SpringJoint>();		//have the cube gravitate towards the reticule
+					FixedJoint joint = reticule.AddComponent<FixedJoint>();		//have the cube gravitate towards the reticule
 					joint.connectedBody = hitObject.rigidbody;
-					joint.spring = 10000f;
-					joint.maxDistance = 0f;
-					joint.damper = 0f;
+					//joint.spring = 10000f;
+					//joint.maxDistance = 0f;
+					//joint.damper = 0.1f;
 
 				}else if(hitObject != null){										//otherwise just set the grabbed object to null
 					hitObject = null;
