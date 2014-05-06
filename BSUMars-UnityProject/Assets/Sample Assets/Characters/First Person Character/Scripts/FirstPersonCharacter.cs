@@ -14,7 +14,7 @@ public class FirstPersonCharacter : MonoBehaviour
 	[SerializeField] private bool lockCursor = true;
 	[SerializeField]
 	private bool movEnabled = true;
-	[SerializeField] private float rigDist = 4f;
+	[SerializeField] private float rigDist = 3f;
 
 	[System.Serializable]
 	public class AdvancedSettings                                                       // The advanced settings
@@ -26,7 +26,7 @@ public class FirstPersonCharacter : MonoBehaviour
 	}
 	
 	private CapsuleCollider capsule;                                                    // The capsule collider for the first person character
-	private const float jumpRayLength = 0.7f;                                           // The length of the ray used for testing against the ground when jumping
+	private const float jumpRayLength = 0.5f;                                           // The length of the ray used for testing against the ground when jumping
 	public bool grounded { get; private set; }
 	public bool conMode = false;
 	private GameObject grid = null;
@@ -41,40 +41,45 @@ public class FirstPersonCharacter : MonoBehaviour
 	void Start(){
 		cam = GameObject.FindGameObjectWithTag ("MainCamera");
 		activeCam = cam.GetComponent<Camera>();
+		//reticule = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+		//Destroy (reticule.GetComponent<SphereCollider>());
 		reticule = new GameObject ();
 		reticule.name = "rig";
 		reticule.transform.parent = cam.transform;
 		Rigidbody dummyRig = reticule.AddComponent<Rigidbody> ();
 		dummyRig.useGravity = false;
 		dummyRig.isKinematic = true;
-		//dummyRig.freezeRotation = true;
 		dummyRig.constraints = RigidbodyConstraints.FreezeAll;
 	}
 
 	public void dropObject(){
+		//Destroy(reticule.GetComponent<SpringJoint> ());
+		//print ("dropped");
 		Destroy(reticule.GetComponent<FixedJoint> ());		
-		ConstructionPiece conPiece = hitObject.GetComponent<ConstructionPiece>();
-		Destroy(reticule.GetComponent<SpringJoint> ());		
 		hitObject.transform.parent = null;
-		hitObject.rigidbody.constraints = RigidbodyConstraints.None;
-		//hitObject.rigidbody.isKinematic = false;
 		hitObject.rigidbody.useGravity = true;
-		if (conPiece.curGrid != null)
-			conPiece.StartPlacement(conPiece.curGrid);
+		ConstructionPiece conPiece = hitObject.GetComponent<ConstructionPiece>();
+		if(conPiece != null){
+			if (conPiece.curGrid != null)
+				conPiece.StartPlacement(conPiece.curGrid);
+		}
 		hitObject = null;
 	}
 
 	public void pickupObject(GameObject hit) {
+		//print("picked Up");
 		hitObject = hit;
 		hitObject.transform.parent = cam.transform;						//if it's a construction piece, do this
 		hitObject.rigidbody.useGravity = false;
-		hitObject.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
-
+		hitObject.transform.position = reticule.transform.position;
 		FixedJoint joint = reticule.AddComponent<FixedJoint>();		//have the cube gravitate towards the reticule
+		//SpringJoint joint = reticule.AddComponent<SpringJoint>();
+
 		joint.connectedBody = hitObject.rigidbody;
+
 		//joint.spring = 10000f;
-		//joint.maxDistance = 0f;
-		//joint.damper = 0.1f;
+		//joint.damper = 0f;
+		//joint.maxDistance = 0.01f;
 	}
 
 	public void ConCam(GameObject grid) {
@@ -105,27 +110,25 @@ public class FirstPersonCharacter : MonoBehaviour
 	{
 		RaycastHit hit;
 
-		if(Physics.Raycast(transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, rigDist, ~(1 << 11))){
-			if(hit.collider.gameObject != hitObject)
-				reticule.transform.position = hit.point;
+		if(Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, rigDist, ~((1 << 11) + (1 << 12) + (1 << 9)))){
+			reticule.transform.position = hit.point;
+			if(hitObject != null){
+				// || (reticule.transform.position - hitObject.transform.position).magnitude < 0.5f
+				if(hit.distance < 1.5f)		//if it's too close or too far from cursor, drop it
+					dropObject ();
+			}
 		}
-		else reticule.transform.position = cam.transform.TransformDirection (Vector3.forward) * rigDist + transform.position;	//reticule is always rigDist in front of the camera
+		else reticule.transform.position = cam.transform.TransformDirection (Vector3.forward) * rigDist + cam.transform.position;	//reticule is always rigDist in front of the camera
 
-		if(hit.distance < 1f && hitObject != null)		//if it's too close, drop it
-			dropObject ();
+		if(hitObject != null)
+			hitObject.rigidbody.angularVelocity = new Vector3 (0, 0, 0);
 
 		if (Input.GetKeyDown(KeyCode.Q)) {
 			if(hitObject != null){		//if it isn't null, it must be what the player is carrying. toggle off
 				dropObject ();
 			}
-			else if (Physics.Raycast(transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, rigDist)) {
-				if (hit.collider.gameObject.GetComponent<ConstructionPiece>()) {	//otherwise get what the character is trying to get
-					pickupObject(hit.collider.gameObject);
-				} else if (hitObject != null) {
-					FixedJoint joint = reticule.AddComponent<FixedJoint>();		//have the cube gravitate towards the reticule
-					joint.connectedBody = hitObject.rigidbody;				}else if(hitObject != null){										//otherwise just set the grabbed object to null
-					hitObject = null;
-				}
+			else if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, rigDist, 1 << 11)) {
+				pickupObject(hit.collider.gameObject);			//otherwise get what the character is trying to get
 			}
 		}
 

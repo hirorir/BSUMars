@@ -37,7 +37,7 @@ public class ConstructionPiece : MonoBehaviour {
 		if (player != null) {
 			if (player.transform.parent.parent.GetComponent<FirstPersonCharacter>()) {
 				if (Input.GetMouseButtonDown(0)) {
-					Debug.Log(":D");
+					//Debug.Log(":D");
 				}
 			}
 		}
