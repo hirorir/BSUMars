@@ -318,6 +318,8 @@ MonoBehaviour:
   lockCursor: 1
   movEnabled: 1
   rigDist: 4
+  conMode: 0
+  activeCam: {fileID: 0}
 --- !u!1 &387722913
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +332,7 @@ GameObject:
   - 64: {fileID: 387722916}
   - 23: {fileID: 387722915}
   - 65: {fileID: 387722914}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConGrid
   m_TagString: ConGrid
   m_Icon: {fileID: 0}
@@ -421,7 +423,7 @@ GameObject:
   - 124: {fileID: 446379907}
   - 92: {fileID: 446379906}
   - 81: {fileID: 446379905}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConstructionCameraLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1367,7 +1369,7 @@ GameObject:
   - 124: {fileID: 1471555252}
   - 92: {fileID: 1471555251}
   - 81: {fileID: 1471555250}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConstructionCameraRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1883,7 +1885,7 @@ GameObject:
   - 124: {fileID: 1932475183}
   - 92: {fileID: 1932475182}
   - 81: {fileID: 1932475181}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConstructionCameraBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1963,7 +1965,7 @@ GameObject:
   - 124: {fileID: 1956778189}
   - 92: {fileID: 1956778188}
   - 81: {fileID: 1956778187}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ConstructionCameraFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2151,6 +2153,10 @@ Prefab:
       value: 
       objectReference: {fileID: -833548472, guid: 4adc798f0c2c6b94faa597c6c74e8438,
         type: 3}
+    - target: {fileID: 100000, guid: b9e8613ea5fcc17469aea4d54d5b3eed, type: 2}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9e8613ea5fcc17469aea4d54d5b3eed, type: 2}
   m_RootGameObject: {fileID: 387722913}

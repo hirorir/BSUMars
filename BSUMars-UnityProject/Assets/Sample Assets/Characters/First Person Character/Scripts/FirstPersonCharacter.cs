@@ -105,7 +105,7 @@ public class FirstPersonCharacter : MonoBehaviour
 	{
 		RaycastHit hit;
 
-		if(Physics.Raycast(transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, rigDist)){
+		if(Physics.Raycast(transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, rigDist, ~(1 << 11))){
 			if(hit.collider.gameObject != hitObject)
 				reticule.transform.position = hit.point;
 		}
@@ -121,7 +121,7 @@ public class FirstPersonCharacter : MonoBehaviour
 			else if (Physics.Raycast(transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, rigDist)) {
 				if (hit.collider.gameObject.GetComponent<ConstructionPiece>()) {	//otherwise get what the character is trying to get
 					pickupObject(hit.collider.gameObject);
-
+				} else if (hitObject != null) {
 					FixedJoint joint = reticule.AddComponent<FixedJoint>();		//have the cube gravitate towards the reticule
 					joint.connectedBody = hitObject.rigidbody;				}else if(hitObject != null){										//otherwise just set the grabbed object to null
 					hitObject = null;

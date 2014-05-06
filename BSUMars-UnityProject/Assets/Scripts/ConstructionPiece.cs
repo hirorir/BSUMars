@@ -96,14 +96,6 @@ public class ConstructionPiece : MonoBehaviour {
 		}
 	}
 
-	protected void OnTriggerStay(Collider target) {
-		if (target.tag == "ConGrid" && !placing) {
-			if (target.bounds.Contains(transform.position) && transform.parent == player.transform) {
-				//StartPlacement(target.gameObject, target.bounds.size.z);
-			}
-		}
-	}
-
 	protected void OnTriggerExit(Collider target) {
 		if (target.tag == "ConGrid") {
 			curGrid = null;
