@@ -98,10 +98,6 @@ public class FirstPersonCharacter : MonoBehaviour
 
 					FixedJoint joint = reticule.AddComponent<FixedJoint>();		//have the cube gravitate towards the reticule
 					joint.connectedBody = hitObject.rigidbody;
-					//joint.spring = 10000f;
-					//joint.maxDistance = 0f;
-					//joint.damper = 0.1f;
-
 				}else if(hitObject != null){										//otherwise just set the grabbed object to null
 					hitObject = null;
 				}
@@ -201,7 +197,6 @@ public class FirstPersonCharacter : MonoBehaviour
 			}
 
 			Debug.DrawRay(ray.origin, ray.direction * capsule.height * jumpRayLength, grounded ? Color.green : Color.red);
-
 
 			// add extra gravity
 			rigidbody.AddForce(Physics.gravity * (advanced.gravityMultiplier - 1));
