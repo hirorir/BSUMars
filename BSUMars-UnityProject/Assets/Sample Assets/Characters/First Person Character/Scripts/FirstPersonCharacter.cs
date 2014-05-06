@@ -122,7 +122,8 @@ public class FirstPersonCharacter : MonoBehaviour
 				if (hit.collider.gameObject.GetComponent<ConstructionPiece>()) {	//otherwise get what the character is trying to get
 					pickupObject(hit.collider.gameObject);
 
-				}else if(hitObject != null){										//otherwise just set the grabbed object to null
+					FixedJoint joint = reticule.AddComponent<FixedJoint>();		//have the cube gravitate towards the reticule
+					joint.connectedBody = hitObject.rigidbody;				}else if(hitObject != null){										//otherwise just set the grabbed object to null
 					hitObject = null;
 				}
 			}
@@ -258,7 +259,6 @@ public class FirstPersonCharacter : MonoBehaviour
 			}
 
 			Debug.DrawRay(ray.origin, ray.direction * capsule.height * jumpRayLength, grounded ? Color.green : Color.red);
-
 
 			// add extra gravity
 			rigidbody.AddForce(Physics.gravity * (advanced.gravityMultiplier - 1));
