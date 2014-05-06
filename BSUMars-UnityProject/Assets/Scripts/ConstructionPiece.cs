@@ -13,8 +13,8 @@ public class ConstructionPiece : MonoBehaviour {
 	private bool placing = false; // Whether or not the piece is being placed by the player.
 	private bool wasPlaced = false;
 	private GameObject player;
-	private Camera mainCam;
-    private Camera activeCam;
+	//private Camera mainCam;
+    //private Camera activeCam;
 	//private List<Camera> conCams;
 
 	// Use this for initialization
@@ -26,25 +26,19 @@ public class ConstructionPiece : MonoBehaviour {
 	private IEnumerator getobjs() {
 		yield return new WaitForEndOfFrame();
 		player = GameObject.Find("First Person Camera");
-		mainCam = player.GetComponent<Camera>();
-        activeCam = mainCam;
+		//mainCam = player.GetComponent<Camera>();
+        //activeCam = mainCam;
 	}
 
 	void Update() {
 		if (placing) {
 			rigidbody.velocity = Vector3.zero;
-			if (Input.GetKeyDown(KeyCode.O)) {
-				activeCam.enabled = false;
-				activeCam = getRotCam(activeCam, "left");
-				activeCam.enabled = true;
-				adjX = Mathf.Cos(activeCam.transform.eulerAngles.y * Mathf.PI / 180f) * conSpeed;
-				adjZ = Mathf.Sin(activeCam.transform.eulerAngles.y * Mathf.PI / 180f) * conSpeed;
-			} else if (Input.GetKeyDown(KeyCode.P)) {
-				activeCam.enabled = false;
-				activeCam = getRotCam(activeCam, "right");
-				activeCam.enabled = true;
-				adjX = Mathf.Cos(activeCam.transform.eulerAngles.y * Mathf.PI / 180f) * conSpeed;
-				adjZ = Mathf.Sin(activeCam.transform.eulerAngles.y * Mathf.PI / 180f) * conSpeed;
+		}
+		if (player != null) {
+			if (player.transform.parent.parent.GetComponent<FirstPersonCharacter>()) {
+				if (Input.GetMouseButtonDown(0)) {
+					Debug.Log(":D");
+				}
 			}
 		}
 	}
@@ -122,10 +116,11 @@ public class ConstructionPiece : MonoBehaviour {
 
 	// This function is jank and hacked together right now. Fixing it after shit works.
 	public void StartPlacement(GameObject grid) {
+		FirstPersonCharacter playerChar = player.transform.parent.parent.GetComponent<FirstPersonCharacter>();
 		if (transform.parent == player.transform)
 			transform.parent = null;
 		transform.eulerAngles = Vector3.zero;
-		player.transform.parent.parent.rigidbody.velocity = Vector3.zero;
+		playerChar.rigidbody.velocity = Vector3.zero;
 		//rigidbody.velocity = Vector3.zero;
 		foreach (GameObject piece in GameObject.FindGameObjectsWithTag("ConPiece")) {
 			piece.rigidbody.isKinematic = true;
@@ -134,19 +129,21 @@ public class ConstructionPiece : MonoBehaviour {
 		rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
 		rigidbody.isKinematic = false;
 		placing = true;
-		player.transform.parent.parent.GetComponent<FirstPersonCharacter>().disableMovement();
-		mainCam.enabled = false;
-        activeCam = closestCam(grid);
-		activeCam.enabled = true;
-		adjX = Mathf.Cos(activeCam.transform.eulerAngles.y * Mathf.PI / 180f) * conSpeed;
-		adjZ = Mathf.Sin(activeCam.transform.eulerAngles.y * Mathf.PI / 180f) * conSpeed;
+		playerChar.pickup(gameObject);
+		playerChar.conMode = true;
+		playerChar.disableMovement();
+		playerChar.ConCam(grid);
+		setAdjs(player.transform.parent.parent.GetComponent<FirstPersonCharacter>().activeCam.transform.eulerAngles.y);
 	}
 
 	public void endPlacement() {
-		activeCam.enabled = false;
-		mainCam.enabled = true;
+		FirstPersonCharacter playerChar = player.transform.parent.parent.GetComponent<FirstPersonCharacter>();
+		playerChar.reactivateCam();
 		placing = false;
-		player.transform.parent.parent.GetComponent<FirstPersonCharacter>().enableMovement();
+		playerChar.enableMovement();
+		playerChar.conMode = false;
+		playerChar.nullifyPickup();
+		Screen.lockCursor = true;
 		foreach (GameObject piece in GameObject.FindGameObjectsWithTag("ConPiece")) {
 			piece.rigidbody.isKinematic = false;
 		}
@@ -160,7 +157,12 @@ public class ConstructionPiece : MonoBehaviour {
 		}
 	}
 
-    private Camera closestCam(GameObject obj) {
+	public void setAdjs(float angle) {
+		adjX = Mathf.Cos(angle * Mathf.PI / 180f) * conSpeed;
+		adjZ = Mathf.Sin(angle * Mathf.PI / 180f) * conSpeed;
+	}
+
+    /*private Camera closestCam(GameObject obj) {
         float minDist = 10000;
         Camera nearCam = new Camera();
         foreach (Transform camera in obj.transform){
@@ -204,5 +206,5 @@ public class ConstructionPiece : MonoBehaviour {
 		} else {
 			return orig;
 		}
-	}
+	}*/
 }

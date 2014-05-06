@@ -28,15 +28,19 @@ public class FirstPersonCharacter : MonoBehaviour
 	private CapsuleCollider capsule;                                                    // The capsule collider for the first person character
 	private const float jumpRayLength = 0.7f;                                           // The length of the ray used for testing against the ground when jumping
 	public bool grounded { get; private set; }
+	public bool conMode = false;
+	private GameObject grid = null;
 	private Vector2 input;
 	private IComparer rayHitComparer;
 	private GameObject hitObject = null;
-	private GameObject cam;
+	private GameObject cam; // The player's cam
 	private GameObject reticule;
+	private GameObject placingObject;
+	public Camera activeCam; // The active cam
 
 	void Start(){
 		cam = GameObject.FindGameObjectWithTag ("MainCamera");
-
+		activeCam = cam.GetComponent<Camera>();
 		reticule = new GameObject ();
 		reticule.name = "rig";
 		reticule.transform.parent = cam.transform;
@@ -48,14 +52,39 @@ public class FirstPersonCharacter : MonoBehaviour
 	}
 
 	public void dropObject(){
-		Destroy(reticule.GetComponent<FixedJoint> ());		ConstructionPiece conPiece = hitObject.GetComponent<ConstructionPiece>();
-		Destroy(reticule.GetComponent<SpringJoint> ());		hitObject.transform.parent = null;
+		Destroy(reticule.GetComponent<FixedJoint> ());		
+		ConstructionPiece conPiece = hitObject.GetComponent<ConstructionPiece>();
+		Destroy(reticule.GetComponent<SpringJoint> ());		
+		hitObject.transform.parent = null;
 		hitObject.rigidbody.constraints = RigidbodyConstraints.None;
 		//hitObject.rigidbody.isKinematic = false;
 		hitObject.rigidbody.useGravity = true;
 		if (conPiece.curGrid != null)
 			conPiece.StartPlacement(conPiece.curGrid);
 		hitObject = null;
+	}
+
+	public void pickupObject(GameObject hit) {
+		hitObject = hit;
+		hitObject.transform.parent = cam.transform;						//if it's a construction piece, do this
+		hitObject.rigidbody.useGravity = false;
+		hitObject.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
+
+		FixedJoint joint = reticule.AddComponent<FixedJoint>();		//have the cube gravitate towards the reticule
+		joint.connectedBody = hitObject.rigidbody;
+		//joint.spring = 10000f;
+		//joint.maxDistance = 0f;
+		//joint.damper = 0.1f;
+	}
+
+	public void ConCam(GameObject grid) {
+		Screen.lockCursor = false;
+		cam.GetComponent<Camera>().enabled = false;
+		if (hitObject != null)
+			activeCam = closestCam(hitObject, grid);
+		else
+			activeCam = closestCam(gameObject, grid);
+		activeCam.enabled = true;
 	}
 	
 	void Awake ()
@@ -91,16 +120,7 @@ public class FirstPersonCharacter : MonoBehaviour
 			}
 			else if (Physics.Raycast(transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, rigDist)) {
 				if (hit.collider.gameObject.GetComponent<ConstructionPiece>()) {	//otherwise get what the character is trying to get
-					hitObject = hit.collider.gameObject;
-					hitObject.transform.parent = cam.transform;						//if it's a construction piece, do this
-					hitObject.rigidbody.useGravity = false;
-					hitObject.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
-
-					FixedJoint joint = reticule.AddComponent<FixedJoint>();		//have the cube gravitate towards the reticule
-					joint.connectedBody = hitObject.rigidbody;
-					//joint.spring = 10000f;
-					//joint.maxDistance = 0f;
-					//joint.damper = 0.1f;
+					pickupObject(hit.collider.gameObject);
 
 				}else if(hitObject != null){										//otherwise just set the grabbed object to null
 					hitObject = null;
@@ -108,9 +128,46 @@ public class FirstPersonCharacter : MonoBehaviour
 			}
 		}
 
-		if (Input.GetMouseButtonUp(0))
-		{
-			Screen.lockCursor = lockCursor;
+		if (grid != null || conMode) {
+			if (Input.GetKeyDown(KeyCode.Tab)) {
+				if (conMode) {
+					conMode = false;
+					if (placingObject != null)
+						placingObject.GetComponent<ConstructionPiece>().endPlacement();
+					else {
+						reactivateCam();
+					}
+				} else {
+					conMode = true;
+					if (hitObject != null) {
+						dropObject();
+					} else {
+						rigidbody.velocity = Vector3.zero;
+						disableMovement();
+						ConCam(grid);
+					}
+				}
+			}
+		}
+
+		if (conMode) {
+			if (Input.GetKeyDown(KeyCode.O)) {
+				activeCam.enabled = false;
+				activeCam = getRotCam(activeCam, "left");
+				activeCam.enabled = true;
+				if (hitObject != null)
+					hitObject.GetComponent<ConstructionPiece>().setAdjs(activeCam.transform.eulerAngles.y);
+			} else if (Input.GetKeyDown(KeyCode.P)) {
+				activeCam.enabled = false;
+				activeCam = getRotCam(activeCam, "right");
+				activeCam.enabled = true;
+				if (hitObject != null)
+					hitObject.GetComponent<ConstructionPiece>().setAdjs(activeCam.transform.eulerAngles.y);
+			}
+		} else {
+			if (Input.GetMouseButtonUp(0)) {
+				Screen.lockCursor = lockCursor;
+			}
 		}
 	}
 
@@ -217,11 +274,98 @@ public class FirstPersonCharacter : MonoBehaviour
 			return ((RaycastHit)x).distance.CompareTo(((RaycastHit)y).distance);
 		}	
 	}
+
+	protected void OnTriggerEnter(Collider target) {
+		if (target.tag == "ConGrid") {
+			grid = target.gameObject;
+		}
+	}
+
+	protected void OnTriggerExit(Collider target) {
+		if (target.tag == "ConGrid") {
+			grid = null;
+		}
+	}
+
+	/*protected void OnTriggerStay(Collider target) {
+		if (target.tag == "ConGrid" && !conMode) {
+			conMode = true;
+			if (hitObject != null) {
+				dropObject();
+			} else {
+				rigidbody.velocity = Vector3.zero;
+				disableMovement();
+				ConCam(target.gameObject);
+			}
+		}
+	}*/
+
 	public void enableMovement() {
 		movEnabled = true;
 	}
 	public void disableMovement() {
 		movEnabled = false;
 	}
-	
+
+	private Camera closestCam(GameObject activeObj, GameObject grid) {
+		float minDist = 10000;
+		Camera nearCam = new Camera();
+		foreach (Transform camera in grid.transform) {
+			float dist = Vector3.Distance(camera.position, activeObj.transform.position);
+			Camera cam = camera.GetComponent<Camera>();
+			if (cam && dist < minDist) {
+				nearCam = camera.GetComponent<Camera>();
+				minDist = dist;
+			}
+		}
+		return nearCam;
+	}
+
+	private Camera getRotCam(Camera orig, string dir) {
+		if (dir == "left") {
+			switch (orig.name) {
+				case "ConstructionCameraFront":
+					return orig.transform.parent.Find("ConstructionCameraLeft").GetComponent<Camera>();
+				case "ConstructionCameraLeft":
+					return orig.transform.parent.Find("ConstructionCameraBack").GetComponent<Camera>();
+				case "ConstructionCameraBack":
+					return orig.transform.parent.Find("ConstructionCameraRight").GetComponent<Camera>();
+				case "ConstructionCameraRight":
+					return orig.transform.parent.Find("ConstructionCameraFront").GetComponent<Camera>();
+				default:
+					return orig;
+			}
+		} else if (dir == "right") {
+			switch (orig.name) {
+				case "ConstructionCameraFront":
+					return orig.transform.parent.Find("ConstructionCameraRight").GetComponent<Camera>();
+				case "ConstructionCameraLeft":
+					return orig.transform.parent.Find("ConstructionCameraFront").GetComponent<Camera>();
+				case "ConstructionCameraBack":
+					return orig.transform.parent.Find("ConstructionCameraLeft").GetComponent<Camera>();
+				case "ConstructionCameraRight":
+					return orig.transform.parent.Find("ConstructionCameraBack").GetComponent<Camera>();
+				default:
+					return orig;
+			}
+		} else {
+			return orig;
+		}
+	}
+
+	public void reactivateCam() {
+		activeCam.enabled = false;
+		activeCam = cam.GetComponent<Camera>();
+		activeCam.enabled = true;
+		Screen.lockCursor = true;
+		enableMovement();
+	}
+
+	public void pickup(GameObject obj) {
+		placingObject = obj;
+	}
+
+	public void nullifyPickup() {
+		placingObject = null;
+	}
 }
