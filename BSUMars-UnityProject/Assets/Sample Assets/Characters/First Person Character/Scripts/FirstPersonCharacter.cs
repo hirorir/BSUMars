@@ -91,6 +91,10 @@ public class FirstPersonCharacter : MonoBehaviour
 			activeCam = closestCam(gameObject, grid);
 		activeCam.enabled = true;
 	}
+
+	public void kobe(){
+
+	}
 	
 	void Awake ()
 	{
@@ -108,6 +112,12 @@ public class FirstPersonCharacter : MonoBehaviour
 
 	void Update()
 	{
+		if (Input.GetMouseButtonDown (0) && hitObject != null) {
+			GameObject projectile = hitObject;
+			dropObject ();
+			projectile.rigidbody.AddExplosionForce(500f, cam.transform.position, 10f);
+		}
+
 		RaycastHit hit;
 
 		if(Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, rigDist, ~((1 << 11) + (1 << 12) + (1 << 9)))){
