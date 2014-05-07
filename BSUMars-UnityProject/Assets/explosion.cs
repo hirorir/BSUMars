@@ -15,9 +15,14 @@ public class explosion : MonoBehaviour {
 		if(Input.GetKeyDown (KeyCode.P)){
 			Vector3 explosionPos = transform.position;
 			Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
+			ConstructionPiece conPiece;
 			foreach (Collider hit in colliders) {
 				if (hit.rigidbody){
-					hit.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0F);
+					conPiece = hit.GetComponent<ConstructionPiece>();
+					if (conPiece != null)
+						conPiece.explosion(power, explosionPos, radius, 3.0f);
+					else
+						hit.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0F);
 				}
 			}
 			Destroy (gameObject);

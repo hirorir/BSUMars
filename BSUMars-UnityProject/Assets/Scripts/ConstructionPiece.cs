@@ -6,6 +6,7 @@ using System.Linq;
 public class ConstructionPiece : MonoBehaviour {
 	[SerializeField] protected float conSpeed = 16f; // The controlled placement movement speed of the object.
 	[SerializeField] protected float rotSpeed = 90f; // The controlled placement rotation speed of the object.
+	[SerializeField] protected int explosionCube = 1; // Controls how many pieces the object breaks into from explosions. For cubes, explodes into n^2 pieces.
 	public float origMass;
 	private float adjX;
 	private float adjZ;
@@ -137,6 +138,7 @@ public class ConstructionPiece : MonoBehaviour {
 		playerChar.nullifyPickup();
 		Screen.lockCursor = true;
 		foreach (GameObject piece in GameObject.FindGameObjectsWithTag("ConPiece")) {
+			piece.rigidbody.AddForce(Vector3.zero);
 			piece.rigidbody.isKinematic = false;
 		}
 		rigidbody.useGravity = true;
@@ -152,6 +154,30 @@ public class ConstructionPiece : MonoBehaviour {
 	public void setAdjs(float angle) {
 		adjX = Mathf.Cos(angle * Mathf.PI / 180f) * conSpeed;
 		adjZ = Mathf.Sin(angle * Mathf.PI / 180f) * conSpeed;
+	}
+
+	// Adds an explosion force to the piece, and breaks it apart if it is breakable.
+	// Only works for cubes for now.
+	public void explosion(float power, Vector3 explosionPos, float radius, float upwardsModifier) {
+		if (explosionCube > 1) {
+			//List<GameObject> newPieces = new List<GameObject>();
+			int expCubeTrue = explosionCube * explosionCube * explosionCube;
+			Vector3 cubeCorner = new Vector3(transform.position.x + collider.bounds.size.x * (1 - expCubeTrue) / (2f * expCubeTrue), transform.position.y + collider.bounds.size.y * (1 - expCubeTrue) / (2f * expCubeTrue),
+											   transform.position.z + collider.bounds.size.z * (1 - expCubeTrue) / (2f * expCubeTrue));
+			for (int i = 0; i < explosionCube; i++) {
+				for (int j = 0; j < explosionCube; j++) {
+					for (int k = 0; k < explosionCube; k++) {
+						GameObject newPiece = GameObject.Instantiate(gameObject) as GameObject;
+						newPiece.transform.position = new Vector3(cubeCorner.x + i % explosionCube, cubeCorner.y + j % explosionCube, cubeCorner.z + k % explosionCube);
+						newPiece.transform.localScale = transform.localScale / (float)explosionCube;
+						newPiece.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
+					}
+				}
+			}
+			Destroy(gameObject);
+		} else {
+			rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0F);
+		}
 	}
 
     /*private Camera closestCam(GameObject obj) {

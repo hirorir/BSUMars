@@ -109,6 +109,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
+      propertyPath: explosionCube
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
   m_RootGameObject: {fileID: 1187783656}
@@ -164,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  explosionCube: 6
   origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &30650785
@@ -254,6 +259,10 @@ Prefab:
     - target: {fileID: 400000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
+      propertyPath: explosionCube
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
@@ -751,6 +760,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
+      propertyPath: explosionCube
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
   m_RootGameObject: {fileID: 1768851449}
@@ -814,6 +827,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
+      propertyPath: explosionCube
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
@@ -1009,6 +1026,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  explosionCube: 6
   origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &928754754
@@ -1146,6 +1164,10 @@ Prefab:
     - target: {fileID: 400000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
+      propertyPath: explosionCube
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
@@ -1388,6 +1410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  explosionCube: 6
   origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1187783659
@@ -1494,6 +1517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  explosionCube: 6
   origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1407303804
@@ -1680,6 +1704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  explosionCube: 6
   origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1602845782
@@ -1975,6 +2000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  explosionCube: 6
   origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1768851452
@@ -2480,6 +2506,10 @@ Prefab:
     - target: {fileID: 400000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
+      propertyPath: explosionCube
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f96f59aa2e4b7494ea8fec3319f9108a, type: 2}
