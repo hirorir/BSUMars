@@ -13,6 +13,10 @@ public class explosion : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown (KeyCode.P)){
+
+			if(FindObjectOfType<FirstPersonCharacter>().holdingObject ())
+				FindObjectOfType <FirstPersonCharacter>().dropObject ();
+
 			Vector3 explosionPos = transform.position;
 			Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
 			ConstructionPiece conPiece;

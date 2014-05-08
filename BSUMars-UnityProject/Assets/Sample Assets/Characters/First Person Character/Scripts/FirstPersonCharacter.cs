@@ -38,6 +38,10 @@ public class FirstPersonCharacter : MonoBehaviour
 	private GameObject placingObject;
 	public Camera activeCam; // The active cam
 
+	public bool holdingObject(){
+		return(hitObject != null);
+	}
+
 	void Start(){
 		cam = GameObject.FindGameObjectWithTag ("MainCamera");
 		activeCam = cam.GetComponent<Camera>();
