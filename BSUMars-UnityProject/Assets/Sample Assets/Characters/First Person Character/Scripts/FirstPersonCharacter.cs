@@ -62,11 +62,11 @@ public class FirstPersonCharacter : MonoBehaviour
 		Destroy(reticule.GetComponent<FixedJoint> ());		
 		hitObject.transform.parent = null;
 		hitObject.rigidbody.useGravity = true;
-		ConstructionPiece conPiece = hitObject.GetComponent<ConstructionPiece>();
+		/*ConstructionPiece conPiece = hitObject.GetComponent<ConstructionPiece>();
 		if(conPiece != null){
 			if (conPiece.curGrid != null)
 				conPiece.StartPlacement(conPiece.curGrid);
-		}
+		}*/
 		hitObject = null;
 	}
 
@@ -150,15 +150,19 @@ public class FirstPersonCharacter : MonoBehaviour
 			if (Input.GetKeyDown(KeyCode.Tab)) {
 				if (conMode) {
 					conMode = false;
-					if (placingObject != null)
+					if (placingObject != null) {
 						placingObject.GetComponent<ConstructionPiece>().endPlacement();
-					else {
+						placingObject = null;
+					} else {
 						reactivateCam();
 					}
 				} else {
 					conMode = true;
 					if (hitObject != null) {
+                        placingObject = hitObject;
 						dropObject();
+                        ConstructionPiece conPiece = placingObject.GetComponent<ConstructionPiece>();
+                        conPiece.StartPlacement(conPiece.curGrid);
 					} else {
 						rigidbody.velocity = Vector3.zero;
 						disableMovement();
@@ -173,14 +177,12 @@ public class FirstPersonCharacter : MonoBehaviour
 				activeCam.enabled = false;
 				activeCam = getRotCam(activeCam, "left");
 				activeCam.enabled = true;
-				if (hitObject != null)
-					hitObject.GetComponent<ConstructionPiece>().setAdjs(activeCam.transform.eulerAngles.y);
+				placingObject.GetComponent<ConstructionPiece>().setAdjs(activeCam.transform.eulerAngles.y);
 			} else if (Input.GetKeyDown(KeyCode.P)) {
 				activeCam.enabled = false;
 				activeCam = getRotCam(activeCam, "right");
 				activeCam.enabled = true;
-				if (hitObject != null)
-					hitObject.GetComponent<ConstructionPiece>().setAdjs(activeCam.transform.eulerAngles.y);
+				placingObject.GetComponent<ConstructionPiece>().setAdjs(activeCam.transform.eulerAngles.y);
 			}
 		} else {
 			if (Input.GetMouseButtonUp(0)) {

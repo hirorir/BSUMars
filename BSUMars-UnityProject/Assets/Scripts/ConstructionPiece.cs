@@ -14,6 +14,7 @@ public class ConstructionPiece : MonoBehaviour {
 	private bool placing = false; // Whether or not the piece is being placed by the player.
 	private bool wasPlaced = false;
 	private GameObject player;
+	private FirstPersonCharacter playerChar;
 	//private Camera mainCam;
     //private Camera activeCam;
 	//private List<Camera> conCams;
@@ -27,6 +28,7 @@ public class ConstructionPiece : MonoBehaviour {
 	private IEnumerator getobjs() {
 		yield return new WaitForEndOfFrame();
 		player = GameObject.Find("First Person Camera");
+		playerChar = player.transform.parent.parent.GetComponent<FirstPersonCharacter>();
 		//mainCam = player.GetComponent<Camera>();
         //activeCam = mainCam;
 	}
@@ -35,13 +37,13 @@ public class ConstructionPiece : MonoBehaviour {
 		if (placing) {
 			rigidbody.velocity = Vector3.zero;
 		}
-		if (player != null) {
-			if (player.transform.parent.parent.GetComponent<FirstPersonCharacter>()) {
+		/*if (player != null) {
+			if (playerChar != null) {
 				if (Input.GetMouseButtonDown(0)) {
 					//Debug.Log(":D");
 				}
 			}
-		}
+		}*/
 	}
 	
 	void FixedUpdate () {
@@ -81,7 +83,7 @@ public class ConstructionPiece : MonoBehaviour {
 		}
 	}
 
-	protected void OnGUI() {
+	/*protected void OnGUI() {
 		if (placing) {
 			GUI.Box(new Rect(Screen.width - 200, Screen.height - 150, 150, 100), "Press Enter to place");
 			if (Input.GetKeyDown(KeyCode.Return)) {
@@ -89,7 +91,7 @@ public class ConstructionPiece : MonoBehaviour {
 				wasPlaced = true;
 			}
 		}
-	}
+	}*/
 
 	protected void OnTriggerEnter(Collider target) {
 		if (target.tag == "ConGrid" && !placing) {
@@ -107,9 +109,14 @@ public class ConstructionPiece : MonoBehaviour {
 		}
 	}
 
+    protected void OnCollisionEnter(Collision target) {
+		if (target.gameObject.tag == "ConPiece" && playerChar.conMode && Input.GetKey(KeyCode.Space)) {
+
+		}
+    }
+
 	// This function is jank and hacked together right now. Fixing it after shit works.
 	public void StartPlacement(GameObject grid) {
-		FirstPersonCharacter playerChar = player.transform.parent.parent.GetComponent<FirstPersonCharacter>();
 		if (transform.parent == player.transform)
 			transform.parent = null;
 		transform.eulerAngles = Vector3.zero;
@@ -126,11 +133,10 @@ public class ConstructionPiece : MonoBehaviour {
 		playerChar.conMode = true;
 		playerChar.disableMovement();
 		playerChar.ConCam(grid);
-		setAdjs(player.transform.parent.parent.GetComponent<FirstPersonCharacter>().activeCam.transform.eulerAngles.y);
+		setAdjs(playerChar.activeCam.transform.eulerAngles.y);
 	}
 
 	public void endPlacement() {
-		FirstPersonCharacter playerChar = player.transform.parent.parent.GetComponent<FirstPersonCharacter>();
 		playerChar.reactivateCam();
 		placing = false;
 		playerChar.enableMovement();
@@ -138,8 +144,8 @@ public class ConstructionPiece : MonoBehaviour {
 		playerChar.nullifyPickup();
 		Screen.lockCursor = true;
 		foreach (GameObject piece in GameObject.FindGameObjectsWithTag("ConPiece")) {
-			piece.rigidbody.AddForce(Vector3.zero);
 			piece.rigidbody.isKinematic = false;
+            piece.rigidbody.AddForce(Vector3.zero);
 		}
 		rigidbody.useGravity = true;
 		rigidbody.constraints = RigidbodyConstraints.None;
