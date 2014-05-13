@@ -15,6 +15,7 @@ public class ConstructionPiece : MonoBehaviour {
 	private bool wasPlaced = false;
 	private GameObject player;
 	private FirstPersonCharacter playerChar;
+	private Vector2 springMidpointXZ;
 	//private Camera mainCam;
     //private Camera activeCam;
 	//private List<Camera> conCams;
@@ -23,6 +24,7 @@ public class ConstructionPiece : MonoBehaviour {
 	void Start () {
 		StartCoroutine(getobjs());
 		origMass = rigidbody.mass;
+		springMidpointXZ = new Vector2(transform.position.x, transform.position.z);
 	}
 
 	private IEnumerator getobjs() {
@@ -73,9 +75,21 @@ public class ConstructionPiece : MonoBehaviour {
 				movementVec += new Vector3(0f, -Time.deltaTime * conSpeed, 0f);
 			} 
 			if (Input.GetKey(KeyCode.Q)) {
-				transform.Rotate(0f, -rotSpeed * Time.deltaTime, 0f);
+				if (GetComponent<FixedJoint>()) {
+					Vector3 rotPoint = new Vector3(springMidpointXZ.x, transform.position.y, springMidpointXZ.y);
+					transform.RotateAround(rotPoint, Vector3.up, -rotSpeed * Time.deltaTime);
+					foreach (FixedJoint connection in GetComponents<FixedJoint>())
+						connection.transform.RotateAround(rotPoint, Vector3.up, -rotSpeed * Time.deltaTime);
+				} else
+					transform.Rotate(0f, -rotSpeed * Time.deltaTime, 0f);
 			} else if (Input.GetKey(KeyCode.E)) {
-				transform.Rotate(0f, rotSpeed * Time.deltaTime, 0f);
+				if (GetComponent<FixedJoint>()) {
+					Vector3 rotPoint = new Vector3(springMidpointXZ.x, transform.position.y, springMidpointXZ.y);
+					transform.RotateAround(rotPoint, Vector3.up, rotSpeed * Time.deltaTime);
+					foreach (FixedJoint connection in GetComponents<FixedJoint>())
+						connection.transform.RotateAround(rotPoint, Vector3.up, rotSpeed * Time.deltaTime);
+				} else
+					transform.Rotate(0f, rotSpeed * Time.deltaTime, 0f);
 			}
 			transform.Translate(movementVec, Space.World);
 
@@ -109,11 +123,15 @@ public class ConstructionPiece : MonoBehaviour {
 		}
 	}
 
-    protected void OnCollisionEnter(Collision target) {
-		if (target.gameObject.tag == "ConPiece" && playerChar.conMode && Input.GetKey(KeyCode.Space)) {
-
+	private void RecalculateMidPoint() {
+		FixedJoint[] connections = GetComponents<FixedJoint>();
+		Vector2 average = new Vector2(transform.position.x, transform.position.z);
+		foreach (FixedJoint connection in connections) {
+			average.x += connection.transform.position.x;
+			average.y += connection.transform.position.z;
 		}
-    }
+		springMidpointXZ = average / (connections.Length + 1);
+	}
 
 	// This function is jank and hacked together right now. Fixing it after shit works.
 	public void StartPlacement(GameObject grid) {
@@ -154,6 +172,14 @@ public class ConstructionPiece : MonoBehaviour {
 	protected void OnCollisionEnter(Collision target) {
 		if (placing && target.gameObject.tag == "ConPiece") {
 			rigidbody.velocity = Vector3.zero;
+			if (Input.GetKey(KeyCode.Space)) {
+				FixedJoint joint = gameObject.AddComponent<FixedJoint>();
+				joint.connectedBody = target.rigidbody;
+				joint.connectedBody.rigidbody.useGravity = false;
+				joint.connectedBody.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
+				joint.connectedBody.rigidbody.isKinematic = false;
+				RecalculateMidPoint();
+			}
 		}
 	}
 

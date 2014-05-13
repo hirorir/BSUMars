@@ -1,10 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\explosion.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Immunogen\Immunogen-UnityProject\Assets\NGUI\Scripts\Internal\RealTime.cs">
     <Files>
-      <File FileName="Assets\explosion.cs" Line="13" Column="33" />
-      <File FileName="Assets\Sample Assets\Characters\First Person Character\Scripts\FirstPersonCharacter.cs" Line="42" Column="29" />
-      <File FileName="Assets\Scripts\ConstructionPiece.cs" Line="30" Column="31" />
+      <File FileName="..\..\Immunogen\Immunogen-UnityProject\Assets\NGUI\Scripts\Internal\RealTime.cs" Line="61" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
