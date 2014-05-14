@@ -4,6 +4,7 @@ using System.Collections;
 public class explosion : MonoBehaviour {
 
 	// Use this for initialization
+	[SerializeField] private GameObject explosionanim;
 	[SerializeField] private float radius = 20.0F;
 	[SerializeField] private float power = 500.0F;
 
@@ -29,6 +30,7 @@ public class explosion : MonoBehaviour {
 						hit.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0F);
 				}
 			}
+			Instantiate (explosionanim, transform.position, transform.rotation);
 			Destroy (gameObject);
 		}
 	}
