@@ -137,7 +137,7 @@ public class FirstPersonCharacter : MonoBehaviour
 		if(hitObject != null)
 			hitObject.rigidbody.angularVelocity = new Vector3 (0, 0, 0);
 
-		if (Input.GetKeyDown(KeyCode.Q)) {
+		if (Input.GetKeyDown(KeyCode.E)) {
 			if(hitObject != null){		//if it isn't null, it must be what the player is carrying. toggle off
 				dropObject ();
 			}
@@ -173,12 +173,12 @@ public class FirstPersonCharacter : MonoBehaviour
 		}
 
 		if (conMode) {
-			if (Input.GetKeyDown(KeyCode.O)) {
+			if (Input.GetKeyDown(KeyCode.LeftArrow)) {
 				activeCam.enabled = false;
 				activeCam = getRotCam(activeCam, "left");
 				activeCam.enabled = true;
 				placingObject.GetComponent<ConstructionPiece>().setAdjs(activeCam.transform.eulerAngles.y);
-			} else if (Input.GetKeyDown(KeyCode.P)) {
+			} else if (Input.GetKeyDown(KeyCode.RightArrow)) {
 				activeCam.enabled = false;
 				activeCam = getRotCam(activeCam, "right");
 				activeCam.enabled = true;
@@ -304,6 +304,10 @@ public class FirstPersonCharacter : MonoBehaviour
 		if (target.tag == "ConGrid") {
 			grid = null;
 		}
+	}
+
+	public bool isPlacing() {
+		return hitObject != null;
 	}
 
 	/*protected void OnTriggerStay(Collider target) {

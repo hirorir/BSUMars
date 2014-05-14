@@ -6,7 +6,7 @@ using System.Linq;
 public class ConstructionPiece : MonoBehaviour {
 	[SerializeField] protected float conSpeed = 16f; // The controlled placement movement speed of the object.
 	[SerializeField] protected float rotSpeed = 90f; // The controlled placement rotation speed of the object.
-	[SerializeField] protected int explosionCube = 1; // Controls how many pieces the object breaks into from explosions. For cubes, explodes into n^2 pieces.
+	public int explosionCube = 1; // Controls how many pieces the object breaks into from explosions. For cubes, explodes into n^2 pieces.
 	public float origMass;
 	private float adjX;
 	private float adjZ;
@@ -68,10 +68,10 @@ public class ConstructionPiece : MonoBehaviour {
 			if (Input.GetKey(KeyCode.D)) {
 				movementVec += new Vector3(adjX * Time.deltaTime, 0f, -adjZ * Time.deltaTime);
 			} 
-			if (Input.GetKey(KeyCode.R)) {
+			if (Input.GetKey(KeyCode.Space)) {
 				movementVec += new Vector3(0f, Time.deltaTime * conSpeed, 0f);
 			} 
-			if (Input.GetKey(KeyCode.F) && transform.position.y > collider.bounds.size.y / 2) {
+			if (Input.GetKey(KeyCode.Z) && transform.position.y > collider.bounds.size.y / 2) {
 				movementVec += new Vector3(0f, -Time.deltaTime * conSpeed, 0f);
 			} 
 			if (Input.GetKey(KeyCode.Q)) {
@@ -110,6 +110,8 @@ public class ConstructionPiece : MonoBehaviour {
 	protected void OnTriggerEnter(Collider target) {
 		if (target.tag == "ConGrid" && !placing) {
 			curGrid = target.gameObject;
+		} else if (target.tag == "Combinations") {
+			target.GetComponent<ComboGrid>().addItem(gameObject);
 		}
 	}
 
@@ -120,6 +122,8 @@ public class ConstructionPiece : MonoBehaviour {
 				endPlacement();
 				wasPlaced = false;
 			}
+		} else if (target.tag == "Combinations") {
+			target.GetComponent<ComboGrid>().removeItem(gameObject);
 		}
 	}
 
@@ -167,18 +171,22 @@ public class ConstructionPiece : MonoBehaviour {
 		}
 		rigidbody.useGravity = true;
 		rigidbody.constraints = RigidbodyConstraints.None;
+		foreach (FixedJoint joint in GetComponents<FixedJoint>()) {
+			joint.connectedBody.rigidbody.isKinematic = true;
+		}
 	}
 
 	protected void OnCollisionEnter(Collision target) {
 		if (placing && target.gameObject.tag == "ConPiece") {
 			rigidbody.velocity = Vector3.zero;
-			if (Input.GetKey(KeyCode.Space)) {
+			if (playerChar.conMode) {
 				FixedJoint joint = gameObject.AddComponent<FixedJoint>();
 				joint.connectedBody = target.rigidbody;
-				joint.connectedBody.rigidbody.useGravity = false;
-				joint.connectedBody.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
+				//joint.connectedBody.rigidbody.useGravity = false;
+				//joint.connectedBody.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
 				joint.connectedBody.rigidbody.isKinematic = false;
-				RecalculateMidPoint();
+				//RecalculateMidPoint();
+				endPlacement();
 			}
 		}
 	}
@@ -200,6 +208,7 @@ public class ConstructionPiece : MonoBehaviour {
 				for (int j = 0; j < explosionCube; j++) {
 					for (int k = 0; k < explosionCube; k++) {
 						GameObject newPiece = GameObject.Instantiate(gameObject) as GameObject;
+						newPiece.GetComponent<ConstructionPiece>().explosionCube = 1;
 						newPiece.transform.position = new Vector3(cubeCorner.x + i % explosionCube, cubeCorner.y + j % explosionCube, cubeCorner.z + k % explosionCube);
 						newPiece.transform.localScale = transform.localScale / (float)explosionCube;
 						newPiece.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
