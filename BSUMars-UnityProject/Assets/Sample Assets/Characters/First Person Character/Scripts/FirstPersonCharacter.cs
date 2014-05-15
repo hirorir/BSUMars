@@ -36,6 +36,7 @@ public class FirstPersonCharacter : MonoBehaviour
 	private GameObject cam; // The player's cam
 	private GameObject reticule;
 	private GameObject placingObject;
+	private float originalMass;
 	public Camera activeCam; // The active cam
 
 	public bool holdingObject(){
@@ -59,8 +60,11 @@ public class FirstPersonCharacter : MonoBehaviour
 	public void dropObject(){
 		//Destroy(reticule.GetComponent<SpringJoint> ());
 		//print ("dropped");
+		hitObject.layer = 11;											//recognizes character collision
 		Destroy(reticule.GetComponent<FixedJoint> ());		
 		hitObject.transform.parent = null;
+		hitObject.rigidbody.mass = originalMass;
+		//hitObject.rigidbody.constraints = RigidbodyConstraints.None;
 		hitObject.rigidbody.useGravity = true;
 		/*ConstructionPiece conPiece = hitObject.GetComponent<ConstructionPiece>();
 		if(conPiece != null){
@@ -73,17 +77,21 @@ public class FirstPersonCharacter : MonoBehaviour
 	public void pickupObject(GameObject hit) {
 		//print("picked Up");
 		hitObject = hit;
+		hitObject.layer = 13;											//ignores character collision
 		hitObject.transform.parent = cam.transform;						//if it's a construction piece, do this
 		hitObject.rigidbody.useGravity = false;
+		originalMass = hitObject.rigidbody.mass;
+		hitObject.rigidbody.mass = 0.001f;
+		//hitObject.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
 		hitObject.transform.position = reticule.transform.position;
-		FixedJoint joint = reticule.AddComponent<FixedJoint>();		//have the cube gravitate towards the reticule
+		FixedJoint joint = reticule.AddComponent<FixedJoint>();			//have the cube gravitate towards the reticule
 		//SpringJoint joint = reticule.AddComponent<SpringJoint>();
 
 		joint.connectedBody = hitObject.rigidbody;
 
-		//joint.spring = 10000f;
-		//joint.damper = 0f;
-		//joint.maxDistance = 0.01f;
+		/*joint.spring = 500f;
+		joint.damper = 0.01f;
+		joint.maxDistance = 0.01f;*/
 	}
 
 	public void ConCam(GameObject grid) {
@@ -94,10 +102,6 @@ public class FirstPersonCharacter : MonoBehaviour
 		else
 			activeCam = closestCam(gameObject, grid);
 		activeCam.enabled = true;
-	}
-
-	public void kobe(){
-
 	}
 	
 	void Awake ()
@@ -124,11 +128,11 @@ public class FirstPersonCharacter : MonoBehaviour
 
 		RaycastHit hit;
 
-		if(Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, rigDist, ~((1 << 11) + (1 << 12) + (1 << 9)))){
+		if(Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, rigDist, ~((1 << 12) + (1 << 9) + (1 << 13)))){
 			reticule.transform.position = hit.point;
 			if(hitObject != null){
 				// || (reticule.transform.position - hitObject.transform.position).magnitude < 0.5f
-				if(hit.distance < 1.5f)		//if it's too close or too far from cursor, drop it
+				if(hit.distance < 0.5f)		//if it's too close or too far from cursor, drop it
 					dropObject ();
 			}
 		}
@@ -141,7 +145,7 @@ public class FirstPersonCharacter : MonoBehaviour
 			if(hitObject != null){		//if it isn't null, it must be what the player is carrying. toggle off
 				dropObject ();
 			}
-			else if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, rigDist, 1 << 11)) {
+			else if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, rigDist, (1 << 14) + (1 << 11))) {
 				//Debug.Log("yus");
 				if (hit.collider.tag == "ComboMachine")
 					hit.collider.GetComponent<ComboMachine>().displayRecipes();
