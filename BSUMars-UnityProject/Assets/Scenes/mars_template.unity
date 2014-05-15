@@ -88,7 +88,7 @@ GameObject:
   - 114: {fileID: 27198563}
   - 54: {fileID: 27198562}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,11 +124,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &27198564
 Renderer:
@@ -360,7 +360,7 @@ GameObject:
   - 114: {fileID: 57943308}
   - 54: {fileID: 57943307}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -396,11 +396,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &57943309
 Renderer:
@@ -470,7 +470,7 @@ GameObject:
   - 114: {fileID: 67019717}
   - 54: {fileID: 67019716}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -506,11 +506,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &67019718
 Renderer:
@@ -628,7 +628,7 @@ GameObject:
   - 114: {fileID: 77151271}
   - 54: {fileID: 77151270}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -664,11 +664,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &77151272
 Renderer:
@@ -738,7 +738,7 @@ GameObject:
   - 114: {fileID: 81545727}
   - 54: {fileID: 81545726}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -774,11 +774,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &81545728
 Renderer:
@@ -848,7 +848,7 @@ GameObject:
   - 114: {fileID: 94476863}
   - 54: {fileID: 94476862}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -884,11 +884,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &94476864
 Renderer:
@@ -958,7 +958,7 @@ GameObject:
   - 114: {fileID: 102076647}
   - 54: {fileID: 102076646}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -994,11 +994,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &102076648
 Renderer:
@@ -1116,7 +1116,7 @@ GameObject:
   - 114: {fileID: 112951063}
   - 54: {fileID: 112951062}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1152,11 +1152,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &112951064
 Renderer:
@@ -2359,7 +2359,7 @@ GameObject:
   - 114: {fileID: 126083860}
   - 54: {fileID: 126083859}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2395,11 +2395,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &126083861
 Renderer:
@@ -2801,7 +2801,7 @@ GameObject:
   - 114: {fileID: 227766766}
   - 54: {fileID: 227766765}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2837,11 +2837,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &227766767
 Renderer:
@@ -2911,7 +2911,7 @@ GameObject:
   - 114: {fileID: 232795899}
   - 54: {fileID: 232795898}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2947,11 +2947,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &232795900
 Renderer:
@@ -3021,7 +3021,7 @@ GameObject:
   - 114: {fileID: 248553414}
   - 54: {fileID: 248553413}
   m_Layer: 11
-  m_Name: SmallWall
+  m_Name: ConcSmallWall
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3117,6 +3117,116 @@ Transform:
   m_LocalScale: {x: 4, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!1 &254833485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 811b55fd36bd1074b8f4b7c1b50cc7a3, type: 2}
+  m_PrefabInternal: {fileID: 681606351}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 254833491}
+  - 33: {fileID: 254833490}
+  - 65: {fileID: 254833489}
+  - 23: {fileID: 254833488}
+  - 114: {fileID: 254833487}
+  - 54: {fileID: 254833486}
+  m_Layer: 11
+  m_Name: MetalSmallWall
+  m_TagString: ConPiece
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &254833486
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 811b55fd36bd1074b8f4b7c1b50cc7a3,
+    type: 2}
+  m_PrefabInternal: {fileID: 681606351}
+  m_GameObject: {fileID: 254833485}
+  serializedVersion: 2
+  m_Mass: 6
+  m_Drag: .0500000007
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &254833487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 811b55fd36bd1074b8f4b7c1b50cc7a3,
+    type: 2}
+  m_PrefabInternal: {fileID: 681606351}
+  m_GameObject: {fileID: 254833485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e5ac3fe81a39a448a5541e00af6e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conSpeed: 2
+  rotSpeed: 90
+  bldgMat: Metal
+  blockSize: 4
+  explosionCube: 2
+  curGrid: {fileID: 0}
+  radius: 10
+  power: 750
+--- !u!23 &254833488
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 811b55fd36bd1074b8f4b7c1b50cc7a3,
+    type: 2}
+  m_PrefabInternal: {fileID: 681606351}
+  m_GameObject: {fileID: 254833485}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: -584047819, guid: ffb3959b6c250464c91026cd534f8e68, type: 3}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!65 &254833489
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: 811b55fd36bd1074b8f4b7c1b50cc7a3,
+    type: 2}
+  m_PrefabInternal: {fileID: 681606351}
+  m_GameObject: {fileID: 254833485}
+  m_Material: {fileID: 13400000, guid: 3329827b7b257154db45d4dae715d293, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &254833490
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 811b55fd36bd1074b8f4b7c1b50cc7a3,
+    type: 2}
+  m_PrefabInternal: {fileID: 681606351}
+  m_GameObject: {fileID: 254833485}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &254833491
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 811b55fd36bd1074b8f4b7c1b50cc7a3, type: 2}
+  m_PrefabInternal: {fileID: 681606351}
+  m_GameObject: {fileID: 254833485}
+  m_LocalRotation: {x: -.00395390764, y: -.000738625007, z: -.00379766105, w: .999984741}
+  m_LocalPosition: {x: 2.66102004, y: .405400336, z: 11.5330362}
+  m_LocalScale: {x: 4, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &267037218
 GameObject:
   m_ObjectHideFlags: 0
@@ -3131,7 +3241,7 @@ GameObject:
   - 114: {fileID: 267037220}
   - 54: {fileID: 267037219}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3167,11 +3277,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &267037221
 Renderer:
@@ -3289,7 +3399,7 @@ GameObject:
   - 114: {fileID: 272840434}
   - 54: {fileID: 272840433}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3325,11 +3435,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &272840435
 Renderer:
@@ -3399,7 +3509,7 @@ GameObject:
   - 114: {fileID: 277116567}
   - 54: {fileID: 277116566}
   m_Layer: 11
-  m_Name: SmallWall
+  m_Name: ConcSmallWall
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3509,7 +3619,7 @@ GameObject:
   - 114: {fileID: 347985439}
   - 54: {fileID: 347985438}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3545,11 +3655,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &347985440
 Renderer:
@@ -3653,6 +3763,50 @@ Prefab:
   m_RootGameObject: {fileID: 1404778787}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1001 &360473050
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: d62b65f08fc5597488a5d205063a236f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3.12047386
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d62b65f08fc5597488a5d205063a236f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .480028659
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d62b65f08fc5597488a5d205063a236f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 9.66412735
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d62b65f08fc5597488a5d205063a236f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 7.38070094e-06
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d62b65f08fc5597488a5d205063a236f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 3.97427793e-05
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d62b65f08fc5597488a5d205063a236f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -1.39614178e-06
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d62b65f08fc5597488a5d205063a236f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d62b65f08fc5597488a5d205063a236f, type: 2}
+      propertyPath: curGrid
+      value: 
+      objectReference: {fileID: 387722913}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d62b65f08fc5597488a5d205063a236f, type: 2}
+  m_RootGameObject: {fileID: 822340229}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &367253284
 GameObject:
   m_ObjectHideFlags: 0
@@ -3667,7 +3821,7 @@ GameObject:
   - 114: {fileID: 367253286}
   - 54: {fileID: 367253285}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3703,11 +3857,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &367253287
 Renderer:
@@ -3777,7 +3931,7 @@ GameObject:
   - 114: {fileID: 367710559}
   - 54: {fileID: 367710558}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3813,11 +3967,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &367710560
 Renderer:
@@ -4459,6 +4613,116 @@ Prefab:
   m_RootGameObject: {fileID: 277116565}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &503842870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 0cf3168fc2b0bf24db49f68510d1955f, type: 2}
+  m_PrefabInternal: {fileID: 2060208514}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 503842876}
+  - 33: {fileID: 503842875}
+  - 65: {fileID: 503842874}
+  - 23: {fileID: 503842873}
+  - 114: {fileID: 503842872}
+  - 54: {fileID: 503842871}
+  m_Layer: 11
+  m_Name: ConcLargeWall
+  m_TagString: ConPiece
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &503842871
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 0cf3168fc2b0bf24db49f68510d1955f,
+    type: 2}
+  m_PrefabInternal: {fileID: 2060208514}
+  m_GameObject: {fileID: 503842870}
+  serializedVersion: 2
+  m_Mass: 24
+  m_Drag: .0500000007
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &503842872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 0cf3168fc2b0bf24db49f68510d1955f,
+    type: 2}
+  m_PrefabInternal: {fileID: 2060208514}
+  m_GameObject: {fileID: 503842870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e5ac3fe81a39a448a5541e00af6e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conSpeed: 2
+  rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 6
+  explosionCube: 2
+  curGrid: {fileID: 387722913}
+  radius: 10
+  power: 750
+--- !u!23 &503842873
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 0cf3168fc2b0bf24db49f68510d1955f,
+    type: 2}
+  m_PrefabInternal: {fileID: 2060208514}
+  m_GameObject: {fileID: 503842870}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: -106926425, guid: 367e5b5841f63fa48a02e2e5c102b385, type: 3}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!65 &503842874
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: 0cf3168fc2b0bf24db49f68510d1955f,
+    type: 2}
+  m_PrefabInternal: {fileID: 2060208514}
+  m_GameObject: {fileID: 503842870}
+  m_Material: {fileID: 13400000, guid: 254510f7e981b8b42ae92b50c914a816, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &503842875
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 0cf3168fc2b0bf24db49f68510d1955f,
+    type: 2}
+  m_PrefabInternal: {fileID: 2060208514}
+  m_GameObject: {fileID: 503842870}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &503842876
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 0cf3168fc2b0bf24db49f68510d1955f, type: 2}
+  m_PrefabInternal: {fileID: 2060208514}
+  m_GameObject: {fileID: 503842870}
+  m_LocalRotation: {x: 7.38070094e-06, y: 3.97427793e-05, z: -1.39614178e-06, w: 1}
+  m_LocalPosition: {x: 12.4763126, y: 2.04392076, z: 9.46472549}
+  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &509902718
 GameObject:
   m_ObjectHideFlags: 0
@@ -4473,7 +4737,7 @@ GameObject:
   - 114: {fileID: 509902720}
   - 54: {fileID: 509902719}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4509,11 +4773,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &509902721
 Renderer:
@@ -4631,7 +4895,7 @@ GameObject:
   - 114: {fileID: 539184268}
   - 54: {fileID: 539184267}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4667,11 +4931,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &539184269
 Renderer:
@@ -5029,7 +5293,7 @@ GameObject:
   - 114: {fileID: 590617813}
   - 54: {fileID: 590617812}
   m_Layer: 11
-  m_Name: SmallWall
+  m_Name: ConcSmallWall
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5139,7 +5403,7 @@ GameObject:
   - 114: {fileID: 604791665}
   - 54: {fileID: 604791664}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5175,11 +5439,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &604791666
 Renderer:
@@ -5235,6 +5499,116 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!1 &610277862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 5d8d767900fea514f926df98edf43bde, type: 2}
+  m_PrefabInternal: {fileID: 2081744823}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 610277868}
+  - 33: {fileID: 610277867}
+  - 65: {fileID: 610277866}
+  - 23: {fileID: 610277865}
+  - 114: {fileID: 610277864}
+  - 54: {fileID: 610277863}
+  m_Layer: 11
+  m_Name: MetalLongWall
+  m_TagString: ConPiece
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &610277863
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 5d8d767900fea514f926df98edf43bde,
+    type: 2}
+  m_PrefabInternal: {fileID: 2081744823}
+  m_GameObject: {fileID: 610277862}
+  serializedVersion: 2
+  m_Mass: 6
+  m_Drag: .0500000007
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &610277864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 5d8d767900fea514f926df98edf43bde,
+    type: 2}
+  m_PrefabInternal: {fileID: 2081744823}
+  m_GameObject: {fileID: 610277862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e5ac3fe81a39a448a5541e00af6e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conSpeed: 2
+  rotSpeed: 90
+  bldgMat: Metal
+  blockSize: 5
+  explosionCube: 2
+  curGrid: {fileID: 0}
+  radius: 10
+  power: 750
+--- !u!23 &610277865
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 5d8d767900fea514f926df98edf43bde,
+    type: 2}
+  m_PrefabInternal: {fileID: 2081744823}
+  m_GameObject: {fileID: 610277862}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: -584047819, guid: ffb3959b6c250464c91026cd534f8e68, type: 3}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!65 &610277866
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: 5d8d767900fea514f926df98edf43bde,
+    type: 2}
+  m_PrefabInternal: {fileID: 2081744823}
+  m_GameObject: {fileID: 610277862}
+  m_Material: {fileID: 13400000, guid: 3329827b7b257154db45d4dae715d293, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &610277867
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 5d8d767900fea514f926df98edf43bde,
+    type: 2}
+  m_PrefabInternal: {fileID: 2081744823}
+  m_GameObject: {fileID: 610277862}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &610277868
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 5d8d767900fea514f926df98edf43bde, type: 2}
+  m_PrefabInternal: {fileID: 2081744823}
+  m_GameObject: {fileID: 610277862}
+  m_LocalRotation: {x: -.00395390764, y: -.000738625007, z: -.00379766105, w: .999984741}
+  m_LocalPosition: {x: 10.3028698, y: .347401887, z: 11.5445557}
+  m_LocalScale: {x: 8, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &613584840
 GameObject:
   m_ObjectHideFlags: 0
@@ -5249,7 +5623,7 @@ GameObject:
   - 114: {fileID: 613584842}
   - 54: {fileID: 613584841}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5285,11 +5659,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &613584843
 Renderer:
@@ -5455,7 +5829,7 @@ GameObject:
   - 114: {fileID: 630332672}
   - 54: {fileID: 630332671}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5491,11 +5865,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &630332673
 Renderer:
@@ -5709,7 +6083,7 @@ GameObject:
   - 114: {fileID: 649252787}
   - 54: {fileID: 649252786}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5745,11 +6119,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &649252788
 Renderer:
@@ -5819,7 +6193,7 @@ GameObject:
   - 114: {fileID: 661672521}
   - 54: {fileID: 661672520}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5855,11 +6229,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &661672522
 Renderer:
@@ -5963,6 +6337,50 @@ Prefab:
   m_RootGameObject: {fileID: 630332670}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1001 &672560793
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 31c5925c94710b9409eef5cdbdc5cd9a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12.4765949
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31c5925c94710b9409eef5cdbdc5cd9a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .582507372
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31c5925c94710b9409eef5cdbdc5cd9a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 13.0635796
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31c5925c94710b9409eef5cdbdc5cd9a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 7.38070094e-06
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31c5925c94710b9409eef5cdbdc5cd9a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 3.97427793e-05
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31c5925c94710b9409eef5cdbdc5cd9a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -1.39614178e-06
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 31c5925c94710b9409eef5cdbdc5cd9a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 31c5925c94710b9409eef5cdbdc5cd9a, type: 2}
+      propertyPath: curGrid
+      value: 
+      objectReference: {fileID: 387722913}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 31c5925c94710b9409eef5cdbdc5cd9a, type: 2}
+  m_RootGameObject: {fileID: 985568924}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &676420672
 GameObject:
   m_ObjectHideFlags: 0
@@ -5977,7 +6395,7 @@ GameObject:
   - 114: {fileID: 676420674}
   - 54: {fileID: 676420673}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6013,11 +6431,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &676420675
 Renderer:
@@ -6073,6 +6491,46 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!1001 &681606351
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 811b55fd36bd1074b8f4b7c1b50cc7a3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.66102004
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 811b55fd36bd1074b8f4b7c1b50cc7a3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .405400336
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 811b55fd36bd1074b8f4b7c1b50cc7a3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 11.5330362
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 811b55fd36bd1074b8f4b7c1b50cc7a3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -.00395390764
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 811b55fd36bd1074b8f4b7c1b50cc7a3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -.000738625007
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 811b55fd36bd1074b8f4b7c1b50cc7a3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -.00379766105
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 811b55fd36bd1074b8f4b7c1b50cc7a3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .999984741
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 811b55fd36bd1074b8f4b7c1b50cc7a3, type: 2}
+  m_RootGameObject: {fileID: 254833485}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &691673038
 GameObject:
   m_ObjectHideFlags: 0
@@ -6087,7 +6545,7 @@ GameObject:
   - 114: {fileID: 691673040}
   - 54: {fileID: 691673039}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6123,11 +6581,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &691673041
 Renderer:
@@ -6181,6 +6639,116 @@ Transform:
   m_LocalRotation: {x: -.00395390764, y: -.000738625007, z: -.00379766105, w: .999984741}
   m_LocalPosition: {x: -1.37555063, y: .499640524, z: 19.5755138}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!1 &700054121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 4f121c65f2cef8d46a9595af535f5026, type: 2}
+  m_PrefabInternal: {fileID: 1569004095}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 700054127}
+  - 33: {fileID: 700054126}
+  - 65: {fileID: 700054125}
+  - 23: {fileID: 700054124}
+  - 114: {fileID: 700054123}
+  - 54: {fileID: 700054122}
+  m_Layer: 11
+  m_Name: ConcColumn
+  m_TagString: ConPiece
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &700054122
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 4f121c65f2cef8d46a9595af535f5026,
+    type: 2}
+  m_PrefabInternal: {fileID: 1569004095}
+  m_GameObject: {fileID: 700054121}
+  serializedVersion: 2
+  m_Mass: 24
+  m_Drag: .0500000007
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &700054123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 4f121c65f2cef8d46a9595af535f5026,
+    type: 2}
+  m_PrefabInternal: {fileID: 1569004095}
+  m_GameObject: {fileID: 700054121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e5ac3fe81a39a448a5541e00af6e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conSpeed: 2
+  rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 4
+  explosionCube: 2
+  curGrid: {fileID: 387722913}
+  radius: 10
+  power: 750
+--- !u!23 &700054124
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 4f121c65f2cef8d46a9595af535f5026,
+    type: 2}
+  m_PrefabInternal: {fileID: 1569004095}
+  m_GameObject: {fileID: 700054121}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: -106926425, guid: 367e5b5841f63fa48a02e2e5c102b385, type: 3}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!65 &700054125
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: 4f121c65f2cef8d46a9595af535f5026,
+    type: 2}
+  m_PrefabInternal: {fileID: 1569004095}
+  m_GameObject: {fileID: 700054121}
+  m_Material: {fileID: 13400000, guid: 254510f7e981b8b42ae92b50c914a816, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &700054126
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 4f121c65f2cef8d46a9595af535f5026,
+    type: 2}
+  m_PrefabInternal: {fileID: 1569004095}
+  m_GameObject: {fileID: 700054121}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &700054127
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 4f121c65f2cef8d46a9595af535f5026, type: 2}
+  m_PrefabInternal: {fileID: 1569004095}
+  m_GameObject: {fileID: 700054121}
+  m_LocalRotation: {x: 7.38070094e-06, y: 3.97427793e-05, z: -1.39614178e-06, w: 1}
+  m_LocalPosition: {x: 3.12074924, y: 2.23918891, z: 13.0643482}
+  m_LocalScale: {x: 1, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1001 &705187131
@@ -6341,7 +6909,7 @@ GameObject:
   - 114: {fileID: 752532613}
   - 54: {fileID: 752532612}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6377,11 +6945,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &752532614
 Renderer:
@@ -6604,7 +7172,7 @@ GameObject:
   - 114: {fileID: 788002660}
   - 54: {fileID: 788002659}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6640,11 +7208,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &788002661
 Renderer:
@@ -6714,7 +7282,7 @@ GameObject:
   - 114: {fileID: 793745440}
   - 54: {fileID: 793745439}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6750,11 +7318,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &793745441
 Renderer:
@@ -6920,7 +7488,7 @@ GameObject:
   - 114: {fileID: 816663503}
   - 54: {fileID: 816663502}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6956,11 +7524,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &816663504
 Renderer:
@@ -7013,6 +7581,116 @@ Transform:
   m_GameObject: {fileID: 816663501}
   m_LocalRotation: {x: -.00395390764, y: -.000738625007, z: -.00379766105, w: .999984741}
   m_LocalPosition: {x: -2.40455484, y: .547104836, z: 24.5919113}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!1 &822340229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: d62b65f08fc5597488a5d205063a236f, type: 2}
+  m_PrefabInternal: {fileID: 360473050}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 822340235}
+  - 33: {fileID: 822340234}
+  - 65: {fileID: 822340233}
+  - 23: {fileID: 822340232}
+  - 114: {fileID: 822340231}
+  - 54: {fileID: 822340230}
+  m_Layer: 11
+  m_Name: ConcreteBlock
+  m_TagString: ConPiece
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &822340230
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: d62b65f08fc5597488a5d205063a236f,
+    type: 2}
+  m_PrefabInternal: {fileID: 360473050}
+  m_GameObject: {fileID: 822340229}
+  serializedVersion: 2
+  m_Mass: 24
+  m_Drag: .0500000007
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &822340231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: d62b65f08fc5597488a5d205063a236f,
+    type: 2}
+  m_PrefabInternal: {fileID: 360473050}
+  m_GameObject: {fileID: 822340229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e5ac3fe81a39a448a5541e00af6e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conSpeed: 2
+  rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
+  explosionCube: 2
+  curGrid: {fileID: 387722913}
+  radius: 10
+  power: 750
+--- !u!23 &822340232
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: d62b65f08fc5597488a5d205063a236f,
+    type: 2}
+  m_PrefabInternal: {fileID: 360473050}
+  m_GameObject: {fileID: 822340229}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: -106926425, guid: 367e5b5841f63fa48a02e2e5c102b385, type: 3}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!65 &822340233
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: d62b65f08fc5597488a5d205063a236f,
+    type: 2}
+  m_PrefabInternal: {fileID: 360473050}
+  m_GameObject: {fileID: 822340229}
+  m_Material: {fileID: 13400000, guid: 254510f7e981b8b42ae92b50c914a816, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &822340234
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: d62b65f08fc5597488a5d205063a236f,
+    type: 2}
+  m_PrefabInternal: {fileID: 360473050}
+  m_GameObject: {fileID: 822340229}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &822340235
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: d62b65f08fc5597488a5d205063a236f, type: 2}
+  m_PrefabInternal: {fileID: 360473050}
+  m_GameObject: {fileID: 822340229}
+  m_LocalRotation: {x: 7.38070094e-06, y: 3.97427793e-05, z: -1.39614178e-06, w: 1}
+  m_LocalPosition: {x: 3.12047386, y: .480028659, z: 9.66412735}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7203,6 +7881,46 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!1001 &889793254
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 96ccf1f875ac3c845921e6b3fa191213, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 10.311101
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 96ccf1f875ac3c845921e6b3fa191213, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.00702095
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 96ccf1f875ac3c845921e6b3fa191213, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 14.440053
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 96ccf1f875ac3c845921e6b3fa191213, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -.00395390764
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 96ccf1f875ac3c845921e6b3fa191213, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -.000738625007
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 96ccf1f875ac3c845921e6b3fa191213, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -.00379766105
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 96ccf1f875ac3c845921e6b3fa191213, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .999984741
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 96ccf1f875ac3c845921e6b3fa191213, type: 2}
+  m_RootGameObject: {fileID: 1525741988}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &902985442
 GameObject:
   m_ObjectHideFlags: 0
@@ -7217,7 +7935,7 @@ GameObject:
   - 114: {fileID: 902985444}
   - 54: {fileID: 902985443}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7253,11 +7971,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &902985445
 Renderer:
@@ -7327,7 +8045,7 @@ GameObject:
   - 114: {fileID: 905161664}
   - 54: {fileID: 905161663}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7363,11 +8081,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &905161665
 Renderer:
@@ -7437,7 +8155,7 @@ GameObject:
   - 114: {fileID: 917202725}
   - 54: {fileID: 917202724}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7473,11 +8191,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &917202726
 Renderer:
@@ -7547,7 +8265,7 @@ GameObject:
   - 114: {fileID: 928723812}
   - 54: {fileID: 928723811}
   m_Layer: 11
-  m_Name: SmallWall
+  m_Name: ConcSmallWall
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7657,7 +8375,7 @@ GameObject:
   - 114: {fileID: 932743562}
   - 54: {fileID: 932743561}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7693,11 +8411,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &932743563
 Renderer:
@@ -7794,7 +8512,7 @@ GameObject:
   - 114: {fileID: 946317678}
   - 54: {fileID: 946317677}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7830,11 +8548,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &946317679
 Renderer:
@@ -7904,7 +8622,7 @@ GameObject:
   - 114: {fileID: 954404420}
   - 54: {fileID: 954404419}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7940,11 +8658,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &954404421
 Renderer:
@@ -8048,6 +8766,116 @@ Prefab:
   m_RootGameObject: {fileID: 676420672}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &985568924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 31c5925c94710b9409eef5cdbdc5cd9a, type: 2}
+  m_PrefabInternal: {fileID: 672560793}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 985568930}
+  - 33: {fileID: 985568929}
+  - 65: {fileID: 985568928}
+  - 23: {fileID: 985568927}
+  - 114: {fileID: 985568926}
+  - 54: {fileID: 985568925}
+  m_Layer: 11
+  m_Name: ConcLongWall
+  m_TagString: ConPiece
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &985568925
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 31c5925c94710b9409eef5cdbdc5cd9a,
+    type: 2}
+  m_PrefabInternal: {fileID: 672560793}
+  m_GameObject: {fileID: 985568924}
+  serializedVersion: 2
+  m_Mass: 24
+  m_Drag: .0500000007
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &985568926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 31c5925c94710b9409eef5cdbdc5cd9a,
+    type: 2}
+  m_PrefabInternal: {fileID: 672560793}
+  m_GameObject: {fileID: 985568924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e5ac3fe81a39a448a5541e00af6e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conSpeed: 2
+  rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 5
+  explosionCube: 2
+  curGrid: {fileID: 387722913}
+  radius: 10
+  power: 750
+--- !u!23 &985568927
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 31c5925c94710b9409eef5cdbdc5cd9a,
+    type: 2}
+  m_PrefabInternal: {fileID: 672560793}
+  m_GameObject: {fileID: 985568924}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: -106926425, guid: 367e5b5841f63fa48a02e2e5c102b385, type: 3}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!65 &985568928
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: 31c5925c94710b9409eef5cdbdc5cd9a,
+    type: 2}
+  m_PrefabInternal: {fileID: 672560793}
+  m_GameObject: {fileID: 985568924}
+  m_Material: {fileID: 13400000, guid: 254510f7e981b8b42ae92b50c914a816, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &985568929
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 31c5925c94710b9409eef5cdbdc5cd9a,
+    type: 2}
+  m_PrefabInternal: {fileID: 672560793}
+  m_GameObject: {fileID: 985568924}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &985568930
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 31c5925c94710b9409eef5cdbdc5cd9a, type: 2}
+  m_PrefabInternal: {fileID: 672560793}
+  m_GameObject: {fileID: 985568924}
+  m_LocalRotation: {x: 7.38070094e-06, y: 3.97427793e-05, z: -1.39614178e-06, w: 1}
+  m_LocalPosition: {x: 12.4765949, y: .582507372, z: 13.0635796}
+  m_LocalScale: {x: 8, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &993974234
 GameObject:
   m_ObjectHideFlags: 0
@@ -8062,7 +8890,7 @@ GameObject:
   - 114: {fileID: 993974236}
   - 54: {fileID: 993974235}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8098,11 +8926,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &993974237
 Renderer:
@@ -8158,6 +8986,116 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!1 &1023229569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 1d7d27a6d78fb5b40a1d13ad79d5b46b, type: 2}
+  m_PrefabInternal: {fileID: 1540141136}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1023229575}
+  - 33: {fileID: 1023229574}
+  - 65: {fileID: 1023229573}
+  - 23: {fileID: 1023229572}
+  - 114: {fileID: 1023229571}
+  - 54: {fileID: 1023229570}
+  m_Layer: 11
+  m_Name: MetalColumn
+  m_TagString: ConPiece
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &1023229570
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 1d7d27a6d78fb5b40a1d13ad79d5b46b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1540141136}
+  m_GameObject: {fileID: 1023229569}
+  serializedVersion: 2
+  m_Mass: 6
+  m_Drag: .0500000007
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1023229571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 1d7d27a6d78fb5b40a1d13ad79d5b46b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1540141136}
+  m_GameObject: {fileID: 1023229569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e5ac3fe81a39a448a5541e00af6e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conSpeed: 2
+  rotSpeed: 90
+  bldgMat: Metal
+  blockSize: 4
+  explosionCube: 2
+  curGrid: {fileID: 0}
+  radius: 10
+  power: 750
+--- !u!23 &1023229572
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 1d7d27a6d78fb5b40a1d13ad79d5b46b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1540141136}
+  m_GameObject: {fileID: 1023229569}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: -584047819, guid: ffb3959b6c250464c91026cd534f8e68, type: 3}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!65 &1023229573
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: 1d7d27a6d78fb5b40a1d13ad79d5b46b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1540141136}
+  m_GameObject: {fileID: 1023229569}
+  m_Material: {fileID: 13400000, guid: 3329827b7b257154db45d4dae715d293, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1023229574
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 1d7d27a6d78fb5b40a1d13ad79d5b46b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1540141136}
+  m_GameObject: {fileID: 1023229569}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1023229575
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 1d7d27a6d78fb5b40a1d13ad79d5b46b, type: 2}
+  m_PrefabInternal: {fileID: 1540141136}
+  m_GameObject: {fileID: 1023229569}
+  m_LocalRotation: {x: -.00395390764, y: -.000738625007, z: -.00379766105, w: .999984741}
+  m_LocalPosition: {x: 2.6825223, y: 2.43874907, z: 7.5061903}
+  m_LocalScale: {x: 1, y: 4, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &1029753977
 GameObject:
   m_ObjectHideFlags: 0
@@ -8172,7 +9110,7 @@ GameObject:
   - 114: {fileID: 1029753979}
   - 54: {fileID: 1029753978}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8208,11 +9146,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1029753980
 Renderer:
@@ -8282,7 +9220,7 @@ GameObject:
   - 114: {fileID: 1032965307}
   - 54: {fileID: 1032965306}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8318,11 +9256,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1032965308
 Renderer:
@@ -8392,7 +9330,7 @@ GameObject:
   - 114: {fileID: 1045820400}
   - 54: {fileID: 1045820399}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8428,11 +9366,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1045820401
 Renderer:
@@ -8550,7 +9488,7 @@ GameObject:
   - 114: {fileID: 1069047377}
   - 54: {fileID: 1069047376}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8586,11 +9524,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1069047378
 Renderer:
@@ -8831,7 +9769,7 @@ GameObject:
   - 114: {fileID: 1115385850}
   - 54: {fileID: 1115385849}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8867,11 +9805,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1115385851
 Renderer:
@@ -9176,7 +10114,7 @@ GameObject:
   - 114: {fileID: 1160878219}
   - 54: {fileID: 1160878218}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9212,11 +10150,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1160878220
 Renderer:
@@ -9338,7 +10276,7 @@ GameObject:
   - 114: {fileID: 1212465515}
   - 54: {fileID: 1212465514}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9374,11 +10312,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1212465516
 Renderer:
@@ -9653,7 +10591,7 @@ GameObject:
   - 114: {fileID: 1274533665}
   - 54: {fileID: 1274533664}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9689,11 +10627,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1274533666
 Renderer:
@@ -9811,7 +10749,7 @@ GameObject:
   - 114: {fileID: 1277015785}
   - 54: {fileID: 1277015784}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9847,11 +10785,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1277015786
 Renderer:
@@ -9921,7 +10859,7 @@ GameObject:
   - 114: {fileID: 1282047045}
   - 54: {fileID: 1282047044}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9957,11 +10895,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1282047046
 Renderer:
@@ -10127,7 +11065,7 @@ GameObject:
   - 114: {fileID: 1352773423}
   - 54: {fileID: 1352773422}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10163,11 +11101,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1352773424
 Renderer:
@@ -10237,7 +11175,7 @@ GameObject:
   - 114: {fileID: 1364525128}
   - 54: {fileID: 1364525127}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10273,11 +11211,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1364525129
 Renderer:
@@ -10395,7 +11333,7 @@ GameObject:
   - 114: {fileID: 1404778789}
   - 54: {fileID: 1404778788}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10431,11 +11369,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1404778790
 Renderer:
@@ -10505,7 +11443,7 @@ GameObject:
   - 114: {fileID: 1408334660}
   - 54: {fileID: 1408334659}
   m_Layer: 11
-  m_Name: SmallWall
+  m_Name: ConcSmallWall
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10615,7 +11553,7 @@ GameObject:
   - 114: {fileID: 1424673092}
   - 54: {fileID: 1424673091}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10651,11 +11589,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1424673093
 Renderer:
@@ -10725,7 +11663,7 @@ GameObject:
   - 114: {fileID: 1427437320}
   - 54: {fileID: 1427437319}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10761,11 +11699,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1427437321
 Renderer:
@@ -10883,7 +11821,7 @@ GameObject:
   - 114: {fileID: 1434264344}
   - 54: {fileID: 1434264343}
   m_Layer: 11
-  m_Name: SmallWall
+  m_Name: ConcSmallWall
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12174,7 +13112,7 @@ GameObject:
   - 114: {fileID: 1445191225}
   - 54: {fileID: 1445191224}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12210,11 +13148,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1445191226
 Renderer:
@@ -12517,7 +13455,7 @@ GameObject:
   - 114: {fileID: 1472557145}
   - 54: {fileID: 1472557144}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12553,11 +13491,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1472557146
 Renderer:
@@ -12627,7 +13565,7 @@ GameObject:
   - 114: {fileID: 1491183368}
   - 54: {fileID: 1491183367}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12663,11 +13601,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1491183369
 Renderer:
@@ -12771,6 +13709,116 @@ Prefab:
   m_RootGameObject: {fileID: 954404418}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1525741988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 96ccf1f875ac3c845921e6b3fa191213, type: 2}
+  m_PrefabInternal: {fileID: 889793254}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1525741994}
+  - 33: {fileID: 1525741993}
+  - 65: {fileID: 1525741992}
+  - 23: {fileID: 1525741991}
+  - 114: {fileID: 1525741990}
+  - 54: {fileID: 1525741989}
+  m_Layer: 11
+  m_Name: MetalLargeWall
+  m_TagString: ConPiece
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &1525741989
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 96ccf1f875ac3c845921e6b3fa191213,
+    type: 2}
+  m_PrefabInternal: {fileID: 889793254}
+  m_GameObject: {fileID: 1525741988}
+  serializedVersion: 2
+  m_Mass: 6
+  m_Drag: .0500000007
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1525741990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 96ccf1f875ac3c845921e6b3fa191213,
+    type: 2}
+  m_PrefabInternal: {fileID: 889793254}
+  m_GameObject: {fileID: 1525741988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e5ac3fe81a39a448a5541e00af6e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conSpeed: 2
+  rotSpeed: 90
+  bldgMat: Metal
+  blockSize: 6
+  explosionCube: 2
+  curGrid: {fileID: 0}
+  radius: 10
+  power: 750
+--- !u!23 &1525741991
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 96ccf1f875ac3c845921e6b3fa191213,
+    type: 2}
+  m_PrefabInternal: {fileID: 889793254}
+  m_GameObject: {fileID: 1525741988}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: -584047819, guid: ffb3959b6c250464c91026cd534f8e68, type: 3}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!65 &1525741992
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: 96ccf1f875ac3c845921e6b3fa191213,
+    type: 2}
+  m_PrefabInternal: {fileID: 889793254}
+  m_GameObject: {fileID: 1525741988}
+  m_Material: {fileID: 13400000, guid: 3329827b7b257154db45d4dae715d293, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1525741993
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 96ccf1f875ac3c845921e6b3fa191213,
+    type: 2}
+  m_PrefabInternal: {fileID: 889793254}
+  m_GameObject: {fileID: 1525741988}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1525741994
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 96ccf1f875ac3c845921e6b3fa191213, type: 2}
+  m_PrefabInternal: {fileID: 889793254}
+  m_GameObject: {fileID: 1525741988}
+  m_LocalRotation: {x: -.00395390764, y: -.000738625007, z: -.00379766105, w: .999984741}
+  m_LocalPosition: {x: 10.311101, y: 2.00702095, z: 14.440053}
+  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1001 &1526706546
 Prefab:
   m_ObjectHideFlags: 0
@@ -12819,6 +13867,46 @@ Prefab:
   m_RootGameObject: {fileID: 272840432}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1001 &1540141136
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 1d7d27a6d78fb5b40a1d13ad79d5b46b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.6825223
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1d7d27a6d78fb5b40a1d13ad79d5b46b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.43874907
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1d7d27a6d78fb5b40a1d13ad79d5b46b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 7.5061903
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1d7d27a6d78fb5b40a1d13ad79d5b46b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -.00395390764
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1d7d27a6d78fb5b40a1d13ad79d5b46b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -.000738625007
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1d7d27a6d78fb5b40a1d13ad79d5b46b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -.00379766105
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1d7d27a6d78fb5b40a1d13ad79d5b46b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .999984741
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1d7d27a6d78fb5b40a1d13ad79d5b46b, type: 2}
+  m_RootGameObject: {fileID: 1023229569}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1545284516
 GameObject:
   m_ObjectHideFlags: 0
@@ -12833,7 +13921,7 @@ GameObject:
   - 114: {fileID: 1545284518}
   - 54: {fileID: 1545284517}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12869,11 +13957,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1545284519
 Renderer:
@@ -13024,7 +14112,7 @@ GameObject:
   - 114: {fileID: 1556763023}
   - 54: {fileID: 1556763022}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13060,11 +14148,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1556763024
 Renderer:
@@ -13134,7 +14222,7 @@ GameObject:
   - 114: {fileID: 1565258467}
   - 54: {fileID: 1565258466}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13170,11 +14258,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1565258468
 Renderer:
@@ -13230,6 +14318,50 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!1001 &1569004095
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 4f121c65f2cef8d46a9595af535f5026, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3.12074924
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4f121c65f2cef8d46a9595af535f5026, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.23918891
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4f121c65f2cef8d46a9595af535f5026, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 13.0643482
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4f121c65f2cef8d46a9595af535f5026, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 7.38070094e-06
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4f121c65f2cef8d46a9595af535f5026, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 3.97427793e-05
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4f121c65f2cef8d46a9595af535f5026, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -1.39614178e-06
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4f121c65f2cef8d46a9595af535f5026, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4f121c65f2cef8d46a9595af535f5026, type: 2}
+      propertyPath: curGrid
+      value: 
+      objectReference: {fileID: 387722913}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4f121c65f2cef8d46a9595af535f5026, type: 2}
+  m_RootGameObject: {fileID: 700054121}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1001 &1573610657
 Prefab:
   m_ObjectHideFlags: 0
@@ -13340,7 +14472,7 @@ GameObject:
   - 114: {fileID: 1605397901}
   - 54: {fileID: 1605397900}
   m_Layer: 11
-  m_Name: SmallWall
+  m_Name: ConcSmallWall
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13498,7 +14630,7 @@ GameObject:
   - 114: {fileID: 1618118921}
   - 54: {fileID: 1618118920}
   m_Layer: 11
-  m_Name: SmallWall
+  m_Name: ConcSmallWall
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13608,7 +14740,7 @@ GameObject:
   - 114: {fileID: 1628264452}
   - 54: {fileID: 1628264451}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13644,11 +14776,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1628264453
 Renderer:
@@ -13848,7 +14980,7 @@ GameObject:
   - 114: {fileID: 1654928440}
   - 54: {fileID: 1654928439}
   m_Layer: 11
-  m_Name: SmallWall
+  m_Name: ConcSmallWall
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14111,7 +15243,7 @@ GameObject:
   - 114: {fileID: 1695646213}
   - 54: {fileID: 1695646212}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14147,11 +15279,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1695646214
 Renderer:
@@ -14221,7 +15353,7 @@ GameObject:
   - 114: {fileID: 1695653152}
   - 54: {fileID: 1695653151}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14257,11 +15389,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1695653153
 Renderer:
@@ -14648,7 +15780,7 @@ GameObject:
   - 114: {fileID: 1734558306}
   - 54: {fileID: 1734558305}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14684,11 +15816,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1734558307
 Renderer:
@@ -14911,7 +16043,7 @@ GameObject:
   - 114: {fileID: 1774114928}
   - 54: {fileID: 1774114927}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14947,11 +16079,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1774114929
 Renderer:
@@ -15143,7 +16275,7 @@ GameObject:
   - 114: {fileID: 1784478194}
   - 54: {fileID: 1784478193}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15179,11 +16311,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1784478195
 Renderer:
@@ -16474,7 +17606,7 @@ GameObject:
   - 114: {fileID: 1826930384}
   - 54: {fileID: 1826930383}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16510,11 +17642,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1826930385
 Renderer:
@@ -16584,7 +17716,7 @@ GameObject:
   - 114: {fileID: 1830171841}
   - 54: {fileID: 1830171840}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16620,11 +17752,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1830171842
 Renderer:
@@ -16742,7 +17874,7 @@ GameObject:
   - 114: {fileID: 1885101272}
   - 54: {fileID: 1885101271}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16778,11 +17910,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1885101273
 Renderer:
@@ -16904,7 +18036,7 @@ GameObject:
   - 114: {fileID: 1921148104}
   - 54: {fileID: 1921148103}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16940,11 +18072,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1921148105
 Renderer:
@@ -17014,7 +18146,7 @@ GameObject:
   - 114: {fileID: 1931185219}
   - 54: {fileID: 1931185218}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17050,11 +18182,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1931185220
 Renderer:
@@ -17389,7 +18521,7 @@ GameObject:
   - 114: {fileID: 1979200538}
   - 54: {fileID: 1979200537}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17425,11 +18557,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &1979200539
 Renderer:
@@ -17643,7 +18775,7 @@ GameObject:
   - 114: {fileID: 2022938476}
   - 54: {fileID: 2022938475}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17679,11 +18811,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &2022938477
 Renderer:
@@ -17753,7 +18885,7 @@ GameObject:
   - 114: {fileID: 2030246155}
   - 54: {fileID: 2030246154}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17789,11 +18921,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &2030246156
 Renderer:
@@ -17863,7 +18995,7 @@ GameObject:
   - 114: {fileID: 2035237473}
   - 54: {fileID: 2035237472}
   m_Layer: 11
-  m_Name: SmallWall
+  m_Name: ConcSmallWall
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19250,7 +20382,7 @@ GameObject:
   - 114: {fileID: 2057181987}
   - 54: {fileID: 2057181986}
   m_Layer: 11
-  m_Name: SmallWall
+  m_Name: ConcSmallWall
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19346,6 +20478,50 @@ Transform:
   m_LocalScale: {x: 4, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!1001 &2060208514
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 0cf3168fc2b0bf24db49f68510d1955f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12.4763126
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0cf3168fc2b0bf24db49f68510d1955f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.04392076
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0cf3168fc2b0bf24db49f68510d1955f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 9.46472549
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0cf3168fc2b0bf24db49f68510d1955f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 7.38070094e-06
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0cf3168fc2b0bf24db49f68510d1955f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 3.97427793e-05
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0cf3168fc2b0bf24db49f68510d1955f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -1.39614178e-06
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0cf3168fc2b0bf24db49f68510d1955f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0cf3168fc2b0bf24db49f68510d1955f, type: 2}
+      propertyPath: curGrid
+      value: 
+      objectReference: {fileID: 387722913}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0cf3168fc2b0bf24db49f68510d1955f, type: 2}
+  m_RootGameObject: {fileID: 503842870}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &2060504047
 GameObject:
   m_ObjectHideFlags: 0
@@ -19360,7 +20536,7 @@ GameObject:
   - 114: {fileID: 2060504049}
   - 54: {fileID: 2060504048}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19396,11 +20572,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &2060504050
 Renderer:
@@ -19456,6 +20632,46 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!1001 &2081744823
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 5d8d767900fea514f926df98edf43bde, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 10.3028698
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5d8d767900fea514f926df98edf43bde, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .347401887
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5d8d767900fea514f926df98edf43bde, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 11.5445557
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5d8d767900fea514f926df98edf43bde, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -.00395390764
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5d8d767900fea514f926df98edf43bde, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -.000738625007
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5d8d767900fea514f926df98edf43bde, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -.00379766105
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5d8d767900fea514f926df98edf43bde, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .999984741
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5d8d767900fea514f926df98edf43bde, type: 2}
+  m_RootGameObject: {fileID: 610277862}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1001 &2090569518
 Prefab:
   m_ObjectHideFlags: 0
@@ -19518,7 +20734,7 @@ GameObject:
   - 114: {fileID: 2092320459}
   - 54: {fileID: 2092320458}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19554,11 +20770,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &2092320460
 Renderer:
@@ -19685,7 +20901,7 @@ GameObject:
   - 114: {fileID: 2096219245}
   - 54: {fileID: 2096219244}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19721,11 +20937,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &2096219246
 Renderer:
@@ -19895,7 +21111,7 @@ GameObject:
   - 114: {fileID: 2117366637}
   - 54: {fileID: 2117366636}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19931,11 +21147,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &2117366638
 Renderer:
@@ -20053,7 +21269,7 @@ GameObject:
   - 114: {fileID: 2121503136}
   - 54: {fileID: 2121503135}
   m_Layer: 11
-  m_Name: BldgBase
+  m_Name: MetalBlock
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20089,11 +21305,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
-  bldgMat: Concrete
+  bldgMat: Metal
   blockSize: 3
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 20
+  radius: 10
   power: 750
 --- !u!23 &2121503137
 Renderer:
@@ -20163,7 +21379,7 @@ GameObject:
   - 114: {fileID: 2125105094}
   - 54: {fileID: 2125105093}
   m_Layer: 11
-  m_Name: SmallWall
+  m_Name: ConcSmallWall
   m_TagString: ConPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

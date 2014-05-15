@@ -203,33 +203,151 @@ public class ConstructionPiece : MonoBehaviour {
 	}
 
 	// Adds an explosion force to the piece, and breaks it apart if it is breakable.
-	// Only works for cubes for now.
+	// If the ExplosionCube for any object is 1, it does not break apart when exploded.
+	// If it is 0, then it is destroyed in an explosion.
+	// Non-cube items maintain their ExplosionCube values until they are broken into cubes.
 	public void explosion(float power, Vector3 explosionPos, float radius, float upwardsModifier) {
-		if (explosionCube > 0) {
-			/*if(transform.localScale.x <= 0.25f){
-				Destroy (gameObject);
-				return;
-			}*/
-			//List<GameObject> newPieces = new List<GameObject>();
-			int expCubeTrue = explosionCube * explosionCube * explosionCube;
-			Vector3 cubeCorner = new Vector3(transform.position.x + collider.bounds.size.x * (1 - expCubeTrue) / (2f * expCubeTrue), transform.position.y + collider.bounds.size.y * (1 - expCubeTrue) / (2f * expCubeTrue),
-											   transform.position.z + collider.bounds.size.z * (1 - expCubeTrue) / (2f * expCubeTrue));
-			for (int i = 0; i < explosionCube; i++) {
-				for (int j = 0; j < explosionCube; j++) {
-					for (int k = 0; k < explosionCube; k++) {
-						GameObject newPiece = GameObject.Instantiate(gameObject) as GameObject;
-						newPiece.GetComponent<ConstructionPiece>().explosionCube = explosionCube - 1;
-						newPiece.transform.position = new Vector3(cubeCorner.x + i % explosionCube, cubeCorner.y + j % explosionCube, cubeCorner.z + k % explosionCube);
-						newPiece.transform.localScale = transform.localScale / (float)explosionCube;
-						newPiece.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
-						newPiece.GetComponent<ConstructionPiece>().blockSize--;
+		switch (blockSize) {
+			case 4:
+				if (explosionCube != 1) {
+					if (explosionCube > 0) {
+						GameObject cubeType;
+						if (bldgMat == "Concrete")
+							cubeType = Resources.Load("Prefabs/ConcreteBlock") as GameObject;
+						else if (bldgMat == "Metal")
+							cubeType = Resources.Load("Prefabs/MetalBlock") as GameObject;
+						else
+							cubeType = Resources.Load("Prefabs/MetalBlock") as GameObject;
+
+						Vector3 wallCorner = new Vector3(transform.position.x - collider.bounds.size.x * 0.375f, transform.position.y, transform.position.z);
+						// Break the small wall into cubes
+						for (int i = 0; i < 4; i++) {
+							GameObject newPiece = GameObject.Instantiate(cubeType) as GameObject;
+							newPiece.GetComponent<ConstructionPiece>().explosionCube = explosionCube - 1;
+							if (transform.localScale.x == 4)
+								newPiece.transform.position = wallCorner + new Vector3(i * collider.bounds.size.x / 4f, 0f, 0f);
+							else
+								newPiece.transform.position = wallCorner + new Vector3(0f, 0f, i * collider.bounds.size.z / 4f);
+							//newPiece.transform.localScale = transform.localScale / (float)explosionCube;
+							newPiece.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
+							//newPiece.GetComponent<ConstructionPiece>().explosionCube--;
+						}
 					}
+				} else
+					rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
+				Destroy(gameObject);
+				break;
+			case 5:
+				if (explosionCube != 1) {
+					if (explosionCube > 0) {
+						GameObject cubeType;
+						if (bldgMat == "Concrete")
+							cubeType = Resources.Load("Prefabs/ConcreteBlock") as GameObject;
+						else if (bldgMat == "Metal")
+							cubeType = Resources.Load("Prefabs/MetalBlock") as GameObject;
+						else
+							cubeType = Resources.Load("Prefabs/MetalBlock") as GameObject;
+
+						Vector3 wallCorner = new Vector3(transform.position.x - collider.bounds.size.x * 0.4375f, transform.position.y, transform.position.z);
+						// Break the small wall into cubes
+						for (int i = 0; i < 8; i++) {
+							GameObject newPiece = GameObject.Instantiate(cubeType) as GameObject;
+							newPiece.GetComponent<ConstructionPiece>().explosionCube = explosionCube - 1;
+							newPiece.transform.position = wallCorner + new Vector3(i * collider.bounds.size.x / 8f, 0f, 0f);
+							//newPiece.transform.localScale = transform.localScale / (float)explosionCube;
+							newPiece.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
+							//newPiece.GetComponent<ConstructionPiece>().explosionCube--;
+						}
+					}
+				} else
+					rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
+				Destroy(gameObject);
+				break;
+			case 6:
+				if (explosionCube != 1) {
+					if (explosionCube > 0) {
+						GameObject wallType;
+						if (bldgMat == "Concrete")
+							wallType = Resources.Load("Prefabs/ConcSmallWall") as GameObject;
+						else if (bldgMat == "Metal")
+							wallType = Resources.Load("Prefabs/MetalSmallWall") as GameObject;
+						else
+							wallType = Resources.Load("Prefabs/MetalSmallWall") as GameObject;
+
+						Vector3 wallCorner = new Vector3(transform.position.x, transform.position.y - collider.bounds.size.y * 0.375f, transform.position.z);
+						// Break the small wall into cubes
+						for (int i = 0; i < 4; i++) {
+							GameObject newPiece = GameObject.Instantiate(wallType) as GameObject;
+							//newPiece.GetComponent<ConstructionPiece>().explosionCube = explosionCube - 1;
+							newPiece.transform.position = wallCorner + new Vector3(0f, i * collider.bounds.size.y / 4f, 0f);
+							//newPiece.transform.localScale = transform.localScale / (float)explosionCube;
+							newPiece.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
+							//newPiece.GetComponent<ConstructionPiece>().explosionCube--;
+						}
+					}
+				} else
+					rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
+				Destroy(gameObject);
+				break;
+			case 7:
+				if (explosionCube != 1) {
+					if (explosionCube > 0) {
+						GameObject wallType;
+						if (bldgMat == "Concrete")
+							wallType = Resources.Load("Prefabs/ConcSmallWall") as GameObject;
+						else if (bldgMat == "Metal")
+							wallType = Resources.Load("Prefabs/MetalSmallWall") as GameObject;
+						else
+							wallType = Resources.Load("Prefabs/MetalSmallWall") as GameObject;
+
+						Vector3 wallCorner = new Vector3(transform.position.x - collider.bounds.size.x * 0.25f, transform.position.y - collider.bounds.size.y * 0.375f, transform.position.z);
+						// Break the small wall into cubes
+						for (int i = 0; i < 2; i++) {
+							for (int j = 0; j < 4; j++) {
+								GameObject newPiece = GameObject.Instantiate(wallType) as GameObject;
+								//newPiece.GetComponent<ConstructionPiece>().explosionCube = explosionCube - 1;
+								newPiece.transform.position = wallCorner + new Vector3(i * collider.bounds.size.x / 2f, j * collider.bounds.size.y / 4f, 0f);
+								//newPiece.transform.localScale = transform.localScale / (float)explosionCube;
+								newPiece.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
+								//newPiece.GetComponent<ConstructionPiece>().explosionCube--;
+							}
+						}
+					}
+				} else
+					rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
+				Destroy(gameObject);
+				break;
+			default:
+				if (explosionCube != 1) {
+					if (explosionCube > 0) {
+						/*if(transform.localScale.x <= 0.25f){
+							Destroy (gameObject);
+							return;
+						}*/
+						//List<GameObject> newPieces = new List<GameObject>();
+						int expCubeTrue = explosionCube * explosionCube * explosionCube;
+						Vector3 cubeCorner = new Vector3(transform.position.x + collider.bounds.size.x * (1 - expCubeTrue) / (2f * expCubeTrue), transform.position.y + collider.bounds.size.y * (1 - expCubeTrue) / (2f * expCubeTrue),
+														   transform.position.z + collider.bounds.size.z * (1 - expCubeTrue) / (2f * expCubeTrue));
+						for (int i = 0; i < explosionCube; i++) {
+							for (int j = 0; j < explosionCube; j++) {
+								for (int k = 0; k < explosionCube; k++) {
+									GameObject newPiece = GameObject.Instantiate(gameObject) as GameObject;
+									newPiece.GetComponent<ConstructionPiece>().explosionCube = explosionCube - 1;
+									newPiece.transform.position = new Vector3(cubeCorner.x + i % explosionCube, cubeCorner.y + j % explosionCube, cubeCorner.z + k % explosionCube);
+									newPiece.transform.localScale = transform.localScale / (float)explosionCube;
+									newPiece.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
+									newPiece.GetComponent<ConstructionPiece>().explosionCube--;
+								}
+							}
+						}
+					}
+					Destroy(gameObject);
+				} else {
+					rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
+					explosionCube--;
 				}
-			}
-			Destroy(gameObject);
-		} else {
-			Destroy (gameObject);
-		}
+				break;
+	};
 	}
 
     /*private Camera closestCam(GameObject obj) {

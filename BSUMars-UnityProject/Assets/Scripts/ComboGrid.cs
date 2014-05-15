@@ -100,16 +100,86 @@ public class ComboGrid : MonoBehaviour {
 
 	// Hard-coded recipes go here
 	private void addRecipes() {
-		// Build a larger block
+		// Build a normal metal block from smaller blocks
 		recipes = new List<Recipe>();
 		activeRecipes = new List<Recipe>();
 		List<ConTuple> matList = new List<ConTuple>();
-		matList.Add(new ConTuple(2, "Concrete", 4));
-		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/BldgBase") as GameObject, "Basic Block"));
+		matList.Add(new ConTuple(2, "Metal", 4));
+		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/MetalBlock") as GameObject, "Metal Block"));
 
-		// Build a small wall
+		// Build a normal concrete block from smaller blocks
+		matList.Clear();
+		matList.Add(new ConTuple(2, "Concrete", 4));
+		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/ConcreteBlock") as GameObject, "Concrete Block"));
+
+		// Build a small concrete wall from blocks
 		matList.Clear();
 		matList.Add(new ConTuple(3, "Concrete", 4));
-		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/SmallWall") as GameObject, "Small Wall"));
+		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/ConcSmallWall") as GameObject, "Small Concrete Wall"));
+
+		// Build a small metal wall from blocks
+		matList.Clear();
+		matList.Add(new ConTuple(3, "Metal", 4));
+		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/MetalSmallWall") as GameObject, "Small Metal Wall"));
+
+		// Build a concrete column from blocks
+		matList.Clear();
+		matList.Add(new ConTuple(3, "Concrete", 4));
+		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/ConcColumn") as GameObject, "Concrete Column"));
+
+		// Build a metal column from blocks
+		matList.Clear();
+		matList.Add(new ConTuple(3, "Metal", 4));
+		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/MetalColumn") as GameObject, "Metal Column"));
+
+		// Convert between a concrete column and small wall
+		matList.Clear();
+		matList.Add(new ConTuple(4, "Concrete", 1));
+		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/ConcSmallWall") as GameObject, "Small Concrete Wall"));
+
+		// Convert between a metal column and small wall
+		matList.Clear();
+		matList.Add(new ConTuple(4, "Metal", 1));
+		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/MetalSmallWall") as GameObject, "Small Metal Wall"));
+
+		// Convert between a concrete column and small wall
+		matList.Clear();
+		matList.Add(new ConTuple(4, "Concrete", 1));
+		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/ConcColumn") as GameObject, "Concrete Column"));
+
+		// Convert between a metal column and small wall
+		matList.Clear();
+		matList.Add(new ConTuple(4, "Metal", 1));
+		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/MetalColumn") as GameObject, "Metal Column"));
+
+		// Build a long concrete wall from small walls
+		matList.Clear();
+		matList.Add(new ConTuple(4, "Concrete", 2));
+		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/ConcLongWall") as GameObject, "Long Concrete Wall"));
+
+		// Build a long metal wall from small walls
+		matList.Clear();
+		matList.Add(new ConTuple(4, "Metal", 2));
+		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/MetalLongWall") as GameObject, "Long Metal Wall"));
+
+		// Build a long concrete wall from blocks
+		matList.Clear();
+		matList.Add(new ConTuple(3, "Concrete", 8));
+		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/ConcLongWall") as GameObject, "Long Concrete Wall"));
+
+		// Build a long metal wall from blocks
+		matList.Clear();
+		matList.Add(new ConTuple(3, "Metal", 8));
+		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/MetalLongWall") as GameObject, "Long Metal Wall"));
+
+		// Build a long concrete wall from small walls
+		matList.Clear();
+		matList.Add(new ConTuple(4, "Concrete", 4));
+		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/ConcLargeWall") as GameObject, "Large Concrete Wall"));
+
+		// Build a long metal wall from small walls
+		matList.Clear();
+		matList.Add(new ConTuple(4, "Metal", 4));
+		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/MetalLargeWall") as GameObject, "Large Metal Wall"));
 	}
 }
