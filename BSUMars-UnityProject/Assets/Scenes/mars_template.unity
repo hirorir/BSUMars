@@ -168,8 +168,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &30650785
 Renderer:
@@ -1404,8 +1405,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &134828467
 Renderer:
@@ -1847,8 +1849,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &331567942
 Renderer:
@@ -1954,8 +1957,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &355616565
 Renderer:
@@ -2113,8 +2117,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &378517390
 Renderer:
@@ -2457,8 +2462,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &479823610
 Renderer:
@@ -2564,8 +2570,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &484595615
 Renderer:
@@ -2715,8 +2722,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &577623259
 Renderer:
@@ -2822,8 +2830,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &591077237
 Renderer:
@@ -2993,8 +3002,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &634565106
 Renderer:
@@ -3100,8 +3110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &659764026
 Renderer:
@@ -3275,8 +3286,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &700060049
 Renderer:
@@ -3382,8 +3394,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &745805666
 Renderer:
@@ -3621,8 +3634,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &782915283
 Renderer:
@@ -3728,8 +3742,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &804603794
 Renderer:
@@ -4042,8 +4057,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &916123629
 Renderer:
@@ -4217,8 +4233,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &926828040
 Renderer:
@@ -4324,8 +4341,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &928754754
 Renderer:
@@ -4630,8 +4648,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &965007203
 Renderer:
@@ -4805,8 +4824,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1022703682
 Renderer:
@@ -5099,8 +5119,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1152803017
 Renderer:
@@ -5258,8 +5279,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1187783659
 Renderer:
@@ -5661,8 +5683,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1316034599
 Renderer:
@@ -5812,8 +5835,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1351927630
 Renderer:
@@ -5919,8 +5943,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1358511433
 Renderer:
@@ -6026,8 +6051,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1407303804
 Renderer:
@@ -6133,8 +6159,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1421209924
 Renderer:
@@ -6240,8 +6267,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1422791406
 Renderer:
@@ -7556,8 +7584,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1492634218
 Renderer:
@@ -8024,8 +8053,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1602845782
 Renderer:
@@ -8125,6 +8155,104 @@ Prefab:
   m_RootGameObject: {fileID: 479823607}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1647173006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1647173011}
+  - 33: {fileID: 1647173010}
+  - 65: {fileID: 1647173009}
+  - 23: {fileID: 1647173008}
+  - 54: {fileID: 1647173007}
+  - 114: {fileID: 1647173012}
+  m_Layer: 11
+  m_Name: ComboMachine
+  m_TagString: ComboMachine
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &1647173007
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647173006}
+  serializedVersion: 2
+  m_Mass: 10000
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!23 &1647173008
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647173006}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!65 &1647173009
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647173006}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1647173010
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647173006}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1647173011
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647173006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27.6961918, y: 1.90944862, z: 6.55881882}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &1647173012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647173006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d208ec91de7335e40ba09a1f3d78b428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 1228040728}
 --- !u!1 &1711811290
 GameObject:
   m_ObjectHideFlags: 0
@@ -8260,8 +8388,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1723037520
 Renderer:
@@ -8512,8 +8641,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1743568362
 Renderer:
@@ -8619,8 +8749,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1765562862
 Renderer:
@@ -8726,8 +8857,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1768851452
 Renderer:
@@ -10368,8 +10500,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &1857067227
 Renderer:
@@ -10687,8 +10820,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conSpeed: 2
   rotSpeed: 90
+  bldgMat: Concrete
+  blockSize: 3
   explosionCube: 2
-  origMass: 0
   curGrid: {fileID: 0}
 --- !u!23 &2008717415
 Renderer:

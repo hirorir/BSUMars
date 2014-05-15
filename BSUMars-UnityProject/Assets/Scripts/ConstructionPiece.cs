@@ -6,8 +6,10 @@ using System.Linq;
 public class ConstructionPiece : MonoBehaviour {
 	[SerializeField] protected float conSpeed = 16f; // The controlled placement movement speed of the object.
 	[SerializeField] protected float rotSpeed = 90f; // The controlled placement rotation speed of the object.
+	public string bldgMat = "Concrete"; // The material of the object.
+	public int blockSize = 3; // The size classificarion of the object.
 	public int explosionCube = 1; // Controls how many pieces the object breaks into from explosions. For cubes, explodes into n^2 pieces.
-	public float origMass;
+	//public float origMass;
 	private float adjX;
 	private float adjZ;
 	public GameObject curGrid;
@@ -23,7 +25,7 @@ public class ConstructionPiece : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(getobjs());
-		origMass = rigidbody.mass;
+		//origMass = rigidbody.mass;
 		springMidpointXZ = new Vector2(transform.position.x, transform.position.z);
 	}
 

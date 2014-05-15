@@ -266,7 +266,10 @@
      <Compile Include="Assets\Sample Assets\Vehicles\Rolling Ball\Scripts\Ball.cs" />
      <Compile Include="Assets\Sample Assets\Vehicles\Rolling Ball\Scripts\BallUserControl.cs" />
      <Compile Include="Assets\Scripts\ComboGrid.cs" />
+     <Compile Include="Assets\Scripts\ComboMachine.cs" />
+     <Compile Include="Assets\Scripts\ConTuple.cs" />
      <Compile Include="Assets\Scripts\ConstructionPiece.cs" />
+     <Compile Include="Assets\Scripts\Recipe.cs" />
      <Compile Include="Assets\explosion.cs" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\ReadMe - 3.5.8.txt" />
