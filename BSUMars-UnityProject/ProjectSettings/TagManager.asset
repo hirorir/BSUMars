@@ -9,6 +9,8 @@ TagManager:
   - Fire
   - ConGrid
   - ConPiece
+  - Combinations
+  - ComboMachine
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
