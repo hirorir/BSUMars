@@ -334,7 +334,7 @@ public class ConstructionPiece : MonoBehaviour {
 									GameObject newPiece = GameObject.Instantiate(gameObject) as GameObject;
 									newPiece.GetComponent<ConstructionPiece>().explosionCube = explosionCube - 1;
 									newPiece.transform.position = new Vector3(cubeCorner.x + i % explosionCube, cubeCorner.y + j % explosionCube, cubeCorner.z + k % explosionCube);
-									newPiece.transform.localScale = transform.localScale / (float)explosionCube;
+									newPiece.transform.localScale = transform.localScale / ((float)explosionCube + Random.value);
 									newPiece.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
 									newPiece.GetComponent<ConstructionPiece>().explosionCube--;
 								}
