@@ -261,7 +261,7 @@ public class FirstPersonCharacter : MonoBehaviour
 			Ray ray = new Ray(transform.position, -transform.up);
 
 			// Raycast slightly further than the capsule (as determined by jumpRayLength)
-			RaycastHit[] hits = Physics.RaycastAll(ray, capsule.height * jumpRayLength);
+			RaycastHit[] hits = Physics.RaycastAll(ray, capsule.height * jumpRayLength, ~(1 << 13));
 			System.Array.Sort(hits, rayHitComparer);
 
 

@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour {
 			NGUITools.SetActive(main, false);
 			NGUITools.SetActive(credits, true);
 		} else if (name == "Play") {
-			Application.LoadLevel("mars_template");
+			Application.LoadLevel("mars_concrete_house");
 		} else if (name == "Back") {
 			NGUITools.SetActive(credits, false);
 			NGUITools.SetActive(main, true);

@@ -22,11 +22,12 @@ public class ConstructionPiece : MonoBehaviour {
 	//private List<Camera> conCams;
 
 	[SerializeField] private float radius = 10.0F;
-	[SerializeField] private float power = 1000.0F;
+	[SerializeField] private float power = 500.0F;
 
 	void OnParticleCollision(GameObject other){
 		Vector3 direction = other.transform.position - transform.position;
-		explosion(power, transform.position - direction.normalized, radius, 3.0f);
+		if(direction.magnitude < radius)
+			explosion(power, other.transform.position, radius, 3.0f);
 	}
 
 	// Use this for initialization

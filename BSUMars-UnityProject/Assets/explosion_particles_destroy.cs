@@ -11,7 +11,7 @@ public class explosion_particles_destroy : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (!(GetComponent<ParticleSystem> ().IsAlive())) {
+		if (!audio.isPlaying) {
 			Destroy (gameObject);
 		}
 	}
