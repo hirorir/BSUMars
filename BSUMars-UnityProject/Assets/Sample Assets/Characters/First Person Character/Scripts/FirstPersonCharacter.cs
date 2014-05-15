@@ -142,7 +142,7 @@ public class FirstPersonCharacter : MonoBehaviour
 				dropObject ();
 			}
 			else if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, rigDist, 1 << 11)) {
-				Debug.Log("yus");
+				//Debug.Log("yus");
 				if (hit.collider.tag == "ComboMachine")
 					hit.collider.GetComponent<ComboMachine>().displayRecipes();
 				else

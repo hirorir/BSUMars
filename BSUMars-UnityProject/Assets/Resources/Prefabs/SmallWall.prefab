@@ -26,8 +26,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.6449509, y: 1.5, z: 7.4466877}
+  m_LocalRotation: {x: -1.39584847e-06, y: 1, z: -7.38075551e-06, w: -4.37216912e-08}
+  m_LocalPosition: {x: 3.12102604, y: .480117798, z: 29.5790176}
   m_LocalScale: {x: 4, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -43,7 +43,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: -584047819, guid: ffb3959b6c250464c91026cd534f8e68, type: 3}
+  - {fileID: -106926425, guid: 367e5b5841f63fa48a02e2e5c102b385, type: 3}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -66,7 +66,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   serializedVersion: 2
-  m_Mass: 3
+  m_Mass: 12
   m_Drag: .0500000007
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -103,6 +103,8 @@ MonoBehaviour:
   blockSize: 4
   explosionCube: 2
   curGrid: {fileID: 0}
+  radius: 10
+  power: 750
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

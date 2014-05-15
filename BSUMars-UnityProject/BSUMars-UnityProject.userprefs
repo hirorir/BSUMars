@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\explosion_particles_destroy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Sample Assets\Characters\First Person Character\Scripts\FirstPersonCharacter.cs">
     <Files>
-      <File FileName="Assets\explosion_particles_destroy.cs" Line="14" Column="54" />
+      <File FileName="Assets\Sample Assets\Characters\First Person Character\Scripts\FirstPersonCharacter.cs" Line="147" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

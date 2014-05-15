@@ -8,7 +8,7 @@ public class ConstructionPiece : MonoBehaviour {
 	[SerializeField] protected float rotSpeed = 90f; // The controlled placement rotation speed of the object.
 	public string bldgMat = "Concrete"; // The material of the object.
 	public int blockSize = 3; // The size classificarion of the object.
-	public int explosionCube = 1; // Controls how many pieces the object breaks into from explosions. For cubes, explodes into n^2 pieces.
+	public int explosionCube = 3; // Controls how many pieces the object breaks into from explosions. For cubes, explodes into n^2 pieces.
 	//public float origMass;
 	private float adjX;
 	private float adjZ;
@@ -58,11 +58,11 @@ public class ConstructionPiece : MonoBehaviour {
 	}
 	
 	void FixedUpdate () {
-		if (player != null) {
+		/*if (player != null) {
 			if (transform.parent == player.transform && Input.GetKeyDown(KeyCode.Return)) {
 				transform.parent = null;
 			}
-		}
+		}*/
 		if (placing) {
 			Vector3 movementVec = new Vector3(0f, 0f, 0f);
 			if (Input.GetKey(KeyCode.W)) {
@@ -91,7 +91,8 @@ public class ConstructionPiece : MonoBehaviour {
 						connection.transform.RotateAround(rotPoint, Vector3.up, -rotSpeed * Time.deltaTime);
 				} else*/
 				transform.Rotate(0f, -rotSpeed * Time.deltaTime, 0f);
-			} else if (Input.GetKey(KeyCode.E)) {
+			}
+			if (Input.GetKey(KeyCode.E)) {
 				/*if (GetComponent<FixedJoint>()) {
 					Vector3 rotPoint = new Vector3(springMidpointXZ.x, transform.position.y, springMidpointXZ.y);
 					transform.RotateAround(rotPoint, Vector3.up, rotSpeed * Time.deltaTime);
@@ -204,11 +205,11 @@ public class ConstructionPiece : MonoBehaviour {
 	// Adds an explosion force to the piece, and breaks it apart if it is breakable.
 	// Only works for cubes for now.
 	public void explosion(float power, Vector3 explosionPos, float radius, float upwardsModifier) {
-		if (explosionCube > 1) {
-			if(transform.localScale.x <= 0.25f){
+		if (explosionCube > 0) {
+			/*if(transform.localScale.x <= 0.25f){
 				Destroy (gameObject);
 				return;
-			}
+			}*/
 			//List<GameObject> newPieces = new List<GameObject>();
 			int expCubeTrue = explosionCube * explosionCube * explosionCube;
 			Vector3 cubeCorner = new Vector3(transform.position.x + collider.bounds.size.x * (1 - expCubeTrue) / (2f * expCubeTrue), transform.position.y + collider.bounds.size.y * (1 - expCubeTrue) / (2f * expCubeTrue),
@@ -217,7 +218,7 @@ public class ConstructionPiece : MonoBehaviour {
 				for (int j = 0; j < explosionCube; j++) {
 					for (int k = 0; k < explosionCube; k++) {
 						GameObject newPiece = GameObject.Instantiate(gameObject) as GameObject;
-						newPiece.GetComponent<ConstructionPiece>().explosionCube = 1;
+						newPiece.GetComponent<ConstructionPiece>().explosionCube = explosionCube - 1;
 						newPiece.transform.position = new Vector3(cubeCorner.x + i % explosionCube, cubeCorner.y + j % explosionCube, cubeCorner.z + k % explosionCube);
 						newPiece.transform.localScale = transform.localScale / (float)explosionCube;
 						newPiece.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
@@ -227,7 +228,7 @@ public class ConstructionPiece : MonoBehaviour {
 			}
 			Destroy(gameObject);
 		} else {
-			rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0F);
+			Destroy (gameObject);
 		}
 	}
 

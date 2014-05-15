@@ -265,7 +265,11 @@
      <Compile Include="Assets\Sample Assets\Vehicles\Car\Scripts\Wheel.cs" />
      <Compile Include="Assets\Sample Assets\Vehicles\Rolling Ball\Scripts\Ball.cs" />
      <Compile Include="Assets\Sample Assets\Vehicles\Rolling Ball\Scripts\BallUserControl.cs" />
+     <Compile Include="Assets\Scripts\ComboGrid.cs" />
+     <Compile Include="Assets\Scripts\ComboMachine.cs" />
+     <Compile Include="Assets\Scripts\ConTuple.cs" />
      <Compile Include="Assets\Scripts\ConstructionPiece.cs" />
+     <Compile Include="Assets\Scripts\Recipe.cs" />
      <Compile Include="Assets\Scripts\explosion.cs" />
      <Compile Include="Assets\destructible.cs" />
      <Compile Include="Assets\explosion_particles_destroy.cs" />
