@@ -18,7 +18,7 @@ public class explosion : MonoBehaviour {
 			if(FindObjectOfType<FirstPersonCharacter>().holdingObject ())
 				FindObjectOfType <FirstPersonCharacter>().dropObject ();
 
-			Vector3 explosionPos = transform.position;
+			/*Vector3 explosionPos = transform.position;
 			Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
 			ConstructionPiece conPiece;
 			foreach (Collider hit in colliders) {
@@ -29,7 +29,7 @@ public class explosion : MonoBehaviour {
 					else
 						hit.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0F);
 				}
-			}
+			}*/
 			Instantiate (explosionanim, transform.position, transform.rotation);
 			Destroy (gameObject);
 		}

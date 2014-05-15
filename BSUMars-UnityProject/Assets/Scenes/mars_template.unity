@@ -2420,6 +2420,7 @@ GameObject:
   - 23: {fileID: 479823610}
   - 114: {fileID: 479823609}
   - 54: {fileID: 479823608}
+  - 114: {fileID: 479823614}
   m_Layer: 11
   m_Name: BldgBase
   m_TagString: ConPiece
@@ -2514,6 +2515,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &479823614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 479823607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40358dc187cd70246b7c5a7d9c7f2e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &484595612
 GameObject:
   m_ObjectHideFlags: 0

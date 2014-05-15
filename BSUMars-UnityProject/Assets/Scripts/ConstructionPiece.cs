@@ -20,6 +20,14 @@ public class ConstructionPiece : MonoBehaviour {
     //private Camera activeCam;
 	//private List<Camera> conCams;
 
+	[SerializeField] private float radius = 10.0F;
+	[SerializeField] private float power = 1000.0F;
+
+	void OnParticleCollision(GameObject other){
+		Vector3 direction = other.transform.position - transform.position;
+		explosion(power, transform.position - direction.normalized, radius, 3.0f);
+	}
+
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(getobjs());
@@ -192,6 +200,10 @@ public class ConstructionPiece : MonoBehaviour {
 	// Only works for cubes for now.
 	public void explosion(float power, Vector3 explosionPos, float radius, float upwardsModifier) {
 		if (explosionCube > 1) {
+			if(transform.localScale.x <= 0.25f){
+				Destroy (gameObject);
+				return;
+			}
 			//List<GameObject> newPieces = new List<GameObject>();
 			int expCubeTrue = explosionCube * explosionCube * explosionCube;
 			Vector3 cubeCorner = new Vector3(transform.position.x + collider.bounds.size.x * (1 - expCubeTrue) / (2f * expCubeTrue), transform.position.y + collider.bounds.size.y * (1 - expCubeTrue) / (2f * expCubeTrue),
