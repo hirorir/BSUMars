@@ -14,7 +14,6 @@ public class ConstructionPiece : MonoBehaviour {
 	private float adjZ;
 	public GameObject curGrid;
 	private bool placing = false; // Whether or not the piece is being placed by the player.
-	private bool wasPlaced = false;
 	private GameObject player;
 	private FirstPersonCharacter playerChar;
 	private Vector2 springMidpointXZ;
@@ -77,21 +76,21 @@ public class ConstructionPiece : MonoBehaviour {
 				movementVec += new Vector3(0f, -Time.deltaTime * conSpeed, 0f);
 			} 
 			if (Input.GetKey(KeyCode.Q)) {
-				if (GetComponent<FixedJoint>()) {
+				/*if (GetComponent<FixedJoint>()) {
 					Vector3 rotPoint = new Vector3(springMidpointXZ.x, transform.position.y, springMidpointXZ.y);
 					transform.RotateAround(rotPoint, Vector3.up, -rotSpeed * Time.deltaTime);
 					foreach (FixedJoint connection in GetComponents<FixedJoint>())
 						connection.transform.RotateAround(rotPoint, Vector3.up, -rotSpeed * Time.deltaTime);
-				} else
-					transform.Rotate(0f, -rotSpeed * Time.deltaTime, 0f);
+				} else*/
+				transform.Rotate(0f, -rotSpeed * Time.deltaTime, 0f);
 			} else if (Input.GetKey(KeyCode.E)) {
-				if (GetComponent<FixedJoint>()) {
+				/*if (GetComponent<FixedJoint>()) {
 					Vector3 rotPoint = new Vector3(springMidpointXZ.x, transform.position.y, springMidpointXZ.y);
 					transform.RotateAround(rotPoint, Vector3.up, rotSpeed * Time.deltaTime);
 					foreach (FixedJoint connection in GetComponents<FixedJoint>())
 						connection.transform.RotateAround(rotPoint, Vector3.up, rotSpeed * Time.deltaTime);
-				} else
-					transform.Rotate(0f, rotSpeed * Time.deltaTime, 0f);
+				} else*/
+				transform.Rotate(0f, rotSpeed * Time.deltaTime, 0f);
 			}
 			transform.Translate(movementVec, Space.World);
 
@@ -120,10 +119,6 @@ public class ConstructionPiece : MonoBehaviour {
 	protected void OnTriggerExit(Collider target) {
 		if (target.tag == "ConGrid") {
 			curGrid = null;
-			if (!wasPlaced) {
-				endPlacement();
-				wasPlaced = false;
-			}
 		} else if (target.tag == "Combinations") {
 			target.GetComponent<ComboGrid>().removeItem(gameObject);
 		}
@@ -173,23 +168,23 @@ public class ConstructionPiece : MonoBehaviour {
 		}
 		rigidbody.useGravity = true;
 		rigidbody.constraints = RigidbodyConstraints.None;
-		foreach (FixedJoint joint in GetComponents<FixedJoint>()) {
+		/*foreach (FixedJoint joint in GetComponents<FixedJoint>()) {
 			joint.connectedBody.rigidbody.isKinematic = true;
-		}
+		}*/
 	}
 
 	protected void OnCollisionEnter(Collision target) {
 		if (placing && target.gameObject.tag == "ConPiece") {
 			rigidbody.velocity = Vector3.zero;
-			if (playerChar.conMode) {
-				FixedJoint joint = gameObject.AddComponent<FixedJoint>();
-				joint.connectedBody = target.rigidbody;
+			/*if (playerChar.conMode) {
+				//FixedJoint joint = gameObject.AddComponent<FixedJoint>();
+				//joint.connectedBody = target.rigidbody;
 				//joint.connectedBody.rigidbody.useGravity = false;
 				//joint.connectedBody.rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
-				joint.connectedBody.rigidbody.isKinematic = false;
+				//joint.connectedBody.rigidbody.isKinematic = false;
 				//RecalculateMidPoint();
 				endPlacement();
-			}
+			}*/
 		}
 	}
 
@@ -214,6 +209,7 @@ public class ConstructionPiece : MonoBehaviour {
 						newPiece.transform.position = new Vector3(cubeCorner.x + i % explosionCube, cubeCorner.y + j % explosionCube, cubeCorner.z + k % explosionCube);
 						newPiece.transform.localScale = transform.localScale / (float)explosionCube;
 						newPiece.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
+						newPiece.GetComponent<ConstructionPiece>().blockSize--;
 					}
 				}
 			}

@@ -100,10 +100,16 @@ public class ComboGrid : MonoBehaviour {
 
 	// Hard-coded recipes go here
 	private void addRecipes() {
+		// Build a larger block
 		recipes = new List<Recipe>();
 		activeRecipes = new List<Recipe>();
 		List<ConTuple> matList = new List<ConTuple>();
+		matList.Add(new ConTuple(2, "Concrete", 4));
+		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/BldgBase") as GameObject, "Basic Block"));
+
+		// Build a small wall
+		matList.Clear();
 		matList.Add(new ConTuple(3, "Concrete", 4));
-		recipes.Add(new Recipe(matList, false, Resources.Load("Prefabs/BldgBase") as GameObject, "Basic Block"));
+		recipes.Add(new Recipe(new List<ConTuple>(matList), true, Resources.Load("Prefabs/SmallWall") as GameObject, "Small Wall"));
 	}
 }
