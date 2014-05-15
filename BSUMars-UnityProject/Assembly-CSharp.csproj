@@ -269,6 +269,7 @@
      <Compile Include="Assets\Scripts\ComboMachine.cs" />
      <Compile Include="Assets\Scripts\ConTuple.cs" />
      <Compile Include="Assets\Scripts\ConstructionPiece.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Recipe.cs" />
      <Compile Include="Assets\Scripts\explosion.cs" />
      <Compile Include="Assets\destructible.cs" />
