@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class explosion_particles_destroy : MonoBehaviour {
-
+	
 	// Use this for initialization
 	void Start () {
 	

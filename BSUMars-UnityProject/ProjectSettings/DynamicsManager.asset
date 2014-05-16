@@ -6,10 +6,10 @@ PhysicsManager:
   m_Gravity: {x: 0, y: -3.71000004, z: 0}
   m_DefaultMaterial: {fileID: 13400000, guid: ae51c2b8a2d62f74a917726ce1c0af2c, type: 2}
   m_BounceThreshold: 2
-  m_SleepVelocity: .150000006
-  m_SleepAngularVelocity: .140000001
+  m_SleepVelocity: .300000012
+  m_SleepAngularVelocity: .300000012
   m_MaxAngularVelocity: 7
   m_MinPenetrationForPenalty: .00999999978
-  m_SolverIterationCount: 6
+  m_SolverIterationCount: 4
   m_RaycastsHitTriggers: 1
   m_LayerCollisionMatrix: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdffffffffffffffffffffffffffffffffdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff

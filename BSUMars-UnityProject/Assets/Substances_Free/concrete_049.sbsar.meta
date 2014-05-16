@@ -158,7 +158,7 @@ SubstanceImporter:
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 2, y: 1}
+      scale: {x: 1, y: 1}
       generateAllOutputs: 1
       animationUpdateRate: 42
     materialProperties:
@@ -226,8 +226,8 @@ SubstanceImporter:
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 
-      textureWidth: 512
-      textureHeight: 512
+      textureWidth: 2048
+      textureHeight: 2048
       textureFormat: 0
       loadingBehavior: 1
   deletedPrototypes: []

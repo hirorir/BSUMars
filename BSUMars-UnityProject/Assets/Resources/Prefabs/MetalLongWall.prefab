@@ -43,7 +43,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: -584047819, guid: ffb3959b6c250464c91026cd534f8e68, type: 3}
+  - {fileID: 184848624, guid: 1c7daa9b3dc69754088cd5de23e21819, type: 3}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -103,7 +103,6 @@ MonoBehaviour:
   blockSize: 5
   explosionCube: 2
   curGrid: {fileID: 0}
-  radius: 10
   power: 750
 --- !u!1001 &100100000
 Prefab:
