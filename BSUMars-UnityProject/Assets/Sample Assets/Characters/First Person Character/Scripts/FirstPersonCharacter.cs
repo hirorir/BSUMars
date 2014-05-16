@@ -115,7 +115,7 @@ public class FirstPersonCharacter : MonoBehaviour
 
 	void OnDisable()
 	{
-		Screen.lockCursor = false;
+		//Screen.lockCursor = false;
 	}
 
 	void Update()
@@ -149,7 +149,16 @@ public class FirstPersonCharacter : MonoBehaviour
 				//Debug.Log("yus");
 				if (hit.collider.tag == "ComboMachine")
 					hit.collider.GetComponent<ComboMachine>().displayRecipes();
-				else
+				else if (hit.collider.tag == "ClearGrid") {
+					GameObject invisCube = GameObject.FindGameObjectWithTag("InvisCube");
+					GameObject conGrid = GameObject.FindGameObjectWithTag("ConGrid");
+					Debug.Log(conGrid.renderer.bounds.size);
+					Debug.Log(new Vector3(conGrid.transform.position.x, invisCube.transform.position.y, conGrid.transform.position.z + conGrid.renderer.bounds.size.z / 2f));
+					invisCube.transform.position = new Vector3(conGrid.transform.position.x, invisCube.transform.position.y, conGrid.transform.position.z + conGrid.renderer.bounds.size.z / 2f);
+					StartCoroutine(moveClearer(invisCube, - conGrid.renderer.bounds.size.z, 3f, 300));
+				} else if (hit.collider.tag == "EndConstruction") {
+					Debug.Log("CONSTRUCTION TIME IS OVAH MOTHAFUCKAS");
+				} else if (hit.rigidbody != null)
 					pickupObject(hit.collider.gameObject);			//otherwise get what the character is trying to get
 			}
 		}
@@ -398,5 +407,15 @@ public class FirstPersonCharacter : MonoBehaviour
 
 	public void nullifyPickup() {
 		placingObject = null;
+	}
+
+	public IEnumerator moveClearer(GameObject clearer, float distance, float time, int steps) {
+		Vector3 translationStep = new Vector3(0f, 0f, distance / steps);
+		float timeStep = time / (float)steps;
+		for (int i = 0; i < steps; i++) {
+			clearer.transform.Translate(translationStep, Space.World);
+			yield return new WaitForSeconds(timeStep);
+		}
+		clearer.transform.Translate(new Vector3(-70f, 0f, 0f), Space.World);
 	}
 }

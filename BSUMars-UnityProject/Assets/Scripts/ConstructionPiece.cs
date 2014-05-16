@@ -224,7 +224,8 @@ public class ConstructionPiece : MonoBehaviour {
 						// Break the small wall into cubes
 						for (int i = 0; i < 4; i++) {
 							GameObject newPiece = GameObject.Instantiate(cubeType) as GameObject;
-							newPiece.GetComponent<ConstructionPiece>().explosionCube = explosionCube - 1;
+							newPiece.GetComponent<ConstructionPiece>().explosionCube--;
+							newPiece.GetComponent<ConstructionPiece>().blockSize = 3;
 							if (transform.localScale.x == 4)
 								newPiece.transform.position = wallCorner + new Vector3(i * collider.bounds.size.x / 4f, 0f, 0f);
 							else
@@ -253,7 +254,8 @@ public class ConstructionPiece : MonoBehaviour {
 						// Break the small wall into cubes
 						for (int i = 0; i < 8; i++) {
 							GameObject newPiece = GameObject.Instantiate(cubeType) as GameObject;
-							newPiece.GetComponent<ConstructionPiece>().explosionCube = explosionCube - 1;
+							newPiece.GetComponent<ConstructionPiece>().explosionCube--;
+							newPiece.GetComponent<ConstructionPiece>().blockSize = 3;
 							newPiece.transform.position = wallCorner + new Vector3(i * collider.bounds.size.x / 8f, 0f, 0f);
 							//newPiece.transform.localScale = transform.localScale / (float)explosionCube;
 							newPiece.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
@@ -280,6 +282,7 @@ public class ConstructionPiece : MonoBehaviour {
 						for (int i = 0; i < 4; i++) {
 							GameObject newPiece = GameObject.Instantiate(wallType) as GameObject;
 							//newPiece.GetComponent<ConstructionPiece>().explosionCube = explosionCube - 1;
+							newPiece.GetComponent<ConstructionPiece>().blockSize = 4;
 							newPiece.transform.position = wallCorner + new Vector3(0f, i * collider.bounds.size.y / 4f, 0f);
 							//newPiece.transform.localScale = transform.localScale / (float)explosionCube;
 							newPiece.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
@@ -307,6 +310,7 @@ public class ConstructionPiece : MonoBehaviour {
 							for (int j = 0; j < 4; j++) {
 								GameObject newPiece = GameObject.Instantiate(wallType) as GameObject;
 								//newPiece.GetComponent<ConstructionPiece>().explosionCube = explosionCube - 1;
+								newPiece.GetComponent<ConstructionPiece>().blockSize = 4;
 								newPiece.transform.position = wallCorner + new Vector3(i * collider.bounds.size.x / 2f, j * collider.bounds.size.y / 4f, 0f);
 								//newPiece.transform.localScale = transform.localScale / (float)explosionCube;
 								newPiece.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);
@@ -334,6 +338,7 @@ public class ConstructionPiece : MonoBehaviour {
 								for (int k = 0; k < explosionCube; k++) {
 									GameObject newPiece = GameObject.Instantiate(gameObject) as GameObject;
 									newPiece.GetComponent<ConstructionPiece>().explosionCube = explosionCube - 1;
+									newPiece.GetComponent<ConstructionPiece>().blockSize = 2;
 									newPiece.transform.position = new Vector3(cubeCorner.x + i % explosionCube, cubeCorner.y + j % explosionCube, cubeCorner.z + k % explosionCube);
 									newPiece.transform.localScale = transform.localScale / ((float)explosionCube + Random.value);
 									newPiece.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0f);

@@ -129,7 +129,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &3901019
 Renderer:
   m_ObjectHideFlags: 0
@@ -359,7 +359,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &17062689
 Renderer:
   m_ObjectHideFlags: 0
@@ -549,7 +549,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &39300084
 Renderer:
   m_ObjectHideFlags: 0
@@ -659,7 +659,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &64378888
 Renderer:
   m_ObjectHideFlags: 0
@@ -769,7 +769,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &66378830
 Renderer:
   m_ObjectHideFlags: 0
@@ -904,6 +904,95 @@ Prefab:
   m_RootGameObject: {fileID: 722382568}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &75378731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: a47570f99a16dac408ed6f3e216fc34a, type: 2}
+  m_PrefabInternal: {fileID: 1376616719}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 75378736}
+  - 33: {fileID: 75378735}
+  - 65: {fileID: 75378734}
+  - 23: {fileID: 75378733}
+  - 54: {fileID: 75378732}
+  m_Layer: 0
+  m_Name: InvisCube
+  m_TagString: InvisCube
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &75378732
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: a47570f99a16dac408ed6f3e216fc34a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1376616719}
+  m_GameObject: {fileID: 75378731}
+  serializedVersion: 2
+  m_Mass: 10000
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!23 &75378733
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: a47570f99a16dac408ed6f3e216fc34a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1376616719}
+  m_GameObject: {fileID: 75378731}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!65 &75378734
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: a47570f99a16dac408ed6f3e216fc34a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1376616719}
+  m_GameObject: {fileID: 75378731}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &75378735
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: a47570f99a16dac408ed6f3e216fc34a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1376616719}
+  m_GameObject: {fileID: 75378731}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &75378736
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: a47570f99a16dac408ed6f3e216fc34a, type: 2}
+  m_PrefabInternal: {fileID: 1376616719}
+  m_GameObject: {fileID: 75378731}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
+  m_LocalPosition: {x: -62.9481583, y: 20, z: .0537360013}
+  m_LocalScale: {x: .200000003, y: 40, z: 20}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &83133731
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,7 +1048,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &83133734
 Renderer:
   m_ObjectHideFlags: 0
@@ -1109,7 +1198,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &99398348
 Renderer:
   m_ObjectHideFlags: 0
@@ -1259,7 +1348,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &121192856
 Renderer:
   m_ObjectHideFlags: 0
@@ -1369,7 +1458,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &123216819
 Renderer:
   m_ObjectHideFlags: 0
@@ -2564,7 +2653,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &125904031
 Renderer:
   m_ObjectHideFlags: 0
@@ -2674,7 +2763,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &130121808
 Renderer:
   m_ObjectHideFlags: 0
@@ -2924,7 +3013,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &143415465
 Renderer:
   m_ObjectHideFlags: 0
@@ -2992,7 +3081,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 20f89af66cd0dbb47a4443330e894777, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.90944862
+      value: 1.50807714
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 20f89af66cd0dbb47a4443330e894777, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3018,6 +3107,23 @@ Prefab:
       propertyPath: grid
       value: 
       objectReference: {fileID: 1228040728}
+    - target: {fileID: 2300000, guid: 20f89af66cd0dbb47a4443330e894777, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -564478081, guid: 036bc13753e6f3d46b2072367e431230,
+        type: 3}
+    - target: {fileID: 400000, guid: 20f89af66cd0dbb47a4443330e894777, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 20f89af66cd0dbb47a4443330e894777, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 20f89af66cd0dbb47a4443330e894777, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 20f89af66cd0dbb47a4443330e894777, type: 2}
   m_RootGameObject: {fileID: 1647173006}
@@ -3198,7 +3304,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &212565453
 Renderer:
   m_ObjectHideFlags: 0
@@ -3252,6 +3358,94 @@ Transform:
   m_LocalPosition: {x: .490527064, y: 2.48147845, z: 16.6569328}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+  m_Father: {fileID: 0}
+--- !u!1 &223994705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: d199620d6c6277f41850c4ea103fb7ad, type: 2}
+  m_PrefabInternal: {fileID: 1293845807}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 223994710}
+  - 33: {fileID: 223994709}
+  - 65: {fileID: 223994708}
+  - 23: {fileID: 223994707}
+  - 114: {fileID: 223994706}
+  m_Layer: 14
+  m_Name: ConstructionControls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &223994706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: d199620d6c6277f41850c4ea103fb7ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1293845807}
+  m_GameObject: {fileID: 223994705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d208ec91de7335e40ba09a1f3d78b428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 1228040728}
+--- !u!23 &223994707
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300004, guid: d199620d6c6277f41850c4ea103fb7ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1293845807}
+  m_GameObject: {fileID: 223994705}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: -564478081, guid: 036bc13753e6f3d46b2072367e431230, type: 3}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!65 &223994708
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: d199620d6c6277f41850c4ea103fb7ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1293845807}
+  m_GameObject: {fileID: 223994705}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &223994709
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300004, guid: d199620d6c6277f41850c4ea103fb7ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1293845807}
+  m_GameObject: {fileID: 223994705}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &223994710
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400004, guid: d199620d6c6277f41850c4ea103fb7ad, type: 2}
+  m_PrefabInternal: {fileID: 1293845807}
+  m_GameObject: {fileID: 223994705}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
+  m_LocalPosition: {x: -14.9957447, y: 1.45279408, z: -3.4809761}
+  m_LocalScale: {x: 1, y: 3, z: 2}
+  m_Children:
+  - {fileID: 2063115549}
+  - {fileID: 2144260520}
   m_Father: {fileID: 0}
 --- !u!1001 &224186787
 Prefab:
@@ -3348,7 +3542,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &231095582
 Renderer:
   m_ObjectHideFlags: 0
@@ -3458,7 +3652,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &231213916
 Renderer:
   m_ObjectHideFlags: 0
@@ -3568,7 +3762,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &238709417
 Renderer:
   m_ObjectHideFlags: 0
@@ -3718,7 +3912,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &241041939
 Renderer:
   m_ObjectHideFlags: 0
@@ -3868,7 +4062,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &275532255
 Renderer:
   m_ObjectHideFlags: 0
@@ -4058,7 +4252,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &299553891
 Renderer:
   m_ObjectHideFlags: 0
@@ -4208,7 +4402,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &310446286
 Renderer:
   m_ObjectHideFlags: 0
@@ -4318,7 +4512,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &343076187
 Renderer:
   m_ObjectHideFlags: 0
@@ -4428,7 +4622,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &343946584
 Renderer:
   m_ObjectHideFlags: 0
@@ -4538,7 +4732,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &345885593
 Renderer:
   m_ObjectHideFlags: 0
@@ -4648,7 +4842,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &345923371
 Renderer:
   m_ObjectHideFlags: 0
@@ -4798,7 +4992,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &357069614
 Renderer:
   m_ObjectHideFlags: 0
@@ -5079,7 +5273,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &416118556
 Renderer:
   m_ObjectHideFlags: 0
@@ -5629,7 +5823,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &455726793
 Renderer:
   m_ObjectHideFlags: 0
@@ -5805,7 +5999,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &478939894
 Renderer:
   m_ObjectHideFlags: 0
@@ -5915,7 +6109,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &480930758
 Renderer:
   m_ObjectHideFlags: 0
@@ -6025,7 +6219,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &498918514
 Renderer:
   m_ObjectHideFlags: 0
@@ -6255,7 +6449,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &514428079
 Renderer:
   m_ObjectHideFlags: 0
@@ -6365,7 +6559,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &523239540
 Renderer:
   m_ObjectHideFlags: 0
@@ -6475,7 +6669,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &529387167
 Renderer:
   m_ObjectHideFlags: 0
@@ -6585,7 +6779,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &531713318
 Renderer:
   m_ObjectHideFlags: 0
@@ -6735,7 +6929,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &545375564
 Renderer:
   m_ObjectHideFlags: 0
@@ -7005,7 +7199,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &568611495
 Renderer:
   m_ObjectHideFlags: 0
@@ -7115,7 +7309,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &574071567
 Renderer:
   m_ObjectHideFlags: 0
@@ -7225,7 +7419,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &576619273
 Renderer:
   m_ObjectHideFlags: 0
@@ -7335,7 +7529,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &594927107
 Renderer:
   m_ObjectHideFlags: 0
@@ -7445,7 +7639,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &596299680
 Renderer:
   m_ObjectHideFlags: 0
@@ -7595,7 +7789,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &615562763
 Renderer:
   m_ObjectHideFlags: 0
@@ -7785,7 +7979,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &679184434
 Renderer:
   m_ObjectHideFlags: 0
@@ -7975,7 +8169,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &699890887
 Renderer:
   m_ObjectHideFlags: 0
@@ -8085,7 +8279,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &700248553
 Renderer:
   m_ObjectHideFlags: 0
@@ -8195,7 +8389,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &709426817
 Renderer:
   m_ObjectHideFlags: 0
@@ -8305,7 +8499,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &721744170
 Renderer:
   m_ObjectHideFlags: 0
@@ -8415,7 +8609,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &722382571
 Renderer:
   m_ObjectHideFlags: 0
@@ -8565,7 +8759,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &728361407
 Renderer:
   m_ObjectHideFlags: 0
@@ -8715,7 +8909,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &762222944
 Renderer:
   m_ObjectHideFlags: 0
@@ -8905,7 +9099,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &780720221
 Renderer:
   m_ObjectHideFlags: 0
@@ -9055,7 +9249,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &818906078
 Renderer:
   m_ObjectHideFlags: 0
@@ -9165,7 +9359,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &830530880
 Renderer:
   m_ObjectHideFlags: 0
@@ -9275,7 +9469,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &831400554
 Renderer:
   m_ObjectHideFlags: 0
@@ -9425,7 +9619,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &833910804
 Renderer:
   m_ObjectHideFlags: 0
@@ -9535,7 +9729,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &849478641
 Renderer:
   m_ObjectHideFlags: 0
@@ -9864,7 +10058,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &875723160
 Renderer:
   m_ObjectHideFlags: 0
@@ -10121,7 +10315,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &943724522
 Renderer:
   m_ObjectHideFlags: 0
@@ -10351,7 +10545,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &972076249
 Renderer:
   m_ObjectHideFlags: 0
@@ -10501,7 +10695,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1003159354
 Renderer:
   m_ObjectHideFlags: 0
@@ -10611,7 +10805,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1006452346
 Renderer:
   m_ObjectHideFlags: 0
@@ -10721,7 +10915,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1010915741
 Renderer:
   m_ObjectHideFlags: 0
@@ -10831,7 +11025,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1024588547
 Renderer:
   m_ObjectHideFlags: 0
@@ -10941,7 +11135,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1035207174
 Renderer:
   m_ObjectHideFlags: 0
@@ -11051,7 +11245,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1036509237
 Renderer:
   m_ObjectHideFlags: 0
@@ -11201,7 +11395,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1051224051
 Renderer:
   m_ObjectHideFlags: 0
@@ -11311,7 +11505,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1052307503
 Renderer:
   m_ObjectHideFlags: 0
@@ -11461,7 +11655,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1058113623
 Renderer:
   m_ObjectHideFlags: 0
@@ -11611,7 +11805,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1072974087
 Renderer:
   m_ObjectHideFlags: 0
@@ -11721,7 +11915,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1077346127
 Renderer:
   m_ObjectHideFlags: 0
@@ -11911,7 +12105,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1098133670
 Renderer:
   m_ObjectHideFlags: 0
@@ -12552,7 +12746,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1184338655
 Renderer:
   m_ObjectHideFlags: 0
@@ -12742,7 +12936,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1204433905
 Renderer:
   m_ObjectHideFlags: 0
@@ -13072,7 +13266,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1249891343
 Renderer:
   m_ObjectHideFlags: 0
@@ -13262,7 +13456,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1277964916
 Renderer:
   m_ObjectHideFlags: 0
@@ -13372,7 +13566,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1279135575
 Renderer:
   m_ObjectHideFlags: 0
@@ -13482,7 +13676,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1280029035
 Renderer:
   m_ObjectHideFlags: 0
@@ -13592,7 +13786,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1290028015
 Renderer:
   m_ObjectHideFlags: 0
@@ -13647,6 +13841,50 @@ Transform:
   m_LocalScale: {x: 8, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!1001 &1293845807
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400004, guid: d199620d6c6277f41850c4ea103fb7ad, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -14.9957447
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d199620d6c6277f41850c4ea103fb7ad, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.45279408
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d199620d6c6277f41850c4ea103fb7ad, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -3.4809761
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d199620d6c6277f41850c4ea103fb7ad, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d199620d6c6277f41850c4ea103fb7ad, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d199620d6c6277f41850c4ea103fb7ad, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d199620d6c6277f41850c4ea103fb7ad, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -4.37113883e-08
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d199620d6c6277f41850c4ea103fb7ad, type: 2}
+      propertyPath: grid
+      value: 
+      objectReference: {fileID: 1228040728}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d199620d6c6277f41850c4ea103fb7ad, type: 2}
+  m_RootGameObject: {fileID: 223994705}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1001 &1296966375
 Prefab:
   m_ObjectHideFlags: 0
@@ -13822,7 +14060,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1308183674
 Renderer:
   m_ObjectHideFlags: 0
@@ -14012,7 +14250,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1328558156
 Renderer:
   m_ObjectHideFlags: 0
@@ -14122,7 +14360,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1329888047
 Renderer:
   m_ObjectHideFlags: 0
@@ -14497,7 +14735,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1353847218
 Renderer:
   m_ObjectHideFlags: 0
@@ -14687,7 +14925,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1365790992
 Renderer:
   m_ObjectHideFlags: 0
@@ -14782,6 +15020,46 @@ Prefab:
   m_RootGameObject: {fileID: 1985674647}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1001 &1376616719
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: a47570f99a16dac408ed6f3e216fc34a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -62.9481583
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a47570f99a16dac408ed6f3e216fc34a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a47570f99a16dac408ed6f3e216fc34a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: .0537360013
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a47570f99a16dac408ed6f3e216fc34a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a47570f99a16dac408ed6f3e216fc34a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: .707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a47570f99a16dac408ed6f3e216fc34a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a47570f99a16dac408ed6f3e216fc34a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .707106829
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a47570f99a16dac408ed6f3e216fc34a, type: 2}
+  m_RootGameObject: {fileID: 75378731}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1383883384
 GameObject:
   m_ObjectHideFlags: 0
@@ -14837,7 +15115,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1383883387
 Renderer:
   m_ObjectHideFlags: 0
@@ -15027,7 +15305,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1403841893
 Renderer:
   m_ObjectHideFlags: 0
@@ -15257,7 +15535,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1456541795
 Renderer:
   m_ObjectHideFlags: 0
@@ -15527,7 +15805,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1489749869
 Renderer:
   m_ObjectHideFlags: 0
@@ -15757,7 +16035,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1543404637
 Renderer:
   m_ObjectHideFlags: 0
@@ -15988,7 +16266,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1563034592
 Renderer:
   m_ObjectHideFlags: 0
@@ -16218,7 +16496,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1605215228
 Renderer:
   m_ObjectHideFlags: 0
@@ -16328,7 +16606,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1607775192
 Renderer:
   m_ObjectHideFlags: 0
@@ -16438,7 +16716,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1607794520
 Renderer:
   m_ObjectHideFlags: 0
@@ -16588,7 +16866,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1631004795
 Renderer:
   m_ObjectHideFlags: 0
@@ -16738,7 +17016,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1634607198
 Renderer:
   m_ObjectHideFlags: 0
@@ -16848,7 +17126,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1636034178
 Renderer:
   m_ObjectHideFlags: 0
@@ -16958,7 +17236,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1643646093
 Renderer:
   m_ObjectHideFlags: 0
@@ -17045,7 +17323,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: -564478081, guid: 036bc13753e6f3d46b2072367e431230, type: 3}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -17082,8 +17360,8 @@ Transform:
   m_PrefabInternal: {fileID: 173084461}
   m_GameObject: {fileID: 1647173006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.0394955, y: 1.90944862, z: 6.55881882}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalPosition: {x: 28.0394955, y: 1.50807714, z: 6.55881882}
+  m_LocalScale: {x: 1, y: 3, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!114 &1647173012
@@ -17194,7 +17472,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1663077971
 Renderer:
   m_ObjectHideFlags: 0
@@ -17344,7 +17622,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1668898898
 Renderer:
   m_ObjectHideFlags: 0
@@ -17494,7 +17772,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1683123044
 Renderer:
   m_ObjectHideFlags: 0
@@ -17604,7 +17882,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1689816414
 Renderer:
   m_ObjectHideFlags: 0
@@ -17714,7 +17992,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1692967636
 Renderer:
   m_ObjectHideFlags: 0
@@ -17824,7 +18102,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1700128141
 Renderer:
   m_ObjectHideFlags: 0
@@ -18019,7 +18297,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1716459333
 Renderer:
   m_ObjectHideFlags: 0
@@ -18129,7 +18407,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1731216151
 Renderer:
   m_ObjectHideFlags: 0
@@ -18239,7 +18517,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1737522556
 Renderer:
   m_ObjectHideFlags: 0
@@ -18389,7 +18667,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1763080935
 Renderer:
   m_ObjectHideFlags: 0
@@ -18539,7 +18817,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1779902594
 Renderer:
   m_ObjectHideFlags: 0
@@ -19158,7 +19436,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1825250599
 Renderer:
   m_ObjectHideFlags: 0
@@ -19348,7 +19626,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1869936185
 Renderer:
   m_ObjectHideFlags: 0
@@ -19458,7 +19736,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1883712371
 Renderer:
   m_ObjectHideFlags: 0
@@ -19608,7 +19886,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1906309792
 Renderer:
   m_ObjectHideFlags: 0
@@ -19718,7 +19996,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1913645117
 Renderer:
   m_ObjectHideFlags: 0
@@ -19828,7 +20106,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1914790859
 Renderer:
   m_ObjectHideFlags: 0
@@ -20178,7 +20456,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1956164366
 Renderer:
   m_ObjectHideFlags: 0
@@ -20368,7 +20646,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1973336209
 Renderer:
   m_ObjectHideFlags: 0
@@ -20478,7 +20756,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1983633912
 Renderer:
   m_ObjectHideFlags: 0
@@ -20588,7 +20866,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &1985674650
 Renderer:
   m_ObjectHideFlags: 0
@@ -20738,7 +21016,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &2004719185
 Renderer:
   m_ObjectHideFlags: 0
@@ -21073,7 +21351,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &2036808899
 Renderer:
   m_ObjectHideFlags: 0
@@ -21183,7 +21461,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &2054832221
 Renderer:
   m_ObjectHideFlags: 0
@@ -21238,6 +21516,79 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!1 &2063115548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: d199620d6c6277f41850c4ea103fb7ad, type: 2}
+  m_PrefabInternal: {fileID: 1293845807}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2063115549}
+  - 33: {fileID: 2063115552}
+  - 136: {fileID: 2063115551}
+  - 23: {fileID: 2063115550}
+  m_Layer: 14
+  m_Name: ClearGrid
+  m_TagString: ClearGrid
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2063115549
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: d199620d6c6277f41850c4ea103fb7ad, type: 2}
+  m_PrefabInternal: {fileID: 1293845807}
+  m_GameObject: {fileID: 2063115548}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
+  m_LocalPosition: {x: .424511909, y: .265194833, z: -.310449123}
+  m_LocalScale: {x: .166666657, y: .25, z: .25}
+  m_Children: []
+  m_Father: {fileID: 223994710}
+--- !u!23 &2063115550
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300002, guid: d199620d6c6277f41850c4ea103fb7ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1293845807}
+  m_GameObject: {fileID: 2063115548}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: dc5eb89d85d50a44282ec93dc65d70cc, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!136 &2063115551
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13600002, guid: d199620d6c6277f41850c4ea103fb7ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1293845807}
+  m_GameObject: {fileID: 2063115548}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &2063115552
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300002, guid: d199620d6c6277f41850c4ea103fb7ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1293845807}
+  m_GameObject: {fileID: 2063115548}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2063155929
 GameObject:
   m_ObjectHideFlags: 0
@@ -21293,7 +21644,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &2063155932
 Renderer:
   m_ObjectHideFlags: 0
@@ -21403,7 +21754,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &2063504199
 Renderer:
   m_ObjectHideFlags: 0
@@ -21513,7 +21864,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &2066733368
 Renderer:
   m_ObjectHideFlags: 0
@@ -21623,7 +21974,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &2070510643
 Renderer:
   m_ObjectHideFlags: 0
@@ -21773,7 +22124,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &2073110060
 Renderer:
   m_ObjectHideFlags: 0
@@ -21963,7 +22314,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &2109814534
 Renderer:
   m_ObjectHideFlags: 0
@@ -22113,7 +22464,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &2111261916
 Renderer:
   m_ObjectHideFlags: 0
@@ -22223,7 +22574,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &2113255500
 Renderer:
   m_ObjectHideFlags: 0
@@ -22333,7 +22684,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &2114092282
 Renderer:
   m_ObjectHideFlags: 0
@@ -22523,7 +22874,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &2126709602
 Renderer:
   m_ObjectHideFlags: 0
@@ -22694,7 +23045,7 @@ MonoBehaviour:
   explosionCube: 2
   curGrid: {fileID: 0}
   radius: 10
-  power: 500
+  power: 750
 --- !u!23 &2141596466
 Renderer:
   m_ObjectHideFlags: 0
@@ -22749,3 +23100,76 @@ Transform:
   m_LocalScale: {x: 8, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!1 &2144260519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: d199620d6c6277f41850c4ea103fb7ad, type: 2}
+  m_PrefabInternal: {fileID: 1293845807}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2144260520}
+  - 33: {fileID: 2144260523}
+  - 136: {fileID: 2144260522}
+  - 23: {fileID: 2144260521}
+  m_Layer: 14
+  m_Name: EndConstruction
+  m_TagString: EndConstruction
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2144260520
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: d199620d6c6277f41850c4ea103fb7ad, type: 2}
+  m_PrefabInternal: {fileID: 1293845807}
+  m_GameObject: {fileID: 2144260519}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
+  m_LocalPosition: {x: .424511909, y: .265194833, z: .269382238}
+  m_LocalScale: {x: .166666657, y: .25, z: .25}
+  m_Children: []
+  m_Father: {fileID: 223994710}
+--- !u!23 &2144260521
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: d199620d6c6277f41850c4ea103fb7ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1293845807}
+  m_GameObject: {fileID: 2144260519}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: f1c6ef342fdcc6e4ab36bce1d7065c30, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!136 &2144260522
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13600000, guid: d199620d6c6277f41850c4ea103fb7ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1293845807}
+  m_GameObject: {fileID: 2144260519}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &2144260523
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: d199620d6c6277f41850c4ea103fb7ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1293845807}
+  m_GameObject: {fileID: 2144260519}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
