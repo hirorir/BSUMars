@@ -205,7 +205,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cf8db7fb8ba136438116bbb5d6bf713, type: 3}
   m_Name: 
@@ -219,6 +219,8 @@ MonoBehaviour:
   heightLabel: {fileID: 0}
   compLabel: {fileID: 0}
   reqPanel: {fileID: 0}
+  ratingsPanel: {fileID: 0}
+  menu: {fileID: 0}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -23,6 +23,7 @@ public class StatsButton : MonoBehaviour {
 		} else {
 			NGUITools.SetActive(transform.parent.gameObject, false);
 			NGUITools.SetActive(target, true);
+			Screen.lockCursor = false;
 		}
 	}
 }

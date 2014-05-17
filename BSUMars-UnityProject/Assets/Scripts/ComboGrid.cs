@@ -8,10 +8,14 @@ public class ComboGrid : MonoBehaviour {
 	private List<GameObject> comboItems; // Construction pieces in the grid.
 	private List<Recipe> recipes; // All possible recipes.
 	private List<Recipe> activeRecipes; // Recipes that have their requirements met.
+	[SerializeField] GameObject comboPanel; // The combo panel in the UI
+	[SerializeField] GameObject menu;
+	private GameObject recipeButton;
 	//private int blockCount;
 
 	// Use this for initialization
 	void Start () {
+		recipeButton = Resources.Load("Prefabs/Recipe") as GameObject;
 		comboItems = new List<GameObject>();
 		addRecipes();
 	}
@@ -25,7 +29,7 @@ public class ComboGrid : MonoBehaviour {
 	}
 
 	// Using OnGUI until I have time to create something nicer using NGUI
-	void OnGUI() {
+	/*void OnGUI() {
 		if (activeRecipes.Count > 0) {
 			Time.timeScale = 0;
 			GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "");
@@ -44,7 +48,7 @@ public class ComboGrid : MonoBehaviour {
 				Screen.lockCursor = true;
 			}
 		}
-	}
+	}*/
 
 	public void addItem(GameObject item) {
 		comboItems.Add(item);
@@ -71,11 +75,46 @@ public class ComboGrid : MonoBehaviour {
 
 	public void checkAllRecipes() {
 		activeRecipes.Clear();
-		foreach (Recipe recipe in recipes)
-			if (checkRecipe(recipe))
+		GameObject currentRecButton;
+
+		LoadButton.clickFunc cFunc = () => {
+			Debug.Log("testarino");
+		};
+
+		foreach (Transform child in comboPanel.transform)
+			if (child.name != "Cancel")
+				Destroy(child.gameObject);
+		foreach (Recipe recipe in recipes) {
+			if (checkRecipe(recipe)) {
 				activeRecipes.Add(recipe);
-		if (activeRecipes.Count > 0)
+				currentRecButton = GameObject.Instantiate(recipeButton, recipeButton.transform.position, recipeButton.transform.rotation) as GameObject;
+				currentRecButton.transform.parent = comboPanel.transform;
+				currentRecButton.transform.localScale = recipeButton.transform.localScale;
+				//currentRecButton.transform.localPosition = new Vector3(currentRecButton.transform.localPosition.x, currentRecButton.transform.localPosition.y - activeRecipes.Count * 200f, currentRecButton.transform.localPosition.z);
+				currentRecButton.transform.localPosition = new Vector3(-400, 400 - activeRecipes.Count * 100f, 0f);
+				currentRecButton.transform.localEulerAngles = Vector3.zero;
+				currentRecButton.transform.GetChild(0).GetComponent<UILabel>().text = recipe.getName();
+				cFunc = () => {
+					
+					combine(recipe);
+					activeRecipes.Clear();
+					Time.timeScale = 1;
+					Screen.lockCursor = true;
+					NGUITools.SetActive(comboPanel, false);
+					NGUITools.SetActive(menu, false);
+					NGUITools.SetActive(menu.transform.GetChild(4).gameObject, true);
+				};
+				currentRecButton.GetComponent<LoadButton>().setCFunc(cFunc);
+			}
+		}
+		if (activeRecipes.Count > 0) {
+			Debug.Log(menu.transform.GetChild(3).name);
+			Time.timeScale = 0;
 			Screen.lockCursor = false;
+			NGUITools.SetActive(comboPanel, true);
+			NGUITools.SetActive(menu, true);
+			NGUITools.SetActive(menu.transform.GetChild(3).gameObject, false);
+		}
 	}
 
 	private bool checkRecipe(Recipe recipe) {

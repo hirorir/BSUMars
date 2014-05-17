@@ -141,7 +141,7 @@ public class FirstPersonCharacter : MonoBehaviour
 		if(hitObject != null)
 			hitObject.rigidbody.angularVelocity = new Vector3 (0, 0, 0);
 
-		if (Input.GetKeyDown(KeyCode.E)) {
+		if (Input.GetKeyDown(KeyCode.E) && Time.timeScale > 0 && !conMode) {
 			if(hitObject != null){		//if it isn't null, it must be what the player is carrying. toggle off
 				dropObject ();
 			}
@@ -155,7 +155,7 @@ public class FirstPersonCharacter : MonoBehaviour
 					invisCube.transform.position = new Vector3(conGrid.transform.position.x, invisCube.transform.position.y, conGrid.transform.position.z + conGrid.renderer.bounds.size.z / 2f);
 					StartCoroutine(moveClearer(invisCube, - conGrid.renderer.bounds.size.z, 3f, 300));
 				} else if (hit.collider.tag == "EndConstruction") {
-					hit.collider.GetComponent<Ratings>().calcStats();
+					GetComponent<Ratings>().calcStats();
 				} else if (hit.rigidbody != null)
 					pickupObject(hit.collider.gameObject);			//otherwise get what the character is trying to get
 			}
@@ -200,7 +200,7 @@ public class FirstPersonCharacter : MonoBehaviour
 				placingObject.GetComponent<ConstructionPiece>().setAdjs(activeCam.transform.eulerAngles.y);
 			}
 		} else {
-			if (Input.GetMouseButtonUp(0)) {
+			if (Input.GetMouseButtonUp(0) && Time.timeScale > 0) {
 				Screen.lockCursor = lockCursor;
 			}
 		}
