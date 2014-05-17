@@ -155,7 +155,7 @@ public class FirstPersonCharacter : MonoBehaviour
 					invisCube.transform.position = new Vector3(conGrid.transform.position.x, invisCube.transform.position.y, conGrid.transform.position.z + conGrid.renderer.bounds.size.z / 2f);
 					StartCoroutine(moveClearer(invisCube, - conGrid.renderer.bounds.size.z, 3f, 300));
 				} else if (hit.collider.tag == "EndConstruction") {
-					hit.collider.GetComponent<Ratings>().checkReqs();
+					hit.collider.GetComponent<Ratings>().calcStats();
 				} else if (hit.rigidbody != null)
 					pickupObject(hit.collider.gameObject);			//otherwise get what the character is trying to get
 			}

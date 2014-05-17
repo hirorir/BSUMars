@@ -273,6 +273,7 @@
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Ratings.cs" />
      <Compile Include="Assets\Scripts\Recipe.cs" />
+     <Compile Include="Assets\Scripts\StatsButton.cs" />
      <Compile Include="Assets\Scripts\explosion.cs" />
      <Compile Include="Assets\destructible.cs" />
      <Compile Include="Assets\explosion_particles_destroy.cs" />
