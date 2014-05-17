@@ -119,8 +119,10 @@ public class ConstructionPiece : MonoBehaviour {
 	}*/
 
 	protected void OnTriggerEnter(Collider target) {
-		if (target.tag == "ConGrid" && !placing) {
-			curGrid = target.gameObject;
+		if (target.tag == "ConGrid") {
+			target.gameObject.GetComponent<ConGrid>().addPiece(gameObject);
+			if (!placing)
+				curGrid = target.gameObject;
 		} else if (target.tag == "Combinations") {
 			target.GetComponent<ComboGrid>().addItem(gameObject);
 		}
@@ -128,6 +130,7 @@ public class ConstructionPiece : MonoBehaviour {
 
 	protected void OnTriggerExit(Collider target) {
 		if (target.tag == "ConGrid") {
+			target.gameObject.GetComponent<ConGrid>().removePiece(gameObject);
 			curGrid = null;
 		} else if (target.tag == "Combinations") {
 			target.GetComponent<ComboGrid>().removeItem(gameObject);

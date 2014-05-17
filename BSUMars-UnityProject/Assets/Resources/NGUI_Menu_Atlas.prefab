@@ -42,7 +42,7 @@ MonoBehaviour:
   mSprites:
   - name: 30521
     x: 0
-    y: 256
+    y: 1280
     width: 1024
     height: 768
     borderLeft: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: BSUP - LOGO FINAL
     x: 1025
-    y: 558
+    y: 1582
     width: 835
     height: 466
     borderLeft: 0
@@ -67,8 +67,8 @@ MonoBehaviour:
     paddingTop: 124
     paddingBottom: 91
   - name: BSUP - LOGO FINAL - transparent inner
-    x: 1025
-    y: 91
+    x: 0
+    y: 172
     width: 835
     height: 466
     borderLeft: 0
@@ -79,6 +79,32 @@ MonoBehaviour:
     paddingRight: 150
     paddingTop: 124
     paddingBottom: 91
+  - name: ORANGE
+    x: 0
+    y: 639
+    width: 1024
+    height: 640
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: star
+    x: 1025
+    y: 699
+    width: 600
+    height: 580
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}
   mCoordinates: 0

@@ -152,12 +152,10 @@ public class FirstPersonCharacter : MonoBehaviour
 				else if (hit.collider.tag == "ClearGrid") {
 					GameObject invisCube = GameObject.FindGameObjectWithTag("InvisCube");
 					GameObject conGrid = GameObject.FindGameObjectWithTag("ConGrid");
-					Debug.Log(conGrid.renderer.bounds.size);
-					Debug.Log(new Vector3(conGrid.transform.position.x, invisCube.transform.position.y, conGrid.transform.position.z + conGrid.renderer.bounds.size.z / 2f));
 					invisCube.transform.position = new Vector3(conGrid.transform.position.x, invisCube.transform.position.y, conGrid.transform.position.z + conGrid.renderer.bounds.size.z / 2f);
 					StartCoroutine(moveClearer(invisCube, - conGrid.renderer.bounds.size.z, 3f, 300));
 				} else if (hit.collider.tag == "EndConstruction") {
-					Debug.Log("CONSTRUCTION TIME IS OVAH MOTHAFUCKAS");
+					hit.collider.GetComponent<Ratings>().checkReqs();
 				} else if (hit.rigidbody != null)
 					pickupObject(hit.collider.gameObject);			//otherwise get what the character is trying to get
 			}

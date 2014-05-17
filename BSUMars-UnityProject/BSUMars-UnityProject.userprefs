@@ -1,13 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ConstructionPiece.cs">
     <Files>
-      <File FileName="Assets\Scripts\ConstructionPiece.cs" Line="226" Column="77" />
+      <File FileName="Assets\Scripts\ConstructionPiece.cs" Line="1" Column="1" />
       <File FileName="Assets\Sample Assets\Characters\First Person Character\Scripts\FirstPersonCharacter.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ComboGrid.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\MainMenu.cs" Line="1" Column="1" />
       <File FileName="Assets\explosion_particles_destroy.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\explosion.cs" Line="8" Column="48" />
+      <File FileName="Assets\Scripts\explosion.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
