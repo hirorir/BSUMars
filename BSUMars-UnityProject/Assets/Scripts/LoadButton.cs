@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class LoadButton : MonoBehaviour {
-	[SerializeField] private static string level = "restart";
+	[SerializeField] private string level = "restart";
 	private ComboGrid grid;
 	private Recipe recipe; // Used only if the button is for a recipe
 	
@@ -37,6 +37,7 @@ public class LoadButton : MonoBehaviour {
 			grid.clearRecs();
 			onClick();
 		} else {
+			Time.timeScale = 1;
 			switch (level) {
 				case "restart":
 					Application.LoadLevel(Application.loadedLevel);
@@ -45,6 +46,7 @@ public class LoadButton : MonoBehaviour {
 					Application.LoadLevel("menu");
 					break;
 				default:
+					Application.LoadLevel(level);
 					break;
 			}
 		}

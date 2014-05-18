@@ -22,33 +22,9 @@ public class ComboGrid : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		/*if (Input.GetKeyDown(KeyCode.R)) {
-			if (!player.GetComponent<FirstPersonCharacter>().isPlacing())
-				combine();
-		}*/
+
 	}
 
-	// Using OnGUI until I have time to create something nicer using NGUI
-	/*void OnGUI() {
-		if (activeRecipes.Count > 0) {
-			Time.timeScale = 0;
-			GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "");
-			for (int i = 0; i < activeRecipes.Count; i++) {
-				if (GUI.Button(new Rect(Screen.width * 0.2f, Screen.height * 0.1f * (i + 1), 200f, 50f), activeRecipes[i].getName())) {
-					combine(activeRecipes[i]);
-					activeRecipes.Clear();
-					Time.timeScale = 1;
-					Screen.lockCursor = true;
-				}
-			}
-
-			if (GUI.Button(new Rect(Screen.width * 0.7f, Screen.height * 0.7f, 100f, 50f), "Cancel")) {
-				activeRecipes.Clear();
-				Time.timeScale = 1;
-				Screen.lockCursor = true;
-			}
-		}
-	}*/
 
 	public void addItem(GameObject item) {
 		comboItems.Add(item);

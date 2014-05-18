@@ -5,6 +5,7 @@ public class MainMenu : MonoBehaviour {
 	public GameObject main;
 	public GameObject credits;
 	public GameObject back;
+	public GameObject levelselect;
 
 	// Use this for initialization
 	void Start () {
@@ -21,9 +22,11 @@ public class MainMenu : MonoBehaviour {
 			NGUITools.SetActive(main, false);
 			NGUITools.SetActive(credits, true);
 		} else if (name == "Play") {
-			Application.LoadLevel("mars_concrete_house");
+			NGUITools.SetActive(main, false);
+			NGUITools.SetActive(levelselect, true);
 		} else if (name == "Back") {
 			NGUITools.SetActive(credits, false);
+			NGUITools.SetActive(levelselect, false);
 			NGUITools.SetActive(main, true);
 		}
 	}

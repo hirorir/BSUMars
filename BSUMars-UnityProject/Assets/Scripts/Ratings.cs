@@ -16,8 +16,12 @@ public class Ratings : MonoBehaviour {
 	// Each mini-cube (size class 2) equates to one piece unit, so a standard block is 4, a small wall 16, and so on.
 	[SerializeField] private int minPieces = 200; // The minimum number of cubes needed for completion. 
 	[SerializeField] private int maxPieces = 1600; // The maximum number of pieces allowed for completion.
-	[SerializeField] private Dictionary<string, int> minMaterials; // The minimum number of each material needed for completion.
-	[SerializeField] private Dictionary<string, int> maxMaterials; // The maximum number of each each material allowed for completion.
+	private Dictionary<string, int> minMaterials; // The minimum number of each material needed for completion.
+	private Dictionary<string, int> maxMaterials; // The maximum number of each each material allowed for completion.
+	[SerializeField] private int concMin = 180;
+	[SerializeField] private int concMax = 1440;
+	[SerializeField] private int metalMin = 20;
+	[SerializeField] private int metalMax = 160;
 	[SerializeField] private float minHeight = 5f;
 	[SerializeField] private float maxHeight = 20f;
 	[SerializeField] private GameObject blockLabel;
@@ -32,10 +36,10 @@ public class Ratings : MonoBehaviour {
 		statLabel = Resources.Load("Prefabs/Material Comp") as GameObject;
 		minMaterials = new Dictionary<string, int>();
 		maxMaterials = new Dictionary<string, int>();
-		minMaterials.Add("Concrete", 180);
-		minMaterials.Add("Metal", 20);
-		maxMaterials.Add("Concrete", 2840);
-		maxMaterials.Add("Metal", 160);
+		minMaterials.Add("Concrete", concMin);
+		minMaterials.Add("Metal", metalMin);
+		maxMaterials.Add("Concrete", concMax);
+		maxMaterials.Add("Metal", metalMax);
 		setReqPanel();
 	}
 	
