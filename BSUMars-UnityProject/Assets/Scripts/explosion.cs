@@ -31,11 +31,13 @@ public class explosion : MonoBehaviour {
 				}
 			}*/
 			//Instantiate (explosionanim, transform.position, transform.rotation);
-			exploded = true;
-			audio.Play ();
-			GetComponent<ParticleSystem>().Play ();
-			GetComponent<MeshRenderer>().enabled = false;
-			collider.enabled = false;
+			if (!FindObjectOfType<FirstPersonCharacter>().conMode) {
+				exploded = true;
+				audio.Play();
+				GetComponent<ParticleSystem>().Play();
+				GetComponent<MeshRenderer>().enabled = false;
+				collider.enabled = false;
+			}
 		}
 		else if(exploded && !audio.isPlaying)
 			Destroy (gameObject);

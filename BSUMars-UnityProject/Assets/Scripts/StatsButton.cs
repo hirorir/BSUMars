@@ -19,7 +19,11 @@ public class StatsButton : MonoBehaviour {
 		if (resume) {
 			Time.timeScale = 1;
 			Screen.lockCursor = true;
-			NGUITools.SetActive(transform.parent.parent.gameObject, false);
+			Transform menu = transform.parent.parent;
+			if (transform.parent.name == "Pause")
+				NGUITools.SetActive(transform.parent.gameObject, false);
+			NGUITools.SetActive(menu.Find("Panel - Stats").gameObject, true);
+			NGUITools.SetActive(menu.gameObject, false);
 		} else {
 			NGUITools.SetActive(transform.parent.gameObject, false);
 			NGUITools.SetActive(target, true);

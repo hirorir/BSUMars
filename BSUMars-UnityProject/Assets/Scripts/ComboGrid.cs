@@ -22,7 +22,14 @@ public class ComboGrid : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			Time.timeScale = (Time.timeScale + 1) % 2;
+			GameObject pause = menu.transform.Find("Pause").gameObject;
+			GameObject stats = menu.transform.Find("Panel - Stats").gameObject;
+			NGUITools.SetActive(menu, !menu.activeSelf);
+			NGUITools.SetActive(stats, !stats.activeSelf);
+			NGUITools.SetActive(pause, !pause.activeSelf);
+		}
 	}
 
 
