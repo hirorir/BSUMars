@@ -250,6 +250,8 @@ public class Ratings : MonoBehaviour {
 		}
 		
 		ratingsPanel.transform.GetChild(7).GetChild(0).GetComponent<UILabel>().text = "Score: " + total.ToString();
+
+		KongregateAPI.instance.SubmitStats("Best Building Score", total);
 	}
 
 	// Set the values in the requirements panel. Mostly hardcoding this for now to save time.
