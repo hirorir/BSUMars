@@ -270,6 +270,7 @@
      <Compile Include="Assets\Scripts\ConGrid.cs" />
      <Compile Include="Assets\Scripts\ConTuple.cs" />
      <Compile Include="Assets\Scripts\ConstructionPiece.cs" />
+     <Compile Include="Assets\Scripts\KongregateAPI.cs" />
      <Compile Include="Assets\Scripts\LoadButton.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Ratings.cs" />

@@ -43,6 +43,7 @@ public class LoadButton : MonoBehaviour {
 					Application.LoadLevel(Application.loadedLevel);
 					break;
 				case "menu":
+					Screen.lockCursor = false;
 					Application.LoadLevel("menu");
 					break;
 				default:

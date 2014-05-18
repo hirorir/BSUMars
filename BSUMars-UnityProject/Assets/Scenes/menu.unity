@@ -1533,13 +1533,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 1300
-  mHeight: 1000
+  mWidth: 1536
+  mHeight: 1152
   mDepth: 0
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.29999995
+  aspectRatio: 1.33333337
   mAtlas: {fileID: 11400000, guid: 1473a84ff7860af4a9968d434eb7e1a8, type: 2}
   mSpriteName: 30521
   mType: 0

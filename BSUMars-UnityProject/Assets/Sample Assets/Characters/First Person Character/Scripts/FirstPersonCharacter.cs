@@ -95,7 +95,7 @@ public class FirstPersonCharacter : MonoBehaviour
 	}
 
 	public void ConCam(GameObject grid) {
-		Screen.lockCursor = false;
+		//Screen.lockCursor = false;
 		cam.GetComponent<Camera>().enabled = false;
 		if (hitObject != null)
 			activeCam = closestCam(hitObject, grid);
