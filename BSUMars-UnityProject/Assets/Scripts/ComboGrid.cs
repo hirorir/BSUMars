@@ -60,7 +60,7 @@ public class ComboGrid : MonoBehaviour {
 		//blockCount--;
 	}
 
-	private void combine(Recipe recipe) {
+	public void combine(Recipe recipe) {
 		List<GameObject> checklist = recipe.getPieces();
 		foreach (GameObject item in checklist) {
 			Destroy(item);
@@ -70,16 +70,18 @@ public class ComboGrid : MonoBehaviour {
 
 		recipe.clearPieces();
 		GameObject piece = recipe.outputResult();
-		GameObject.Instantiate(piece, new Vector3(transform.position.x, transform.position.y + piece.collider.bounds.size.y / 2, transform.position.z), Quaternion.identity);
+		piece = (GameObject) GameObject.Instantiate(piece, new Vector3(transform.position.x, transform.position.y + piece.renderer.bounds.size.y / 2, transform.position.z), Quaternion.identity);
+		piece.rigidbody.AddForce(Vector3.zero);
+		GameObject.FindGameObjectWithTag("Player").rigidbody.AddForce(Vector3.zero);
+	}
+
+	public void clearRecs() {
+		activeRecipes.Clear();
 	}
 
 	public void checkAllRecipes() {
 		activeRecipes.Clear();
 		GameObject currentRecButton;
-
-		LoadButton.clickFunc cFunc = () => {
-			Debug.Log("testarino");
-		};
 
 		foreach (Transform child in comboPanel.transform)
 			if (child.name != "Cancel")
@@ -90,25 +92,19 @@ public class ComboGrid : MonoBehaviour {
 				currentRecButton = GameObject.Instantiate(recipeButton, recipeButton.transform.position, recipeButton.transform.rotation) as GameObject;
 				currentRecButton.transform.parent = comboPanel.transform;
 				currentRecButton.transform.localScale = recipeButton.transform.localScale;
-				//currentRecButton.transform.localPosition = new Vector3(currentRecButton.transform.localPosition.x, currentRecButton.transform.localPosition.y - activeRecipes.Count * 200f, currentRecButton.transform.localPosition.z);
 				currentRecButton.transform.localPosition = new Vector3(-400, 400 - activeRecipes.Count * 100f, 0f);
 				currentRecButton.transform.localEulerAngles = Vector3.zero;
 				currentRecButton.transform.GetChild(0).GetComponent<UILabel>().text = recipe.getName();
-				cFunc = () => {
-					
-					combine(recipe);
-					activeRecipes.Clear();
+				currentRecButton.GetComponent<LoadButton>().setCFunc(GetComponent<ComboGrid>(), recipe, () => {
 					Time.timeScale = 1;
 					Screen.lockCursor = true;
 					NGUITools.SetActive(comboPanel, false);
 					NGUITools.SetActive(menu, false);
-					NGUITools.SetActive(menu.transform.GetChild(4).gameObject, true);
-				};
-				currentRecButton.GetComponent<LoadButton>().setCFunc(cFunc);
+					NGUITools.SetActive(menu.transform.GetChild(3).gameObject, true);
+				});
 			}
 		}
 		if (activeRecipes.Count > 0) {
-			Debug.Log(menu.transform.GetChild(3).name);
 			Time.timeScale = 0;
 			Screen.lockCursor = false;
 			NGUITools.SetActive(comboPanel, true);
