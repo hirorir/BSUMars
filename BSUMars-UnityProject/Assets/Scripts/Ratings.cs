@@ -29,6 +29,9 @@ public class Ratings : MonoBehaviour {
 	private GameObject statLabel;
 	// Use this for initialization
 	void Start () {
+		if (KongregateAPI.instance == null)
+			Debug.Log("This should never happen.");
+
 		statLabel = Resources.Load("Prefabs/Material Comp") as GameObject;
 		minMaterials = new Dictionary<string, int>();
 		maxMaterials = new Dictionary<string, int>();
